@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators  } from 'redux';
+import login from '../actions/index';
 
 class Landing extends Component {
 
@@ -29,21 +31,21 @@ class Landing extends Component {
                   </div>
                 </li>
                 <li className="menu_item contact page">
-                  <img src="./images/Contact_Us.png" />
+                  <img src="./images/Contact_Us.png" alt="" />
                 </li>
                 <li className="menu_item about page">
-                  <img src="./images/About_Us.png" />
+                  <img src="./images/About_Us.png" alt="" />
                 </li>
                 <li className="menu_item Share">
-                  <img src="./images/Share.png" />
+                  <img src="./images/Share.png" alt="" />
                 </li>
                 <li className="menu_item Logout">
-                  <img src="./images/Log_out.png" />
+                  <img src="./images/Log_out.png" alt="" />
                 </li>
                 <li className="menu_item ">
-                  <img src="./images/whatsapp.png" />
-                  <img src="./images/facebool_icon.png" />
-                  <img src="./images/website.png" />
+                  <img src="./images/whatsapp.png" alt="" />
+                  <img src="./images/facebool_icon.png" alt="" />
+                  <img src="./images/website.png" alt="" />
                 </li>
               </ul>
             </nav>
@@ -54,16 +56,16 @@ class Landing extends Component {
           <div className="seperation_layer"></div>
           <div id="LoginDiv" className="login">
             <div className='background'>
-              <img className="star" src="images/Global/Star.svg" />
-              <img className="star" src="images/Global/Star.svg" />
-              <img className="star" src="images/Global/Star.svg" />
-              <img className="star" src="images/Global/Star.svg" />
-              <img className="star" src="images/Global/Star.svg" />
-              <img className="star" src="images/Global/Star.svg" />
-              <img className="star" src="images/Global/Star.svg" />
-              <img className="star" src="images/Global/Star.svg" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
+              <img className="star" src="images/Global/Star.svg" alt="" />
               <div className="pen_footer">
-                <img src="images/Global/Pen.svg"/>
+                <img src="images/Global/Pen.svg"alt="" />
                 <div className='text_footer'>
                   <p>جميع حقوق النشر محفوظة لدى المؤسسة العربية الحديثة  -
                     يحظر نشر أو توزيع أو طباعة أى مادة دون إذن مسبق من المؤسسة</p>
@@ -73,31 +75,31 @@ class Landing extends Component {
                 </div>
               </div>
             </div>
-            <div className="content {{this.isLoggedIn()}}">
+            <div className={`content ${this.isLoggedIn()}`}>
               <div className="left">
                 <div className="login_container">
-                  <img src="images/facebook.png" className='fb' />
-                  <img src="images/google.png" className='google' />
-                  <img src="images/visitor.png" className='visitor' />
+                  <img src="images/facebook.png" className='fb' alt="" />
+                  <img src="images/google.png" className='google' alt="" />
+                  <img onClick={() => {this.props.login()} } src="images/visitor.png" className='visitor' alt="" />
                 </div>
               </div>
               <div className="right">
-                <img className="logo" src="images/Global/logo.png" />
+                <img className="logo" src="images/Global/logo.png" alt="" />
                 <div className="character_star">
-                  <img className="character" src="images/Global/Boy_Girl.png" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
-                  <img className="flower" src="images/Global/Yellow_Flower.svg" />
+                  <img className="character" src="images/Global/Boy_Girl.png" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
+                  <img className="flower" src="images/Global/Yellow_Flower.svg" alt="" />
                 </div>
               </div>
             </div>
@@ -108,6 +110,10 @@ class Landing extends Component {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ login } ,dispatch);
+}
+
 
 function mapStateToProps(state) {
   return {
@@ -115,4 +121,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);
