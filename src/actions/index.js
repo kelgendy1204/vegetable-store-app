@@ -1,8 +1,10 @@
-export default function (state = null, action) {
-	switch (action.type) {
-		case 'LOGIN':
-		return action.payload;
-	}
+export default function (loggedStatus) {
 
-	return state;
+
+
+
+	return {
+		type: 'LOGIN',
+		payload: loggedStatus
+	};
 }

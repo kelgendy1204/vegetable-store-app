@@ -80,7 +80,7 @@ class Landing extends Component {
                 <div className="login_container">
                   <img src="images/facebook.png" className='fb' alt="" />
                   <img src="images/google.png" className='google' alt="" />
-                  <img onClick={() => {this.props.login()} } src="images/visitor.png" className='visitor' alt="" />
+                  <img onClick={() => {this.props.login(true)} } src="images/visitor.png" className='visitor' alt="" />
                 </div>
               </div>
               <div className="right">
