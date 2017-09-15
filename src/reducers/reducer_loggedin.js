@@ -3,6 +3,5 @@ export default function (state = null, action) {
 		case 'LOGIN':
 		return action.payload;
 	}
-
 	return state;
 }
