@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-
 class Login extends Component {
 
     constructor(props) {
         super(props);
+        this.login = this.login.bind(this);
     }
 
-    isLoggedIn(){
-        if(this.props.loggedIn){
-            return 'registered';
-        } else {
-            return 'unregistered';
-        }
+    login(){
+        this.props.login(true);
+        this.props.history.push('/InnerPage');
     }
 
     render() {
         return (
           <div>
-              <span> { this.isLoggedIn() } </span>
-              <button onClick={() => this.props.loggedIn ? this.props.login(false) : this.props.login(true) }>
+              <button onClick={ this.login }>
                 login
               </button>
           </div>
