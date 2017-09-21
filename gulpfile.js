@@ -33,23 +33,9 @@ const watch = require('gulp-watch');
 const newer = require('gulp-newer');
 const notifier = require('node-notifier');
 const dotenv = require('dotenv');
-
-var gls = require('gulp-live-server');
-gulp.task('serve', function() {
-
-  //2. serve at custom port
-  var server = gls.static('./', 3000);
-  server.start();
-
-  //use gulp.watch to trigger server actions(notify, start or stop)
-  gulp.watch(['./public/**/*.*', '!./public/**/*.map', './index.html'], function (file) {
-    server.notify.apply(server, [file]);
-  });
-
-});
-
+const gls = require('gulp-live-server');
 const mainSrcFolder = './src/';
-const mainDestFolder = './public/';
+const mainDestFolder = './www/assets/';
 
 dotenv.config();
 
@@ -80,7 +66,7 @@ const pagesArr = ['app'];
         b.transform(babelify, { 'compact': false });
         b.transform(envify);
 
-        let bundle = function () {
+        let bundle = function() {
             return b.bundle()
                 .on('error', swallowError)
                 .pipe(source(`${page}.js`))
@@ -91,7 +77,7 @@ const pagesArr = ['app'];
 
         gulp.task(`js:dev:${page}`, bundle);
         b.on('update', bundle);
-        b.on('log', function (msg) {
+        b.on('log', function(msg) {
             gutil.log(gutil.colors.yellow(msg));
         });
 
@@ -276,19 +262,32 @@ gulp.task('imagemin', () => {
 });
 
 gulp.task('watch:imagemin', () => {
-    watch(`${mainSrcFolder}images/**/*`, {events: ['add', 'change'] }, function () {
+    watch(`${mainSrcFolder}images/**/*`, { events: ['add', 'change'] }, function() {
         minifyImages();
     });
 });
 
 gulp.task('compress', function(cb) {
     pump([
-        gulp.src(`${mainDestFolder}js/**/*.js`),
-        uglify({ mangle: true }),
-        gulp.dest(`${mainDestFolder}js/`)
-    ],
+            gulp.src(`${mainDestFolder}js/**/*.js`),
+            uglify({ mangle: true }),
+            gulp.dest(`${mainDestFolder}js/`)
+        ],
         cb
     );
+});
+
+gulp.task('serve', function() {
+
+    //2. serve at custom port
+    var server = gls.static('./www/', 3000);
+    server.start();
+
+    //use gulp.watch to trigger server actions(notify, start or stop)
+    gulp.watch([`${mainDestFolder}**/*.*`, `!${mainDestFolder}**/*.map`, './www/index.html'], function(file) {
+        server.notify.apply(server, [file]);
+    });
+
 });
 
 gulp.task('copyFonts', () => {
@@ -319,7 +318,7 @@ gulp.task('develop', gulpSequence('clean', pagesArr.concat(['copyfiles', 'handle
 
 function swallowError(error) {
     gutil.log(gutil.colors.red(error.toString()));
-    notify('Error' , error.toString());
+    notify('Error', error.toString());
     this.emit('end');
 }
 
