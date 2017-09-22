@@ -7,7 +7,7 @@ class Splash extends Component {
         let logo = document.querySelector('img.logo');
 
         this.prefixedEventListener(logo, 'animationend', () => {
-            this.checkLogginState();
+            this.props.history.push('/InnerPage');
         });
 
     }
@@ -20,13 +20,13 @@ class Splash extends Component {
         }
     }
 
-    checkLogginState(){
-        if(this.props.loggedIn) {
-            this.props.history.push('/InnerPage');
-        } else {
-            this.props.history.push('/Login');
-        }
-    }
+    // checkLogginState(){
+    //     if(this.props.loggedIn) {
+    //         this.props.history.push('/InnerPage');
+    //     } else {
+    //         this.props.history.push('/Login');
+    //     }
+    // }
 
     render() {
         return (

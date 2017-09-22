@@ -1,0 +1,42 @@
+nav{
+    background-color: $color1;
+    padding: 0 10px;
+    .button-collapse{
+        margin: 0;
+    }
+    ul{
+        height: 100%;
+        display: flex;
+        &.side-nav{
+            display: block;
+            li{
+                display: list-item;
+            }
+        }
+        li{
+            display: inline-flex;
+            img.cart{
+                width: 24px;
+            }
+        }
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                &.reply{
+                    transform-orign: center center;
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+#sidenav-overlay{
+    z-index: 990;
+}
+
+.nav-right{
+    padding: 0;
+}
