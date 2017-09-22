@@ -12,27 +12,28 @@ class Home extends Component {
                 </div>
                 <div className="items container">
                     <div className="item">
-                        <div className="right">
-                            <div className="up">
+                        <div className="right-data">
+                            <div className="up-data">
                                 <div className="content">
                                     <p>%<span>10</span></p>
                                 </div>
                             </div>
-                            <div className="down"></div>
+                            <div className="down-data"></div>
                         </div>
-                        <div className="left">
-                            <div className="top">
-                                <div className="right">
-                                    <div className="one"><p>كيلو طماطم بلدي</p></div>
-                                    <div className="two"><p>35  جنية</p></div>
-                                    <div className="three"><p>49 جنيه</p></div>
+
+                        <div className="left-data">
+                            <div className="top-data">
+                                <div className="right-data">
+                                    <p className="one">كيلو طماطم بلدي</p>
+                                    <p className="two">35  جنية</p>
+                                    <p className="three">49 جنيه</p>
                                 </div>
-                                <div className="left">
+                                <div className="left-data">
                                     <a className="hart"></a>
                                     <a className="share"></a>
                                 </div>
                             </div>
-                            <div className="bottom">
+                            <div className="bottom-data">
                                 <div className="content">
                                     <img src="./assets/images/1.svg" />
                                     <p>اضف الي السلة</p>
@@ -40,22 +41,24 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
+
+
                     <div className="item">
-                        <div className="right">
-                            <div className="down"></div>
+                        <div className="right-data">
+                            <div className="down-data"></div>
                         </div>
-                        <div className="left">
-                            <div className="top">
-                                <div className="right">
+                        <div className="left-data">
+                            <div className="top-data">
+                                <div className="right-data">
                                     <div className="one"><p>كيلو طماطم بلدي</p></div>
                                     <div className="two"><p>35  جنية</p></div>
                                     <div className="three"><p>49 جنيه</p></div>
                                 </div>
-                                <div className="left">
+                                <div className="left-data">
 
                                 </div>
                             </div>
-                            <div className="bottom">
+                            <div className="bottom-data">
                                 <div className="contenttwo">
                                     <div className="border1"><p>+</p></div>
                                     <div className="border2"><p>15</p></div>
@@ -68,27 +71,27 @@ class Home extends Component {
                         </div>
                     </div>
                     <div className="item">
-                        <div className="right">
-                            <div className="up">
+                        <div className="right-data">
+                            <div className="up-data">
                                 <div className="content">
                                     <p><span className="font">%</span>10</p>
                                 </div>
                             </div>
-                            <div className="down"></div>
+                            <div className="down-data"></div>
                         </div>
-                        <div className="left">
-                            <div className="top">
-                                <div className="right">
+                        <div className="left-data">
+                            <div className="top-data">
+                                <div className="right-data">
                                     <div className="one"><p>كيلو طماطم بلدي</p></div>
                                     <div className="two"><p>35  جنية</p></div>
                                     <div className="three"><p>49 جنيه</p></div>
                                 </div>
-                                <div className="left">
+                                <div className="left-data">
                                     <a className="hartorg"></a>
                                     <a className="share"></a>
                                 </div>
                             </div>
-                            <div className="bottom">
+                            <div className="bottom-data">
                                 <div className="content">
                                     <img src="./assets/images/1.svg" />
                                     <p>اضف الي السلة</p>
@@ -97,21 +100,21 @@ class Home extends Component {
                         </div>
                     </div>
                     <div className="item">
-                        <div className="right">
-                            <div className="down"></div>
+                        <div className="right-data">
+                            <div className="down-data"></div>
                         </div>
-                        <div className="left">
-                            <div className="top">
-                                <div className="right">
+                        <div className="left-data">
+                            <div className="top-data">
+                                <div className="right-data">
                                     <div className="one"><p>كيلو طماطم بلدي</p></div>
                                     <div className="two"><p>35  جنية</p></div>
                                     <div className="three"><p>49 جنيه</p></div>
                                 </div>
-                                <div className="left">
+                                <div className="left-data">
 
                                 </div>
                             </div>
-                            <div className="bottom">
+                            <div className="bottom-data">
                                 <div className="contenttwo">
                                     <div className="border1"><p>+</p></div>
                                     <div className="border2"><p>15</p></div>
