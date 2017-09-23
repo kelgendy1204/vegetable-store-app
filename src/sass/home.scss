@@ -74,8 +74,9 @@ div.home {
                     background-image: url(../images/tmatm.jpg);
                     width: 100px;
                     height: 100px;
-                    background-size: 100% 100%;
+                    background-size: contain;
                     background-repeat: no-repeat;
+                    background-position: center center;
                 }
             }
 
@@ -114,6 +115,7 @@ div.home {
                             flex-direction: column;
                             >p {
                                 font-size: 1.4em;
+                                line-height: 1.4em;
                                 margin: 0;
                                 width: 100%;
                                 font-weight: bold;
@@ -123,6 +125,7 @@ div.home {
                                 color: $color2;
                             }
                             .three {
+                                text-decoration: line-through;
                                 color: $color1;
                             }
                         }
@@ -134,8 +137,9 @@ div.home {
                             align-items: center;
                             justify-content: flex-end;
                             >a{
-                                width: 25px;
-                                height: 25px;
+                                width: 20px;
+                                height: 30px;
+                                background-position: center center;
                                 background-size: contain;
                                 background-repeat: no-repeat;
                             }
@@ -171,6 +175,7 @@ div.home {
                         }
                     }
                     .content {
+                        width: 90%;
                         transition: 0.5s linear;
                         position: absolute;
                         bottom: 0;
@@ -180,7 +185,6 @@ div.home {
                         right: 0;
                         border-radius: 10px;
                         display: flex;
-                        width: 98%;
                         height: 30px;
                         align-items: center;
 

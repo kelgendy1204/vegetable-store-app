@@ -6,7 +6,7 @@
 
 # production
 /build
-/www
+/assets
 
 # misc
 .DS_Store
