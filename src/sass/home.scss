@@ -21,14 +21,15 @@ div.home {
         }
     }
 
-
     .items {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         .item {
-            width: 300px;
+            min-width: 300px;
+            max-width: 350px;
+            height: 155px;
             margin: 10px;
             background-color: white;
             border-bottom-right-radius: 0.6em;
@@ -41,7 +42,7 @@ div.home {
                 position: relative;
                 .up-data {
                     background-color: #ffff01;
-                    width: 300px;
+                    width: 250px;
                     position: absolute;
                     height: 300px;
                     transform: rotate(40deg) translateY(-100%);
@@ -56,12 +57,14 @@ div.home {
                         align-items: flex-end;
                         direction: ltr;
                         p {
-                            font-size: 1.2em;
+                            margin-right: 52px !important;
+                            font-size: 2em;
                             font-weight: bold;
                             width: 100%;
                             text-align: center;
                             margin: 0;
                             color: #356732;
+                            font-family: bader;
                         }
                     }
                 }
@@ -71,7 +74,7 @@ div.home {
                     background-image: url(../images/tmatm.jpg);
                     width: 100px;
                     height: 100px;
-                    background-size: contain;
+                    background-size: 100% 100%;
                     background-repeat: no-repeat;
                 }
             }
@@ -81,145 +84,185 @@ div.home {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
+                line-height: 20px;
                 .top-data {
                     width: 100%;
                     height: 70%;
                     display: flex;
                     // justify-content: space-between;
                     align-items: stretch;
-                    .right-data {
-                        justify-content: flex-start;
-                        width: 70%;
-                        height: 100%;
+                    flex-direction: column;
+                    .center-data{
                         display: flex;
-                        flex-direction: column;
-                        >p {
+                        justify-content: flex-start;
+                        p{
                             font-size: 1.4em;
-                            margin: 0;
-                            width: 100%;
-                            width: 100%;
+                            color: $color2;
                             font-weight: bold;
-                        }
-                        .one {
-                            color: $color2;
-                        }
-                        .two {
-                            color: $color2;
-                        }
-                        .three {
-                            color: $color1;
+                            width: 100%;
+                            font-family: bader;
                         }
                     }
-                    .left-data {
-                        width: 30%;
-                        height: 100%;
+                    .centertwo-data{
                         display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-end;
-                        >a{
-                            width: 30px;
-                            height: 30px;
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                        }
-                        .hart {
-                            background-image: url(../images/2.svg);
-                            &.active{
-                                background-image: url(../images/5.svg);
+                        justify-content: space-between;
+                        .right-data {
+                            justify-content: flex-start;
+                            width: 70%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            >p {
+                                font-size: 1.4em;
+                                margin: 0;
+                                width: 100%;
+                                font-weight: bold;
+                                font-family: bader;
+                            }
+                            .two {
+                                color: $color2;
+                            }
+                            .three {
+                                color: $color1;
                             }
                         }
-                        .share {
-                            background-image: url(../images/3.svg);
+                        .lef-data {
+                            width: 30%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: flex-end;
+                            >a{
+                                width: 25px;
+                                height: 25px;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                            }
+                            .hart {
+                                background-image: url(../images/2.svg);
+                                &.active{
+                                    background-image: url(../images/5.svg);
+                                }
+                            }
+                            .share {
+                                background-image: url(../images/3.svg);
+                            }
                         }
                     }
                 }
                 .bottom-data {
+                    position: relative;
                     width: 100%;
                     height: 28%;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+                    &.open{
+                        .content{
+                            &.closed{
+                                z-index: 0;
+                                opacity: 0;
+                            }
+                            &.opened{
+                                z-index: 1;
+                                opacity: 1;
+                            }
+                        }
+                    }
                     .content {
-                        width: 95%;
-                        background-color: #356732;
-                        border-radius: 35px;
-                        height: 80%;
+                        transition: 0.5s linear;
+                        position: absolute;
+                        bottom: 0;
+                        top: 0;
+                        margin: auto;
+                        left: 0;
+                        right: 0;
+                        border-radius: 10px;
                         display: flex;
-                        justify-content: flex-start;
+                        width: 98%;
+                        height: 30px;
                         align-items: center;
 
-                        img {
-                            width: 30%;
-                            height: 100%;
-                        }
-                        p {
-                            font-size: 50px;
-                            color: white;
-                        }
-                    }
-                    .contenttwo {
-                        width: 95%;
-                        height: 80%;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        .border1 {
-                            width: 17%;
-                            background-color: #dedad7;
-                            height: 95%;
-                            border-radius: 15px;
+                        &.closed{
+                            z-index: 1;
+                            opacity: 1;
                             display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            p {
-                                font-size: 70px;
-                                font-weight: bold;
-                                color: #db5927;
-                            }
-                        }
-                        .border2 {
-                            width: 35%;
-                            border: 4px solid #db5927;
-                            height: 95%;
-                            border-radius: 15px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            p {
-                                font-size: 70px;
-                                font-weight: bold;
-                                color: #db5927;
-                            }
-                        }
-                        .border3 {
-                            width: 17%;
-                            background-color: #dedad7;
-                            height: 95%;
-                            border-radius: 15px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            p {
-                                font-size: 70px;
-                                font-weight: bold;
-                                color: #db5927;
-                            }
-                        }
-                        .border4 {
-                            width: 17%;
-                            border: 2px solid #fe0000;
-                            height: 95%;
-                            border-radius: 15px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            justify-content: flex-start;
+                            background-color: #356732;
                             img {
-                                width: 90%;
-                                height: 90%;
+                                width: 30%;
+                                height: 80%;
+                            }
+                            p {
+                                font-size: 20px;
+                                color: white;
+                            }
+                        }
+                        &.opened {
+                            z-index: 0;
+                            opacity: 0;
+                            background-color: transparent;
+                            justify-content: space-around;
+                            .border1 {
+                                width: 30px;
+                                background-color: #dedad7;
+                                height: 30px;
+                                border-radius: 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p {
+                                    font-size: 30px;
+                                    color: #db5927;
+                                    font-family: sans-serif;
+                                }
+                            }
+                            .border2 {
+                                width: 35%;
+                                border: 1.5px solid #db5927;
+                                height: 95%;
+                                border-radius: 10px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p {
+                                    font-size: 25px;
+                                    color: #db5927;
+                                    font-family: sans-serif;
+                                }
+                            }
+                            .border3 {
+                                width: 30px;
+                                background-color: #dedad7;
+                                height: 30px;
+                                border-radius: 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p {
+                                    font-size: 30px;
+                                    color: #db5927;
+                                    font-family: sans-serif;
+                                }
+                            }
+                            .border4 {
+                                width: 30px;
+                                border: 1px solid #fe0000;
+                                height: 30px;
+                                border-radius: 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img {
+                                    width: 90%;
+                                    height: 90%;
+                                }
                             }
                         }
                     }
+
+
                 }
             }
         }

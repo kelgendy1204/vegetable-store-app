@@ -14,8 +14,15 @@
   font-family: DANUB;
   font-style: normal;
   font-weight: 400;
-  src: url(MaterialIcons-Regular.eot);
+//  src: url(MaterialIcons-Regular.eot);
   src: url(../fonts/DANUB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: bader;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/bader.ttf) format('truetype');
 }
 
 .material-icons {
