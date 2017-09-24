@@ -5,16 +5,16 @@ class CartItem extends Component {
 
     constructor(props){
         super(props);
-        // this.openCart = this.openCart.bind(this);
     }
 
     render() {
+        let actualPrice = this.props.data.price - (this.props.data.price * this.props.data.discount / 100);
         return (
-            <div className="item">
+            <div className="item z-depth-3">
                 <div className="right-data">
-                    <div className="up-data">
+                    <div className={"up-data " + (this.props.data.discount > 0 ? "" : "hide")}>
                         <div className="content">
-                            <p>%<span>10</span></p>
+                            <p>%<span>{ this.props.data.discount }</span></p>
                         </div>
                     </div>
                     <div className="down-data"></div>
@@ -26,8 +26,13 @@ class CartItem extends Component {
                         </div>
                         <div className="centertwo-data">
                             <div className="right-data">
-                                <p className="two">35  جنية</p>
-                                <p className="three">49 جنيه</p>
+                                <p className="two">
+                                    <span>
+                                        { actualPrice }
+                                    </span>
+                                    جنية
+                                </p>
+                                <p className={"three " + (this.props.data.discount > 0 ? "" : "hide")}> <span> { this.props.data.price } </span> جنيه</p>
                             </div>
                             <div className="lef-data">
                                 <a className="hart"></a>
@@ -57,7 +62,8 @@ class CartItem extends Component {
 }
 
 CartItem.propTypes = {
-    openCart: PropTypes.func.isRequired
+    openCart: PropTypes.func.isRequired,
+    data: PropTypes.object.isRequired,
 };
 
 export default CartItem;

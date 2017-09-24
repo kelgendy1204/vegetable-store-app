@@ -16,7 +16,7 @@ class Home extends Component {
 
     render() {
         const cartItems = this.props.cartItems.map((elem, index) =>
-            <CartItem openCart={this.openCart} data={elem} key={index} />
+            <CartItem openCart={this.openCart} data={ elem } key={ index } />
         );
 
         return (

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Navbar extends Component {
+    constructor(props){
+      super(props);
+    }
 
     componentDidMount() {
         $('.button-collapse').sideNav(
@@ -11,7 +15,13 @@ class Navbar extends Component {
         });
     }
 
-                  // <a href="#!" className="brand-logo left">Logo</a>
+    goBack(){
+        let nxtPathIndex = this.props.history.index - 1;
+        if(this.props.history.entries[nxtPathIndex].pathname != '/Splash'){
+            this.props.history.goBack();
+        }
+    }
+
     render() {
         return (
           <div className="navbar-fixed">
@@ -37,7 +47,7 @@ class Navbar extends Component {
                         <i className="material-icons">menu</i>
                       </a>
                       <a href="#">
-                        <i className="material-icons reply">reply</i>
+                        <i className="material-icons back" onTouchStart={ () => this.goBack() }>reply</i>
                       </a>
                     </li>
                   </ul>
@@ -56,5 +66,9 @@ class Navbar extends Component {
     }
 
 }
+
+Navbar.propTypes = {
+    history: PropTypes.object.isRequired
+};
 
 export default Navbar;

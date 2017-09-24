@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import InnerPage from './InnerPage';
 import { Route } from 'react-router-dom';
 import { Redirect, Switch } from 'react-router';
-import Login from '../containers/Login';
 import Splash from '../containers/Splash';
 
 class App extends Component {
@@ -10,9 +9,8 @@ class App extends Component {
         return (
             <div className="App">
                 <Switch>
-                    <Route path="/InnerPage" component={ InnerPage }/>
-                    <Route path="/Login" component={ Login }/>
-                    <Route path="/Splash" component={ Splash }/>
+                    <Route path="/InnerPage" component={ InnerPage } />
+                    <Route path="/Splash" component={ Splash } />
                     <Redirect to='/Splash' />
                 </Switch>
             </div>

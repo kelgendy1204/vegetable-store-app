@@ -4,7 +4,7 @@ let defaultCarts = [
     {
         id: 1,
         image: '../images/tmatm.jpg',
-        price: 10,
+        price: 7,
         discount: 10
     },
     {

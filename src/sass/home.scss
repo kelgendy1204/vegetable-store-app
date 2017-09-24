@@ -69,11 +69,9 @@ div.home {
                     }
                 }
                 .down-data {
-                    margin-top: 30px;
-                    margin-right: 30px;
                     background-image: url(../images/tmatm.jpg);
                     width: 100px;
-                    height: 100px;
+                    height: 100%;
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center center;
@@ -195,12 +193,13 @@ div.home {
                             justify-content: flex-start;
                             background-color: #356732;
                             img {
-                                width: 30%;
-                                height: 80%;
+                                margin: 0 10px;
+                                height: 60%;
                             }
                             p {
                                 font-size: 20px;
                                 color: white;
+                                margin: 0;
                             }
                         }
                         &.opened {
