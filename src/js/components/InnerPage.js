@@ -19,7 +19,7 @@ class InnerPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="innerpage">
                 <Navbar history={this.props.history} />
                 <CSSTransitionGroup
                   component="div"

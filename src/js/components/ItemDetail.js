@@ -9,7 +9,7 @@ class ItemDetail extends Component {
 
     render() {
         return (
-            <div>
+            <div className="item-detail">
                 ItemDetail
             </div>
         );
