@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
+import ItemDetail from './ItemDetail';
 import Home from '../containers/Home';
 import { Route } from 'react-router-dom';
 import { Redirect, Switch } from 'react-router';
 import PropTypes from 'prop-types';
-// import CSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 class InnerPage extends Component {
 
@@ -12,20 +13,25 @@ class InnerPage extends Component {
         super(props);
     }
 
-// <CSSTransitionGroup
-//     transitionName="fade"
-//     transitionEnterTimeout={5000}
-//     transitionLeaveTimeout={5000} >
-// </CSSTransitionGroup>
+    componentDidMount(){
+        this.props.history.push('/InnerPage/Home');
+    }
 
     render() {
         return (
             <div>
                 <Navbar history={this.props.history} />
-                <Switch>
-                    <Route path="/InnerPage/Home" component={ Home }/>
-                    <Redirect to="/InnerPage/Home" />
-                </Switch>
+                <CSSTransitionGroup
+                  component="div"
+                  className="inner-pages-holder"
+                  transitionName="fade"
+                  transitionEnterTimeout={500}
+                  transitionLeaveTimeout={300}>
+                    <Switch key={this.props.history.location.pathname} location={this.props.history.location}>
+                        <Route path="/InnerPage/Home" component={ Home }/>
+                        <Route path="/InnerPage/ItemDetail" component={ ItemDetail }/>
+                    </Switch>
+                </CSSTransitionGroup>
             </div>
         );
     }

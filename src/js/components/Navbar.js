@@ -16,8 +16,8 @@ class Navbar extends Component {
     }
 
     goBack(){
-        let nxtPathIndex = this.props.history.index - 1;
-        if(this.props.history.entries[nxtPathIndex].pathname != '/Splash'){
+        let nxtPathName = this.props.history.entries[this.props.history.index - 1].pathname;
+        if( !(nxtPathName == '/Splash' || nxtPathName == '/InnerPage') ){
             this.props.history.goBack();
         }
     }

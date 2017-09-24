@@ -17,7 +17,7 @@ class CartItem extends Component {
                             <p>%<span>{ this.props.data.discount }</span></p>
                         </div>
                     </div>
-                    <div className="down-data"></div>
+                    <div className="down-data" onTouchStart={ () => {this.props.history.push('/InnerPage/ItemDetail')} }></div>
                 </div>
                 <div className="left-data">
                     <div className="top-data">
@@ -63,6 +63,7 @@ class CartItem extends Component {
 
 CartItem.propTypes = {
     openCart: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
 };
 
