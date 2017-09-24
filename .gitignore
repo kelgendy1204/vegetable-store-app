@@ -1,12 +1,12 @@
 # dependencies
-/node_modules
+node_modules/
 
 # testing
-/coverage
+coverage/
 
 # production
-/build
-/assets
+build/
+assets/
 
 # misc
 .DS_Store
