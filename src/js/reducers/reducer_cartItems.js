@@ -3,25 +3,33 @@ import action_types from '../actions/action_types';
 let defaultCarts = [
     {
         id: 1,
-        image: '../images/tmatm.jpg',
+        name: 'طماطم بلدي',
+        image: 'assets/images/tmatm.jpg',
+        description: 'مستورد وذو جودة عالية',
         price: 7,
         discount: 10
     },
     {
         id: 2,
-        image: '../images/tmatm.jpg',
+        name: 'تفاح امريكي',
+        image: 'assets/images/tmatm.jpg',
+        description: 'مستورد وذو جودة عالية',
         price: 12,
         discount: 0
     },
     {
         id: 3,
-        image: '../images/tmatm.jpg',
+        name: 'منجو اسماعيلي',
+        image: 'assets/images/tmatm.jpg',
+        description: 'مستورد وذو جودة عالية',
         price: 14,
         discount: 15
     },
     {
         id: 4,
-        image: '../images/tmatm.jpg',
+        name: 'فراخ بلدي',
+        image: 'assets/images/tmatm.jpg',
+        description: 'مستورد وذو جودة عالية',
         price: 16,
         discount: 5
     },
@@ -35,11 +43,12 @@ export default function (state = defaultCarts, action) {
             ...state,
             {
                 id: action.payload.id,
+                name: action.payload.name,
                 image: action.payload.image,
                 price: action.payload.price,
                 discount: action.payload.discount
             }
-        ]
+        ];
     }
     return state;
 }

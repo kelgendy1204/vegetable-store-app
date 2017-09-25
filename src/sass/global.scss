@@ -17,6 +17,8 @@ body{
 }
 
 .inner-pages-holder{
+    overflow-x: hidden;
+    overflow-y: auto;
     flex-grow: 1;
     position: relative;
 }

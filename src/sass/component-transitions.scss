@@ -1,17 +1,17 @@
-.fade-enter {
-  opacity: 0.01;
+.reactTranslate-enter {
+  transform: translateX(100%);
 }
 
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+.reactTranslate-enter.reactTranslate-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms linear;
 }
 
-.fade-leave {
-  opacity: 1;
+.reactTranslate-leave {
+  transform: translateX(0);
 }
 
-.fade-leave.fade-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+.reactTranslate-leave.reactTranslate-leave-active {
+  transform: translateX(-100%);
+  transition: transform 300ms linear;
 }

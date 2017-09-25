@@ -5,6 +5,12 @@ class CartItem extends Component {
 
     constructor(props){
         super(props);
+        this.gotToDetails = this.gotToDetails.bind(this);
+    }
+
+
+    gotToDetails(){
+        this.props.history.push(`/InnerPage/ItemDetail/${this.props.data.id}`);
     }
 
     render() {
@@ -17,12 +23,12 @@ class CartItem extends Component {
                             <p>%<span>{ this.props.data.discount }</span></p>
                         </div>
                     </div>
-                    <div className="down-data" onTouchStart={ () => {this.props.history.push('/InnerPage/ItemDetail')} }></div>
+                    <div className="down-data" onTouchStart={ () => this.gotToDetails() } style = {{ backgroundImage: 'url(' + this.props.data.image + ')' }} ></div>
                 </div>
                 <div className="left-data">
                     <div className="top-data">
                         <div className="center-data">
-                            <p className="one">كيلو طماطم بلدي</p>
+                            <p className="one"> { this.props.data.name } </p>
                         </div>
                         <div className="centertwo-data">
                             <div className="right-data">

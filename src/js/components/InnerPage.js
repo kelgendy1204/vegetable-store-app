@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import ItemDetail from './ItemDetail';
+import ItemDetail from '../containers/ItemDetail';
 import Home from '../containers/Home';
 import { Route } from 'react-router-dom';
-import { Redirect, Switch } from 'react-router';
+import { Switch } from 'react-router';
 import PropTypes from 'prop-types';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -24,20 +24,18 @@ class InnerPage extends Component {
                 <CSSTransitionGroup
                   component="div"
                   className="inner-pages-holder"
-                  transitionName="fade"
+                  transitionName="reactTranslate"
                   transitionEnterTimeout={500}
-                  transitionLeaveTimeout={300}>
+                  transitionLeaveTimeout={500}>
                     <Switch key={this.props.history.location.pathname} location={this.props.history.location}>
                         <Route path="/InnerPage/Home" component={ Home }/>
-                        <Route path="/InnerPage/ItemDetail" component={ ItemDetail }/>
+                        <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
                     </Switch>
                 </CSSTransitionGroup>
             </div>
         );
     }
-
 }
-
 
 InnerPage.propTypes = {
     history: PropTypes.object.isRequired,

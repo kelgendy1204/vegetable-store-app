@@ -14,6 +14,12 @@ class Home extends Component {
         cartItem.classList.add('open');
     }
 
+    // <div className="tools">
+    //     <a href="#"><i className="swap_vert material-icons">swap_vert</i></a>
+    //     <a href="#"><i className="apps material-icons">apps</i></a>
+    //     <a href="#"><i className="menu material-icons">menu</i></a>
+    // </div>
+
     render() {
         const cartItems = this.props.cartItems.map((elem, index) =>
             <CartItem openCart={this.openCart} data={ elem } key={ index } history={this.props.history} />
@@ -21,11 +27,6 @@ class Home extends Component {
 
         return (
             <div className="home">
-                <div className="tools">
-                    <a href="#"><i className="swap_vert material-icons">swap_vert</i></a>
-                    <a href="#"><i className="apps material-icons">apps</i></a>
-                    <a href="#"><i className="menu material-icons">menu</i></a>
-                </div>
                 <div className="items">
                     {cartItems}
                 </div>

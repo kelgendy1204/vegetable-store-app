@@ -42,7 +42,6 @@ class Splash extends Component {
 
 
 Splash.propTypes = {
-    loggedIn: PropTypes.bool.isRequired,
     history: PropTypes.object,
 };
 
