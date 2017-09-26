@@ -231,8 +231,14 @@ gulp.task('js', () => {
     let stream = merge();
     for (let i = 0; i < pagesArr.length; i++) {
         let page = pagesArr[i];
-        let task = browserify(`${mainSrcFolder}js/main.js`)
+        let task = browserify(`${mainSrcFolder}js/index.js`)
             .transform(babelify, { 'compact': false })
+            // .transform(envify({
+            //     NODE_ENV: 'production'
+            // }))
+            // .transform('uglifyify', { global: true })
+            // .transform(bundleCollapser)
+            // .transform('uglifyJs', {})
             .bundle()
             .on('error', swallowError)
             .pipe(source(`${page}.js`))
@@ -269,10 +275,10 @@ gulp.task('watch:imagemin', () => {
 
 gulp.task('compress', function(cb) {
     pump([
-            gulp.src(`${mainDestFolder}js/**/*.js`),
-            uglify({ mangle: true }),
-            gulp.dest(`${mainDestFolder}js/`)
-        ],
+        gulp.src(`${mainDestFolder}js/**/*.js`),
+        uglify({ mangle: true }),
+        gulp.dest(`${mainDestFolder}js/`)
+    ],
         cb
     );
 });

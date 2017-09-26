@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import Splash from '../components/Splash';
 
 function mapStateToProps(state) {
-  return {
-    loggedIn: state.loggedIn
-  }
+    return {
+        loggedIn: state.loggedIn
+    };
 }
 
 export default connect(mapStateToProps, null)(Splash);

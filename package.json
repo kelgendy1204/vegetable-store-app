@@ -17,7 +17,7 @@
         "css-mqpacker": "^5.0.1",
         "cssnano": "^3.10.0",
         "dotenv": "^4.0.0",
-        "envify": "^4.0.0",
+        "envify": "^4.1.0",
         "eslint-plugin-react": "^7.3.0",
         "gulp": "^3.9.1",
         "gulp-clean": "^0.3.2",
