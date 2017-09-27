@@ -64,7 +64,7 @@ const pagesArr = ['app'];
             plugin: [watchify]
         });
         b.transform(babelify, { 'compact': false });
-        b.transform(envify);
+        // b.transform(envify);
 
         let bundle = function() {
             return b.bundle()
@@ -227,18 +227,12 @@ gulp.task('css', () => {
     }
 });
 
+
 gulp.task('js', () => {
     let stream = merge();
     for (let i = 0; i < pagesArr.length; i++) {
         let page = pagesArr[i];
-        let task = browserify(`${mainSrcFolder}js/index.js`)
-            .transform(babelify, { 'compact': false })
-            // .transform(envify({
-            //     NODE_ENV: 'production'
-            // }))
-            // .transform('uglifyify', { global: true })
-            // .transform(bundleCollapser)
-            // .transform('uglifyJs', {})
+        let task = browserify({ 'entries': [`${mainSrcFolder}js/index.js`], 'transform': [['babelify', {'compact': false}] , [envify]] })
             .bundle()
             .on('error', swallowError)
             .pipe(source(`${page}.js`))
