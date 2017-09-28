@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 
 class Navbar extends Component {
     constructor(props){
-      super(props);
+        super(props);
     }
 
     componentDidMount() {
         $('.button-collapse').sideNav(
-        {
-            menuWidth: 300,
-            closeOnClick: true,
-            edge: 'right',
-        });
+            {
+                menuWidth: 300,
+                closeOnClick: true,
+                edge: 'right',
+            });
     }
 
     goBack(){
@@ -24,43 +24,61 @@ class Navbar extends Component {
 
     render() {
         return (
-          <div className="navbar-fixed">
-              <nav>
-                <div className="nav-wrapper">
+            <div className="navbar-fixed">
+                <nav>
+                    <div className="nav-wrapper">
 
-                  <ul className="left">
-                    <li>
-                      <a href="#!" className="left">
-                        <i className="search material-icons">search</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="left">
-                          <img className="cart" src="./assets/images/1.svg" />
-                      </a>
-                    </li>
-                  </ul>
+                        <ul className="left">
+                            <li>
+                                <a href="#!" className="left">
+                                    <i className="search material-icons">search</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" className="left">
+                                    <img className="cart" src="./assets/images/1.svg" />
+                                </a>
+                            </li>
+                        </ul>
 
-                  <ul className="right nav-right">
-                    <li>
-                      <a href="#" data-activates="mobile-demo" className="button-collapse">
-                        <i className="material-icons">menu</i>
-                      </a>
-                      <a href="#">
-                        <i className="material-icons back" onTouchStart={ () => this.goBack() }>reply</i>
-                      </a>
-                    </li>
-                  </ul>
+                        <ul className="right nav-right">
+                            <li>
+                                <a href="#" data-activates="mobile-demo" className="button-collapse">
+                                    <i className="material-icons">menu</i>
+                                </a>
+                                <a href="#">
+                                    <i className="material-icons back" onTouchStart={ () => this.goBack() }>reply</i>
+                                </a>
+                            </li>
+                        </ul>
 
-                  <ul className="side-nav" id="mobile-demo">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">Javascript</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
-                  </ul>
+                        <ul className="side-nav" id="mobile-demo">
+                            <div className="header-data">
+                                <div className="circl">
+                                    <img src="./assets/images/manu1.svg" />
+                                </div>
+                                <p>  قائمة لهلوبة  </p>
+                            </div>
+                            <div className="menu-data first-data">
+                                <p> تخفيضات لهلوبة </p>
+                                <img src="./assets/images/menu1.svg" />
+                            </div>
+                            <div className="menu-data sc-data">
+                                <p> فواكة لهلوبة </p>
+                                <img src="./assets/images/menu2.svg" />
+                            </div>
+                            <div className="menu-data thr-data">
+                                <p> خضروات لهلوبة </p>
+                                <img src="./assets/images/menu3.svg" />
+                            </div>
+                            <div className="menu-data for-data">
+                                <p> خضروات مجهزة </p>
+                                <img src="./assets/images/menu4.svg" />
+                            </div>
+                        </ul>
 
-                </div>
-              </nav>
+                    </div>
+                </nav>
             </div>
         );
     }
