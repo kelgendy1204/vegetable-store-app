@@ -9,8 +9,9 @@ import Home from '../components/Home';
 
 function mapStateToProps(state) {
   return {
-    cartItems: state.cartItems
-  }
+        cartItems: state.cartItems.sort( (a, b) =>  parseFloat(a.price) - parseFloat(b.price) )
+    };
 }
+
 
 export default connect(mapStateToProps, null)(Home);

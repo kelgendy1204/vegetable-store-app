@@ -9,7 +9,9 @@ import Navbar from '../components/Navbar';
 
 function mapStateToProps(state, ownProps) {
     return {
-        shopCarts: state.shopCarts.length
+        shopCarts: state.shopCarts.reduce((acc, cur) => {
+            return acc + cur.amount;
+        }, 0)
     };
 }
 

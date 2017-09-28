@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CartItem from './CartItem';
+import CartItem from '../containers/CartItem';
 import PropTypes from 'prop-types';
 
 class Home extends Component {

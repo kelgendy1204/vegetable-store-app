@@ -52,9 +52,9 @@ class CartItem extends Component {
                             <p>اضف الي السلة</p>
                         </div>
                         <div className="content opened">
-                            <div className="border1"><p>+</p></div>
-                            <div className="border2"><p>1</p></div>
-                            <div className="border3"><p>-</p></div>
+                            <div className="border1"><button onTouchStart={ (e) => this.props.addCartItem({ id: this.props.data.id, amount: 1}) }>+</button></div>
+                            <div className="border2"><p>{this.props.data.amount}</p></div>
+                            <div className="border3"><button onTouchStart={ (e) => this.props.removeCartItem({ id: this.props.data.id, amount: 1}) }>-</button></div>
                             <div className="border4">
                                 <img src="./assets/images/8.svg" />
                             </div>
