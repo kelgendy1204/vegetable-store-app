@@ -34,20 +34,23 @@ class Navbar extends Component {
                                     <i className="search material-icons">search</i>
                                 </a>
                             </li>
-                            <li>
+                            <li className="cart">
+                                <span className="badge">{ this.props.shopCarts }</span>
                                 <a href="#!" className="left">
-                                    <img className="cart" src="./assets/images/1.svg" />
+                                    <img src="./assets/images/1.svg" />
                                 </a>
                             </li>
                         </ul>
 
                         <ul className="right nav-right">
                             <li>
-                                <a href="#" data-activates="mobile-demo" className="button-collapse">
-                                    <i className="material-icons">menu</i>
-                                </a>
                                 <a href="#">
                                     <i className="material-icons back" onTouchStart={ () => this.goBack() }>reply</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-activates="mobile-demo" className="button-collapse">
+                                    <i className="material-icons">menu</i>
                                 </a>
                             </li>
                         </ul>
@@ -55,7 +58,7 @@ class Navbar extends Component {
                         <ul className="side-nav" id="mobile-demo">
                             <div className="header-data">
                                 <div className="circl">
-                                    <img src="./assets/images/manu1.svg" />
+                                    <img src="./assets/images/menu1.svg" />
                                 </div>
                                 <p>  قائمة لهلوبة  </p>
                             </div>
@@ -86,7 +89,8 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-    history: PropTypes.object.isRequired
+    history: PropTypes.object.isRequired,
+    shopCarts: PropTypes.number.isRequired
 };
 
 export default Navbar;
