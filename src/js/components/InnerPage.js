@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
 import Home from '../containers/Home';
+import ShopCart from './ShopCart';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router';
 import PropTypes from 'prop-types';
@@ -29,6 +30,7 @@ class InnerPage extends Component {
                   transitionLeaveTimeout={500}>
                     <Switch key={this.props.history.location.pathname} location={this.props.history.location}>
                         <Route path="/InnerPage/Home" component={ Home }/>
+                        <Route path="/InnerPage/ShopCart" component={ ShopCart }/>
                         <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
                     </Switch>
                 </CSSTransitionGroup>

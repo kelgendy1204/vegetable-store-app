@@ -22,6 +22,10 @@ class Navbar extends Component {
         }
     }
 
+    goToShopCart(){
+        this.props.history.push('/InnerPage/ShopCart');
+    }
+
     render() {
         return (
             <div className="navbar-fixed">
@@ -36,7 +40,7 @@ class Navbar extends Component {
                             </li>
                             <li className="cart">
                                 <span className="badge">{ this.props.shopCarts }</span>
-                                <a href="#!" className="left">
+                                <a href="#!" className="left" onTouchStart={ () => this.goToShopCart() }>
                                     <img src="./assets/images/1.svg" />
                                 </a>
                             </li>
