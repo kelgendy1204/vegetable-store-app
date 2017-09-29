@@ -15,11 +15,12 @@ export default function (state = [], action) {
                     ...state,
                     {
                         id: action.payload.id,
+                        position: state.length + 1,
                         amount: action.payload.amount
                     }
                 ];
             }
-        break;
+        // break;
         case action_types.REMOVE_CART_ITEM:
             let elementRemoved = state.find( elem => elem.id == action.payload.id);
             if ( elementRemoved ){
@@ -31,7 +32,17 @@ export default function (state = [], action) {
                     ];
                 }
             }
-        break;
+            break;
+        case action_types.REMOVE_FROM_SHOP:
+            let elementRemovedFromShop = state.find( elem => elem.id == action.payload.id);
+            if ( elementRemovedFromShop ){
+                elementRemovedFromShop.amount = 0;
+                return [
+                    ...state.filter(elem => elem.id != action.payload.id),
+                    elementRemovedFromShop
+                ];
+            }
+            break;
     }
     return state;
 }

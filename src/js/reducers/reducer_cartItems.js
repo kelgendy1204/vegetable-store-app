@@ -53,7 +53,7 @@ export default function (state = defaultCarts, action) {
                 ...state.filter(elem => elem.id != action.payload.id),
                 elementAdded
             ];
-        break;
+        // break;
         case action_types.REMOVE_CART_ITEM:
             let elementRemoved = state.find( elem => elem.id == action.payload.id);
             if(elementRemoved.amount > 0) {
@@ -63,7 +63,14 @@ export default function (state = defaultCarts, action) {
                     elementRemoved
                 ];
             }
-        break;
+            break;
+        case action_types.REMOVE_FROM_SHOP:
+            let elementRemovedFromShop = state.find( elem => elem.id == action.payload.id);
+            elementRemovedFromShop.amount = 0;
+            return [
+                ...state.filter(elem => elem.id != action.payload.id),
+                elementRemovedFromShop
+            ];
     }
     return state;
 }

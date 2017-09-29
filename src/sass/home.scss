@@ -3,7 +3,8 @@ div.home {
     width: 100vw; // height: 100vh;
     margin: 0 auto;
     position: absolute;
-
+    height: 100%;
+    overflow: auto;
 
     .tools {
         display: flex;
@@ -277,6 +278,17 @@ div.home {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
+                                overflow: hidden;
+                                button{
+                                    background-color: transparent;
+                                    border: 0;
+                                    padding: 0;
+                                    height: 100%;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
                                 img {
                                     width: 80%;
                                     height: 80%;

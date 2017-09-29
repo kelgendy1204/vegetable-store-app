@@ -13,3 +13,10 @@ export function removeCartItem(cartItem) {
         payload: cartItem
     };
 }
+
+export function removeFromShop(cartItem) {
+    return {
+        type: action_types.REMOVE_FROM_SHOP,
+        payload: cartItem
+    };
+}
