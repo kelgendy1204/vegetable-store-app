@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Home from '../components/Home';
+import CartItem from '../components/CartItem';
+import * as cartItemsActions from '../actions/action_cartItems';
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators( { login } ,dispatch);
+  return bindActionCreators( cartItemsActions ,dispatch);
 }
 
 function mapStateToProps(state) {
@@ -13,4 +14,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, null)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(CartItem);

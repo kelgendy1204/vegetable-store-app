@@ -25,6 +25,7 @@
                 "SwitchCase": 1
             }
         ],
+        "no-case-declarations" : 0,
         "linebreak-style": [
             "off",
             "windows"

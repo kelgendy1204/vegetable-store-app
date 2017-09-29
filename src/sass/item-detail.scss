@@ -2,6 +2,8 @@ div.item-detail {
     position: absolute;
     width: 100%;
     margin: 0 auto;
+    height: 100%;
+    overflow: auto;
     .items-Product{
         display: flex;
         justify-content: center;

@@ -33,15 +33,15 @@ class Navbar extends Component {
                     <div className="nav-wrapper">
 
                         <ul className="left">
-                            <li>
-                                <a href="#!" className="left">
-                                    <i className="search material-icons">search</i>
-                                </a>
-                            </li>
                             <li className="cart">
                                 <span className="badge">{ this.props.shopCarts }</span>
                                 <a href="#!" className="left" onTouchStart={ () => this.goToShopCart() }>
                                     <img src="./assets/images/1.svg" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" className="left">
+                                    <i className="search material-icons">search</i>
                                 </a>
                             </li>
                         </ul>
