@@ -14,9 +14,8 @@ export default function (state = [], action) {
                 return [
                     ...state,
                     {
-                        id: action.payload.id,
-                        position: state.length + 1,
-                        amount: action.payload.amount
+                        ...action.payload,
+                        position: state.length + 1
                     }
                 ];
             }
