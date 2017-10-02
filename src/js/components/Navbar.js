@@ -9,7 +9,7 @@ class Navbar extends Component {
     componentDidMount() {
         $('.button-collapse').sideNav({
             menuWidth: 300,
-            closeOnClick: true,
+            closeonTouchEnd: true,
             edge: 'right',
         });
     }
@@ -37,7 +37,7 @@ class Navbar extends Component {
                         <ul className="left">
                             <li className="cart">
                                 <span className="badge">{ this.props.cartItems }</span>
-                                <a href="#!" className="left" onTouchStart={ () => this.goToShopCart() }>
+                                <a href="#!" className="left" onTouchEnd={ () => this.goToShopCart() }>
                                     <img src="./assets/images/1.svg" />
                                 </a>
                             </li>
@@ -51,7 +51,7 @@ class Navbar extends Component {
                         <ul className="right nav-right">
                             <li>
                                 <a href="#">
-                                    <i className="material-icons back" onTouchStart={ () => this.goBack() }>reply</i>
+                                    <i className="material-icons back" onTouchEnd={ () => this.goBack() }>reply</i>
                                 </a>
                             </li>
                             <li>

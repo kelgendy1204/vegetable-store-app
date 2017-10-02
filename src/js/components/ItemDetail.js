@@ -56,7 +56,7 @@ class ItemDetail extends Component {
                     </div>
                 </div>
                 <div className='button'>
-                    <div className='content' onTouchStart={ (e) => { this.addToShopCart() } } >
+                    <div className='content' onTouchEnd={ (e) => { this.addToShopCart() } } >
                         <img src='assets/images/1.svg' />
                         <p>اضف الي السلة</p>
                     </div>

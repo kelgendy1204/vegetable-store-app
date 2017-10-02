@@ -22,14 +22,14 @@ class ShopCartItem extends Component {
                     </div>
                     <div className="bottom-data">
                         <div className="content">
-                            <div className="border1"><button onTouchStart={ (e) => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
+                            <div className="border1"><button onTouchEnd={ (e) => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
                             <div className="border2"><p>{this.props.data.amount}</p></div>
-                            <div className="border1"><button onTouchStart={ (e) => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
+                            <div className="border1"><button onTouchEnd={ (e) => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
                         </div>
                     </div>
                 </div>
                 <div className="left-data-cart">
-                    <div className="content-data-left" onTouchStart={ (e) => this.props.removeFromShop({ id: this.props.data.id }) } >
+                    <div className="content-data-left" onTouchEnd={ (e) => this.props.removeFromShop({ id: this.props.data.id }) } >
                         <div className="content">
                             <img src="./assets/images/1.svg" />
                         </div>
