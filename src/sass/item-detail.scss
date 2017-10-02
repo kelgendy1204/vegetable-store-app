@@ -147,7 +147,7 @@ div.item-detail {
     .button{
         max-width: 380px;
         height: 55px;
-        margin: 10px;
+        margin: 10px auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -167,7 +167,7 @@ div.item-detail {
             p{
                 font-size: 30px;
                 color: white;
-                margin-right: 5vw;
+                margin: 0;
                 font-family: bader;
             }
         }

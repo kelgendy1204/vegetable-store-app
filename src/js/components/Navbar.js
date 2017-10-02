@@ -7,12 +7,11 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
-        $('.button-collapse').sideNav(
-            {
-                menuWidth: 300,
-                closeOnClick: true,
-                edge: 'right',
-            });
+        $('.button-collapse').sideNav({
+            menuWidth: 300,
+            closeOnClick: true,
+            edge: 'right',
+        });
     }
 
     goBack(){
@@ -23,7 +22,10 @@ class Navbar extends Component {
     }
 
     goToShopCart(){
-        this.props.history.push('/InnerPage/ShopCart');
+        let currPathName = this.props.history.entries[this.props.history.index].pathname;
+        if( currPathName != '/InnerPage/ShopCart' ){
+            this.props.history.push('/InnerPage/ShopCart');
+        }
     }
 
     render() {
@@ -34,7 +36,7 @@ class Navbar extends Component {
 
                         <ul className="left">
                             <li className="cart">
-                                <span className="badge">{ this.props.shopCarts }</span>
+                                <span className="badge">{ this.props.cartItems }</span>
                                 <a href="#!" className="left" onTouchStart={ () => this.goToShopCart() }>
                                     <img src="./assets/images/1.svg" />
                                 </a>
@@ -94,7 +96,7 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
     history: PropTypes.object.isRequired,
-    shopCarts: PropTypes.number.isRequired
+    cartItems: PropTypes.number.isRequired
 };
 
 export default Navbar;

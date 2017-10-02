@@ -8,6 +8,7 @@ let defaultCarts = [
         image: 'assets/images/tmatm.jpg',
         description: 'مستورد وذو جودة عالية',
         price: 7,
+        inShop: false,
         amount: 0,
         discount: 10
     },
@@ -18,6 +19,7 @@ let defaultCarts = [
         image: 'assets/images/tmatm.jpg',
         description: 'مستورد وذو جودة عالية',
         price: 12,
+        inShop: false,
         amount: 0,
         discount: 0
     },
@@ -28,6 +30,7 @@ let defaultCarts = [
         image: 'assets/images/tmatm.jpg',
         description: 'مستورد وذو جودة عالية',
         price: 14,
+        inShop: false,
         amount: 0,
         discount: 15
     },
@@ -38,6 +41,7 @@ let defaultCarts = [
         image: 'assets/images/tmatm.jpg',
         description: 'مستورد وذو جودة عالية',
         price: 16,
+        inShop: false,
         amount: 0,
         discount: 5
     },
@@ -49,6 +53,7 @@ export default function (state = defaultCarts, action) {
         case action_types.ADD_CART_ITEM:
             let elementAdded = state.find( elem => elem.id == action.payload.id);
             elementAdded.amount++;
+            elementAdded.inShop = true;
             return [
                 ...state.filter(elem => elem.id != action.payload.id),
                 elementAdded
@@ -67,6 +72,7 @@ export default function (state = defaultCarts, action) {
         case action_types.REMOVE_FROM_SHOP:
             let elementRemovedFromShop = state.find( elem => elem.id == action.payload.id);
             elementRemovedFromShop.amount = 0;
+            elementRemovedFromShop.inShop = false;
             return [
                 ...state.filter(elem => elem.id != action.payload.id),
                 elementRemovedFromShop

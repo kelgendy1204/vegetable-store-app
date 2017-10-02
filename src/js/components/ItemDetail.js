@@ -6,6 +6,12 @@ class ItemDetail extends Component {
 
     constructor(props){
         super(props);
+        this.addToShopCart = this.addToShopCart.bind(this);
+    }
+
+    addToShopCart(){
+        this.props.addCartItem({ ...this.props.cartItem });
+        this.props.history.push('/InnerPage/ShopCart');
     }
 
     render() {
@@ -50,7 +56,7 @@ class ItemDetail extends Component {
                     </div>
                 </div>
                 <div className='button'>
-                    <div className='content'>
+                    <div className='content' onTouchStart={ (e) => { this.addToShopCart() } } >
                         <img src='assets/images/1.svg' />
                         <p>اضف الي السلة</p>
                     </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
 import Home from '../containers/Home';
-import ShopCart from './ShopCart';
+import ShopCart from '../containers/ShopCart';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router';
 import PropTypes from 'prop-types';
