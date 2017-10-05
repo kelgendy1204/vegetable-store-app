@@ -22,3 +22,7 @@ body{
     flex-grow: 1;
     position: relative;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}

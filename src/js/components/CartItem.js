@@ -8,7 +8,6 @@ class CartItem extends Component {
         this.gotToDetails = this.gotToDetails.bind(this);
     }
 
-
     gotToDetails(){
         this.props.history.push(`/InnerPage/ItemDetail/${this.props.data.id}`);
     }

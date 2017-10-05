@@ -83,10 +83,14 @@ nav{
                 min-height: 100px;
             }
             p{
+                line-height: 1em;
                 flex-grow: 1;
                 font-size: 2.4em;
                 margin: 0;
                 text-align: center;
+                span{
+                    display: block;
+                }
             }
             &.first-data{
                 background-color: #97ce68;

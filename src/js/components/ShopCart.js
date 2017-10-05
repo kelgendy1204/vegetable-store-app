@@ -11,13 +11,16 @@ class ShopCart extends Component {
     render() {
 
         const shopCartItems = this.props.cartItems.map((elem, index) =>
-            <ShopCartItem data={ elem } key={ index } />
+            <ShopCartItem data={ elem } key={ index } history={this.props.history} />
         );
 
         return (
             <div className='shop-cart'>
                 <div className="items-cart">
                     { shopCartItems }
+                </div>
+                <div className="center-align">
+                    <button className="finish">انهاء الطلب</button>
                 </div>
             </div>
         );

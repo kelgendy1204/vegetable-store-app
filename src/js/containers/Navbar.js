@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import Navbar from '../components/Navbar';
+import { withRouter } from 'react-router';
 
 // function mapDispatchToProps(dispatch) {
   // return bindActionCreators({ login } ,dispatch);
 // }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
     return {
         cartItems: state.cartItems.reduce((acc, cur) => {
             return acc + cur.amount;
@@ -15,4 +16,4 @@ function mapStateToProps(state, ownProps) {
     };
 }
 
-export default connect(mapStateToProps, null)(Navbar);
+export default withRouter(connect(mapStateToProps, null)(Navbar));

@@ -7,12 +7,18 @@ class ShopCartItem extends Component {
         super(props);
     }
 
+    gotToDetails(){
+        this.props.history.push(`/InnerPage/ItemDetail/${this.props.data.id}`);
+    }
+
     render() {
+
         let actualPrice = ( this.props.data.price - (this.props.data.price * this.props.data.discount / 100) ) * this.props.data.amount;
+
         return (
             <div className="item-cart z-depth-3">
                 <div className="right-data-cart">
-                    <div className="img" style = {{ backgroundImage: 'url(' + this.props.data.image + ')' }} ></div>
+                    <div className="img" style = {{ backgroundImage: 'url(' + this.props.data.image + ')' }} onTouchEnd={ () => this.gotToDetails() }></div>
                 </div>
                 <div className="center-data-cart">
                     <div className="top-data">
@@ -22,14 +28,14 @@ class ShopCartItem extends Component {
                     </div>
                     <div className="bottom-data">
                         <div className="content">
-                            <div className="border1"><button onTouchEnd={ (e) => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
+                            <div className="border1"><button onTouchEnd={ () => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
                             <div className="border2"><p>{this.props.data.amount}</p></div>
-                            <div className="border1"><button onTouchEnd={ (e) => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
+                            <div className="border1"><button onTouchEnd={ () => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
                         </div>
                     </div>
                 </div>
                 <div className="left-data-cart">
-                    <div className="content-data-left" onTouchEnd={ (e) => this.props.removeFromShop({ id: this.props.data.id }) } >
+                    <div className="content-data-left" onTouchEnd={ () => this.props.removeFromShop({ id: this.props.data.id }) } >
                         <div className="content">
                             <img src="./assets/images/1.svg" />
                         </div>
@@ -45,7 +51,11 @@ class ShopCartItem extends Component {
 }
 
 ShopCartItem.propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
+    addCartItem: PropTypes.func.isRequired,
+    removeCartItem: PropTypes.func.isRequired,
+    removeFromShop: PropTypes.func.isRequired
 };
 
 export default ShopCartItem;
