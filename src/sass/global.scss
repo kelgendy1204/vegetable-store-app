@@ -17,10 +17,19 @@ body{
 }
 
 .inner-pages-holder{
+    position: relative;
+    flex-grow: 1;
+    overflow-x: hidden;
+}
+
+.inner-pages-wrapper{
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    flex-grow: 1;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 ::-webkit-scrollbar {

@@ -1,17 +1,26 @@
-.reactTranslate-enter {
+.react-translate-enter {
   transform: translateX(100%);
 }
 
-.reactTranslate-enter.reactTranslate-enter-active {
+.react-translate-enter.react-translate-enter-active {
   transform: translateX(0);
   transition: transform 300ms linear;
 }
 
-.reactTranslate-leave {
-  transform: translateX(0);
+// .react-translate-leave {
+//   transform: translateX(0);
+// }
+
+.react-translate-exit {
+    transform: translateX(0);
 }
 
-.reactTranslate-leave.reactTranslate-leave-active {
-  transform: translateX(-100%);
-  transition: transform 300ms linear;
+// .react-translate-leave.react-translate-leave-active {
+//   transform: translateX(-100%);
+//   transition: transform 300ms linear;
+// }
+
+.react-translate-exit.react-translate-exit-active {
+    transform: translateX(-100%);
+    transition: transform 300ms linear;
 }

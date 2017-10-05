@@ -65,6 +65,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+android-versions@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/android-versions/-/android-versions-1.2.1.tgz#3f50baf693e73a512c3c5403542291cead900063"
+
 ansi-escapes@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
@@ -1598,17 +1602,18 @@ convert-source-map@~1.1.0:
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.1.3.tgz#4829c877e9fe49b3161f3bf3673888e204699860"
 
 cordova-android@^6.2.3:
-  version "6.2.3"
-  resolved "https://registry.yarnpkg.com/cordova-android/-/cordova-android-6.2.3.tgz#249f21b6ce5f1f1c847a7ab83b16909dbed5aa28"
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/cordova-android/-/cordova-android-6.3.0.tgz#da5418433d25c75a5977b428244bbe437d0128d2"
   dependencies:
-    cordova-common "^2.0.1"
+    android-versions "^1.2.0"
+    cordova-common "^2.1.0"
     elementtree "0.1.6"
     nopt "^3.0.1"
     properties-parser "^0.2.3"
     q "^1.4.1"
     shelljs "^0.5.3"
 
-cordova-common@^2.0.1:
+cordova-common@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cordova-common/-/cordova-common-2.1.0.tgz#bb357ee1b9825031ed9db3c56b592efe973d1640"
   dependencies:
@@ -2323,8 +2328,8 @@ escope@^3.6.0:
     estraverse "^4.1.1"
 
 eslint-plugin-react@^7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.3.0.tgz#ca9368da36f733fbdc05718ae4e91f778f38e344"
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.4.0.tgz#300a95861b9729c087d362dd64abcc351a74364a"
   dependencies:
     doctrine "^2.0.0"
     has "^1.0.1"
@@ -3234,11 +3239,11 @@ gulp-rename@^1.2.0, gulp-rename@^1.2.2:
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
 
 gulp-sass-lint@^1.3.2:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/gulp-sass-lint/-/gulp-sass-lint-1.3.3.tgz#f879d423e517a2872a8902466c0dec8146dc7874"
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/gulp-sass-lint/-/gulp-sass-lint-1.3.4.tgz#a9950c2dd050fd00fbf2ebc063016434a22100e2"
   dependencies:
     gulp-util "^3.0.6"
-    sass-lint "^1.11.0"
+    sass-lint "^1.12.0"
     through2 "^2.0.2"
 
 gulp-sass@^3.0.0:
@@ -5942,14 +5947,14 @@ rc@^1.1.2, rc@^1.1.7:
     strip-json-comments "~2.0.1"
 
 react-addons-css-transition-group@^15.6.0:
-  version "15.6.0"
-  resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-15.6.0.tgz#69887cf6e4874d25cd66e22a699e29f0d648aba0"
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-15.6.2.tgz#9e4376bcf40b5217d14ec68553081cee4b08a6d6"
   dependencies:
     react-transition-group "^1.2.0"
 
 react-dom@^15.6.1:
-  version "15.6.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.1.0"
@@ -5974,8 +5979,8 @@ react-redux@^5.0.6:
     prop-types "^15.5.10"
 
 react-responsive-carousel@^3.1.26:
-  version "3.1.26"
-  resolved "https://registry.yarnpkg.com/react-responsive-carousel/-/react-responsive-carousel-3.1.26.tgz#13442cca032cd9a6a829e0e38f82f732ac5fc549"
+  version "3.1.27"
+  resolved "https://registry.yarnpkg.com/react-responsive-carousel/-/react-responsive-carousel-3.1.27.tgz#6c194849f5a60024842c8b1abb47fa9fe9cbd05f"
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.5.8"
@@ -6026,8 +6031,8 @@ react-transition-group@^2.2.1:
     warning "^3.0.0"
 
 react@^15.6.1:
-  version "15.6.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
     create-react-class "^15.6.0"
     fbjs "^0.8.9"
@@ -6376,9 +6381,9 @@ sass-graph@^2.1.1:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
-sass-lint@^1.11.0:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/sass-lint/-/sass-lint-1.11.1.tgz#1ccea9be01e60fd0ca7ddf379a0096311b218240"
+sass-lint@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/sass-lint/-/sass-lint-1.12.0.tgz#299ec57cd158fb4afbe22cb322799cc630a3e33b"
   dependencies:
     commander "^2.8.1"
     eslint "^2.7.0"

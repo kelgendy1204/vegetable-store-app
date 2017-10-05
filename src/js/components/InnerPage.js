@@ -6,7 +6,8 @@ import ShopCart from '../containers/ShopCart';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router';
 import PropTypes from 'prop-types';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactDOM from 'react-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 class InnerPage extends Component {
 
@@ -22,18 +23,23 @@ class InnerPage extends Component {
         return (
             <div className="innerpage">
                 <Navbar history={this.props.history} />
-                <CSSTransitionGroup
+
+                <TransitionGroup
                   component="div"
-                  className="inner-pages-holder"
-                  transitionName="reactTranslate"
-                  transitionEnterTimeout={500}
-                  transitionLeaveTimeout={500}>
-                    <Switch key={this.props.history.location.pathname} location={this.props.history.location}>
-                        <Route path="/InnerPage/Home" component={ Home }/>
-                        <Route path="/InnerPage/ShopCart" component={ ShopCart }/>
-                        <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
-                    </Switch>
-                </CSSTransitionGroup>
+                  className="inner-pages-holder">
+                    <CSSTransition
+                        key={this.props.history.location.key}
+                        classNames="react-translate"
+                        timeout={{ enter: 500, exit: 500 }}>
+                        <div className="inner-pages-wrapper">
+                            <Switch location={this.props.history.location}>
+                                <Route path="/InnerPage/Home" component={ Home }/>
+                                <Route path="/InnerPage/ShopCart" component={ ShopCart }/>
+                                <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
+                            </Switch>
+                        </div>
+                    </CSSTransition>
+                </TransitionGroup>
             </div>
         );
     }
