@@ -23,7 +23,7 @@ div.item-detail {
                 justify-content: flex-start;
                 flex-direction: column;
                 line-height: 40px;
-                margin-top: 20px;
+                margin-top: 10px;
                 p{
                     font-size: 45px;
                     margin: 0;
@@ -43,8 +43,8 @@ div.item-detail {
                 width: 410px;
                 height: 450px;
                 margin: 10px;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 display: flex;
                 align-items: center;
                 overflow: hidden;
@@ -106,7 +106,7 @@ div.item-detail {
             }
             .content2{
                 width: 100%;
-                height: 125px;
+                height: 65px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -142,44 +142,66 @@ div.item-detail {
                     }
                 }
             }
+            .content3{
+                margin-bottom: 45px;
+                padding-right: 10px;
+                padding-left: 10px;
+                p{
+                    font-size: 20px;
+                }
+            }
         }
     }
     .button{
-        max-width: 380px;
+        width: 100%;
         height: 55px;
-        margin: 10px auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: fixed;
+        bottom: 0;
+        border-radius: 5px;
+        overflow: hidden;
         .content{
-            width: 79.5%;
+            width: 80%;
             background-color: #356732;
             height: 100%;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            img{
-                width: 30%;
-                height: 80%;
+            .img{
+                width: 20%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    margin: 0 10px;
+                    height: 60%;
+                }
             }
-            p{
-                font-size: 30px;
-                color: white;
-                margin: 0;
-                font-family: bader;
+            .data-fov{
+                width: 80%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    font-size: 30px;
+                    color: white;
+                    margin: 0;
+                }
             }
         }
         .hart{
-            width: 19.9%;
+            width: 20%;
+            border-right: 2px solid #dedad7;
             background-color: #356732;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
             img{
                 width: 40%;
                 height: 100%;

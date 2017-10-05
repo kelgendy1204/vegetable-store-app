@@ -53,18 +53,20 @@ class ItemDetail extends Component {
                                 <img src='assets/images/12.svg' />
                             </div>
                         </div>
+                        <div className='content3'>
+                            <p>جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية جنية  جنية</p>
+                        </div>
                     </div>
                 </div>
                 <div className='button'>
                     <div className='content' onTouchEnd={ (e) => { this.addToShopCart() } } >
-                        <img src='assets/images/1.svg' />
-                        <p>اضف الي السلة</p>
+                        <div className="img"><img src="./assets/images/1.svg" /></div>
+                        <div className="data-fov"><p>اضف الي السلة</p></div>
                     </div>
                     <div className='hart'>
                         <img src='assets/images/11.svg' />
                     </div>
                 </div>
-
             </div>
         );
 

@@ -31,6 +31,7 @@ div.home {
         .item {
             min-width: 300px;
             max-width: 350px;
+            width: 95%;
             height: 155px;
             margin: 10px;
             background-color: white;
@@ -39,6 +40,7 @@ div.home {
             overflow: hidden;
             .right-data {
                 height: 100%;
+                width: 40%;
                 position: relative;
                 .up-data {
                     background-color: #ffff01;
@@ -69,7 +71,7 @@ div.home {
                 }
                 .down-data {
                     background-image: url(../images/tmatm.jpg);
-                    width: 100px;
+                    width: 100%;
                     height: 100%;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -172,7 +174,7 @@ div.home {
                         }
                     }
                     .content {
-                        width: 90%;
+                        width: 95%;
                         transition: 0.5s linear;
                         position: absolute;
                         bottom: 0;
@@ -184,21 +186,35 @@ div.home {
                         display: flex;
                         height: 30px;
                         align-items: center;
-
                         &.closed{
                             z-index: 1;
                             opacity: 1;
                             display: flex;
                             justify-content: flex-start;
                             background-color: #356732;
-                            img {
-                                margin: 0 10px;
-                                height: 60%;
+                            .img{
+                                width: 20%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    margin: 0 10px;
+                                    height: 60%;
+                                }
                             }
-                            p {
-                                font-size: 20px;
-                                color: white;
-                                margin: 0;
+                            .data-fov{
+                                width: 80%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p {
+                                    font-size: 20px;
+                                    color: white;
+                                    margin: 0;
+                                }
                             }
                         }
                         &.opened {

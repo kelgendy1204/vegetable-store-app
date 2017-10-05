@@ -47,8 +47,8 @@ class CartItem extends Component {
                     </div>
                     <div className="bottom-data" onTouchEnd={ (e) => this.props.openCart(e) }>
                         <div className="content closed">
-                            <img src="./assets/images/1.svg" />
-                            <p>اضف الي السلة</p>
+                            <div className="img"><img src="./assets/images/1.svg" /></div>
+                            <div className="data-fov"><p>اضف الي السلة</p></div>
                         </div>
                         <div className="content opened">
                             <div className="border1"><button onTouchEnd={ (e) => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
