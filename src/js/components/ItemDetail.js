@@ -59,7 +59,7 @@ class ItemDetail extends Component {
                     </div>
                 </div>
                 <div className='button'>
-                    <div className='content' onTouchEnd={ (e) => { this.addToShopCart() } } >
+                    <div className='content' onClick={ (e) => { this.addToShopCart() } } >
                         <div className="img"><img src="./assets/images/1.svg" /></div>
                         <div className="data-fov"><p>اضف الي السلة</p></div>
                     </div>

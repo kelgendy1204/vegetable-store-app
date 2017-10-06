@@ -22,7 +22,7 @@ class CartItem extends Component {
                             <p>%<span>{ this.props.data.discount }</span></p>
                         </div>
                     </div>
-                    <div className="down-data" onTouchEnd={ () => this.gotToDetails() } style = {{ backgroundImage: 'url(' + this.props.data.image + ')' }} ></div>
+                    <div className="down-data" onClick={ () => this.gotToDetails() } style = {{ backgroundImage: 'url(' + this.props.data.image + ')' }} ></div>
                 </div>
                 <div className="left-data">
                     <div className="top-data">
@@ -45,17 +45,17 @@ class CartItem extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="bottom-data" onTouchEnd={ (e) => this.props.openCart(e) }>
+                    <div className="bottom-data" onClick={ (e) => this.props.openCart(e) }>
                         <div className="content closed">
                             <div className="img"><img src="./assets/images/1.svg" /></div>
                             <div className="data-fov"><p>اضف الي السلة</p></div>
                         </div>
                         <div className="content opened">
-                            <div className="border1"><button onTouchEnd={ (e) => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
+                            <div className="border1"><button onClick={ (e) => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
                             <div className="border2"><p>{this.props.data.amount}</p></div>
-                            <div className="border3"><button onTouchEnd={ (e) => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
+                            <div className="border3"><button onClick={ (e) => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
                             <div className="border4">
-                                <button onTouchEnd={ (e) => this.props.removeFromShop({ id: this.props.data.id }) }>
+                                <button onClick={ (e) => this.props.removeFromShop({ id: this.props.data.id }) }>
                                     <img src="./assets/images/8.svg" />
                                 </button>
                             </div>

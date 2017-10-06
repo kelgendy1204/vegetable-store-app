@@ -18,7 +18,7 @@ class ShopCartItem extends Component {
         return (
             <div className="item-cart z-depth-3">
                 <div className="right-data-cart">
-                    <div className="img" style = {{ backgroundImage: 'url(' + this.props.data.image + ')' }} onTouchEnd={ () => this.gotToDetails() }></div>
+                    <div className="img" style = {{ backgroundImage: 'url(' + this.props.data.image + ')' }} onClick={ () => this.gotToDetails() }></div>
                 </div>
                 <div className="center-data-cart">
                     <div className="top-data">
@@ -28,14 +28,14 @@ class ShopCartItem extends Component {
                     </div>
                     <div className="bottom-data">
                         <div className="content">
-                            <div className="border1"><button onTouchEnd={ () => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
+                            <div className="border1"><button onClick={ () => this.props.addCartItem({ ...this.props.data }) } >+</button></div>
                             <div className="border2"><p>{this.props.data.amount}</p></div>
-                            <div className="border1"><button onTouchEnd={ () => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
+                            <div className="border1"><button onClick={ () => this.props.removeCartItem({ ...this.props.data }) } >-</button></div>
                         </div>
                     </div>
                 </div>
                 <div className="left-data-cart">
-                    <div className="content-data-left" onTouchEnd={ () => this.props.removeFromShop({ id: this.props.data.id }) } >
+                    <div className="content-data-left" onClick={ () => this.props.removeFromShop({ id: this.props.data.id }) } >
                         <div className="content">
                             <img src="./assets/images/1.svg" />
                         </div>

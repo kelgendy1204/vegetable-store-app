@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import NavItem from './NavItem';
 
 class Navbar extends Component {
     constructor(props){
@@ -9,7 +10,7 @@ class Navbar extends Component {
     componentDidMount() {
         $('.button-collapse').sideNav({
             menuWidth: 300,
-            closeonTouchEnd: true,
+            closeonClick: true,
             edge: 'right',
         });
     }
@@ -30,6 +31,18 @@ class Navbar extends Component {
 
     render() {
         let currPathName = this.props.history.location.pathname;
+
+        let discountItemData = {
+            id: 0,
+            position: 0,
+            name: 'تخفيضات لهلوبة',
+            image: 'assets/images/menu1.svg'
+        };
+
+        let NavItems = [ ( <NavItem data={discountItemData} /> ) , ...this.props.navItems.map(function(elem, index) {
+            return <NavItem data={elem} />;
+        }) ];
+
         return (
             <div className="navbar-fixed">
                 <nav>
@@ -38,12 +51,12 @@ class Navbar extends Component {
                         <ul className="left">
                             <li className="cart">
                                 <span className="badge">{ this.props.cartItems }</span>
-                                <a href="#!" className="left" onTouchEnd={ () => this.goToShopCart() }>
+                                <a href="#" className="left" onClick={ () => this.goToShopCart() }>
                                     <img src="./assets/images/1.svg" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#!" className="left">
+                                <a href="#" className="left">
                                     <i className="search material-icons">search</i>
                                 </a>
                             </li>
@@ -51,8 +64,8 @@ class Navbar extends Component {
 
                         <ul className="right nav-right">
                             <li className={(currPathName == '/InnerPage/Home' || currPathName == '/InnerPage') ? 'hide' : '' } >
-                                <a href="#">
-                                    <i className="material-icons back" onTouchEnd={ () => this.goBack() }>reply</i>
+                                <a href="#" onClick={ () => this.goBack() }>
+                                    <i className="material-icons back">reply</i>
                                 </a>
                             </li>
 
@@ -70,38 +83,10 @@ class Navbar extends Component {
                                     <img src="./assets/images/menu1.svg" />
                                 </div>
                                 <p>
-                                    <span>قائمة</span>
-                                    <span>لهلوبة</span>
+                                    قائمة لهلوبة
                                 </p>
                             </div>
-                            <div className="menu-data first-data">
-                                <p>
-                                    <span>تخفيضات</span>
-                                    <span>لهلوبة</span>
-                                </p>
-                                <img src="./assets/images/menu1.svg" />
-                            </div>
-                            <div className="menu-data sc-data">
-                                <p>
-                                    <span>فواكة</span>
-                                    <span>لهلوبة</span>
-                                </p>
-                                <img src="./assets/images/menu2.svg" />
-                            </div>
-                            <div className="menu-data thr-data">
-                                <p>
-                                    <span>خضروات</span>
-                                    <span>لهلوبة</span>
-                                </p>
-                                <img src="./assets/images/menu3.svg" />
-                            </div>
-                            <div className="menu-data for-data">
-                                <p>
-                                    <span>خضروات</span>
-                                    <span>مجهزة</span>
-                                </p>
-                                <img src="./assets/images/menu4.svg" />
-                            </div>
+                            { NavItems }
                         </ul>
 
                     </div>
@@ -114,7 +99,8 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
     history: PropTypes.object.isRequired,
-    cartItems: PropTypes.number.isRequired
+    cartItems: PropTypes.number.isRequired,
+    navItems: PropTypes.array.isRequired
 };
 
 export default Navbar;

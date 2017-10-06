@@ -16,7 +16,7 @@ class Login extends Component {
     render() {
         return (
           <div>
-              <button onTouchEnd={ this.login }>
+              <button onClick={ this.login }>
                 login
               </button>
           </div>

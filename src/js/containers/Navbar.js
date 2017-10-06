@@ -12,7 +12,8 @@ function mapStateToProps(state) {
     return {
         cartItems: state.cartItems.reduce((acc, cur) => {
             return acc + cur.amount;
-        }, 0)
+        }, 0),
+        navItems: state.categories
     };
 }
 
