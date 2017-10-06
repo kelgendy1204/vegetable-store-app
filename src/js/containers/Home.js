@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import Home from '../components/Home';
 
 // function mapDispatchToProps(dispatch) {
@@ -16,11 +16,11 @@ function getCartItems(state) {
 
     return state.cartItems.filter((elem) => {
         return elem.discount > 0;
-    });
+    }).sort( (a, b) =>  parseFloat(a.price) - parseFloat(b.price) );
 }
 
 function mapStateToProps(state) {
-  return {
+    return {
         cartItems: getCartItems(state)
     };
 }
