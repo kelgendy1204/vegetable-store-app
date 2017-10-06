@@ -5,11 +5,17 @@ class NavItem extends Component {
 
     constructor(props){
         super(props);
+        this.changeActiveCategory = this.changeActiveCategory.bind(this);
+    }
+
+    changeActiveCategory(){
+        this.props.changeActiveCategory(this.props.data.id);
+        $('.button-collapse').sideNav('hide');
     }
 
     render() {
         return (
-            <div className="menu-data">
+            <div className="menu-data" onClick={ () => this.changeActiveCategory() } >
                 <p>
                     {this.props.data.name}
                 </p>

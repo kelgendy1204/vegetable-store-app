@@ -70,6 +70,7 @@ nav{
             }
         }
         .menu-data{
+            cursor: pointer;
             padding: 0 10px;
             width: 100%;
             display: flex;
@@ -89,9 +90,6 @@ nav{
                 margin: 0;
                 text-align: center;
                 word-spacing: 100vw;
-                // span{
-                //     display: block;
-                // }
             }
             &:nth-child(n){
                 background-color: #97ce68;

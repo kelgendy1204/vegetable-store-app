@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import NavItem from './NavItem';
+import NavItem from '../containers/NavItem';
 
 class Navbar extends Component {
     constructor(props){
@@ -40,7 +40,7 @@ class Navbar extends Component {
         };
 
         let NavItems = [ ( <NavItem data={discountItemData} /> ) , ...this.props.navItems.map(function(elem, index) {
-            return <NavItem data={elem} />;
+            return <NavItem data={elem} key={index} />;
         }) ];
 
         return (

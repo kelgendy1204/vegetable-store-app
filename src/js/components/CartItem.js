@@ -6,10 +6,17 @@ class CartItem extends Component {
     constructor(props){
         super(props);
         this.gotToDetails = this.gotToDetails.bind(this);
+        this.openCart = this.openCart.bind(this);
     }
 
     gotToDetails(){
         this.props.history.push(`/InnerPage/ItemDetail/${this.props.data.id}`);
+    }
+
+
+    openCart(e) {
+        let cartItem = e.currentTarget;
+        cartItem.classList.add('open');
     }
 
     render() {
@@ -45,7 +52,7 @@ class CartItem extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="bottom-data" onClick={ (e) => this.props.openCart(e) }>
+                    <div className="bottom-data" onClick={ (e) => this.openCart(e) }>
                         <div className="content closed">
                             <div className="img"><img src="./assets/images/1.svg" /></div>
                             <div className="data-fov"><p>اضف الي السلة</p></div>
@@ -69,7 +76,6 @@ class CartItem extends Component {
 }
 
 CartItem.propTypes = {
-    openCart: PropTypes.func.isRequired,
     history: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
 };

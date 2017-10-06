@@ -7,9 +7,21 @@ import Home from '../components/Home';
   // return bindActionCreators({ login } ,dispatch);
 // }
 
+function getCartItems(state) {
+    if(state.activeCategory){
+        return state.cartItems.filter((elem) => {
+            return elem.category_id == state.activeCategory;
+        }).sort( (a, b) =>  parseFloat(a.price) - parseFloat(b.price) );
+    }
+
+    return state.cartItems.filter((elem) => {
+        return elem.discount > 0;
+    });
+}
+
 function mapStateToProps(state) {
   return {
-        cartItems: state.cartItems.sort( (a, b) =>  parseFloat(a.price) - parseFloat(b.price) )
+        cartItems: getCartItems(state)
     };
 }
 
