@@ -39,8 +39,8 @@ class Navbar extends Component {
             image: 'assets/images/menu1.svg'
         };
 
-        let NavItems = [ ( <NavItem data={discountItemData} /> ) , ...this.props.navItems.map(function(elem, index) {
-            return <NavItem data={elem} key={index} />;
+        let NavItems = [ ( <NavItem data={discountItemData} history={ this.props.history } /> ) , ...this.props.navItems.map((elem, index) => {
+            return <NavItem data={elem} key={index} history={ this.props.history } />;
         }) ];
 
         return (

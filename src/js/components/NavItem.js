@@ -11,6 +11,9 @@ class NavItem extends Component {
     changeActiveCategory(){
         this.props.changeActiveCategory(this.props.data.id);
         $('.button-collapse').sideNav('hide');
+        if( this.props.history.location.pathname != '/InnerPage/Home' ){
+            this.props.history.push('/InnerPage/Home');
+        }
     }
 
     render() {
@@ -27,7 +30,9 @@ class NavItem extends Component {
 }
 
 NavItem.propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    changeActiveCategory: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired
 };
 
 export default NavItem;
