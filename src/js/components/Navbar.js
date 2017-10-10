@@ -29,6 +29,22 @@ class Navbar extends Component {
         }
     }
 
+    goToLogin(){
+        let currPathName = this.props.history.location.pathname;
+        $('.button-collapse').sideNav('hide');
+        if( currPathName != '/InnerPage/Login' ){
+            this.props.history.push('/InnerPage/Login');
+        }
+    }
+
+    goToRegister(){
+        let currPathName = this.props.history.location.pathname;
+        $('.button-collapse').sideNav('hide');
+        if( currPathName != '/InnerPage/Register' ){
+            this.props.history.push('/InnerPage/Register');
+        }
+    }
+
     render() {
         let currPathName = this.props.history.location.pathname;
 
@@ -39,7 +55,7 @@ class Navbar extends Component {
             image: 'assets/images/menu1.svg'
         };
 
-        let NavItems = [ ( <NavItem data={discountItemData} history={ this.props.history } /> ) , ...this.props.navItems.map((elem, index) => {
+        let NavItems = [ ( <NavItem data={discountItemData} key={-1} history={ this.props.history } /> ) , ...this.props.navItems.map((elem, index) => {
             return <NavItem data={elem} key={index} history={ this.props.history } />;
         }) ];
 
@@ -85,6 +101,8 @@ class Navbar extends Component {
                                 <p>
                                     قائمة لهلوبة
                                 </p>
+                                <button onClick={ () => this.goToLogin() }>login</button>
+                                <button onClick={ () => this.goToRegister() }>register</button>
                             </div>
                             { NavItems }
                         </ul>

@@ -9,8 +9,8 @@ class Login extends Component {
 
     render() {
         return (
-          <div className="login-page">
-                login page
+          <div className="register-page">
+                register page
           </div>
         );
     }

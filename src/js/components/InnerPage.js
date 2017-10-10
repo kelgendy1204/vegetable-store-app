@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Login from './Login';
+import Register from './Register';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
 import Home from '../containers/Home';
@@ -6,7 +8,7 @@ import ShopCart from '../containers/ShopCart';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 class InnerPage extends Component {
@@ -35,6 +37,8 @@ class InnerPage extends Component {
                             <Switch location={this.props.history.location}>
                                 <Route path="/InnerPage/Home" component={ Home }/>
                                 <Route path="/InnerPage/ShopCart" component={ ShopCart }/>
+                                <Route path="/InnerPage/Login" component={ Login }/>
+                                <Route path="/InnerPage/Register" component={ Register }/>
                                 <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
                             </Switch>
                         </div>
