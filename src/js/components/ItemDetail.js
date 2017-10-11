@@ -7,6 +7,33 @@ class ItemDetail extends Component {
     constructor(props){
         super(props);
         this.addToShopCart = this.addToShopCart.bind(this);
+        this.share = this.share.bind(this);
+    }
+
+    share(){
+        if(window.plugins){
+            var options = {
+              message: null, // not supported on some apps (Facebook, Instagram)
+              subject: null, // fi. for email
+              files: null, // an array of filenames either locally or remotely
+              url: 'http://lahloba.net',
+              chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
+            }
+
+            // var onSuccess = function(result) {
+            //   console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
+            //   console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+            // }
+
+            // var onError = function(msg) {
+            //   console.log("Sharing failed with message: " + msg);
+            // }
+
+            // window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
+
+            window.plugins.socialsharing.shareWithOptions(options, null, null);
+        }
+
     }
 
     addToShopCart(){
@@ -36,7 +63,7 @@ class ItemDetail extends Component {
                                     </div>
                                 </div>
                                 <div className='down-data'>
-                                    <Carousel showArrows={false} showStatus={false} showThumbs={false} stopOnHover={false} autoPlay={true} >
+                                    <Carousel showArrows={false} showStatus={false} showThumbs={false} stopOnHover={false} autoPlay={true} swipeScrollTolerance={10} >
                                         <div className="img" style = {{ backgroundImage: 'url(' + this.props.cartItem.image + ')' }} />
                                         <div className="img" style = {{ backgroundImage: 'url(' + this.props.cartItem.image + ')' }} />
                                         <div className="img" style = {{ backgroundImage: 'url(' + this.props.cartItem.image + ')' }} />
@@ -50,7 +77,9 @@ class ItemDetail extends Component {
                                 <p className={'three ' + (this.props.cartItem.discount > 0 ? '' : 'hide')}> <span> { this.props.cartItem.price } </span> جنية</p>
                             </div>
                             <div className='two'>
-                                <img src='assets/images/12.svg' />
+                                <button onClick={ () => { this.share() } }>
+                                    <img src='assets/images/12.svg' />
+                                </button>
                             </div>
                         </div>
                         <div className='content3'>

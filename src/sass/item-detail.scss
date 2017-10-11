@@ -136,9 +136,16 @@ div.item-detail {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    img{
-                        width: 50%;
-                        max-width: 45px;
+                    >button{
+                        border: 0;
+                        background-color: transparent;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        img{
+                            width: 30px;
+                        }
                     }
                 }
             }
