@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ItemDetail from '../components/ItemDetail';
-import {addCartItem} from '../actions/action_cartItems';
+import * as cartItemsActions from '../actions/action_cartItems';
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators( {addCartItem} ,dispatch);
+    return bindActionCreators( cartItemsActions ,dispatch);
 }
 
 function mapStateToProps(state, ownProps) {
