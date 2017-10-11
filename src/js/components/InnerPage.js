@@ -27,8 +27,8 @@ class InnerPage extends Component {
                 <Navbar history={this.props.history} />
 
                 <TransitionGroup
-                  component="div"
-                  className="inner-pages-holder">
+                    component="div"
+                    className="inner-pages-holder">
                     <CSSTransition
                         key={this.props.history.location.key}
                         classNames="react-translate"

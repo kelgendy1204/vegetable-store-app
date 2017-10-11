@@ -98,11 +98,9 @@ class Navbar extends Component {
                                 <div className="circl">
                                     <img src="./assets/images/menu1.svg" />
                                 </div>
-                                <p>
-                                    قائمة لهلوبة
-                                </p>
-                                <button onClick={ () => this.goToLogin() }>login</button>
-                                <button onClick={ () => this.goToRegister() }>register</button>
+                                <button onClick={ () => this.goToLogin() }>تسجيل الدخول</button>
+                                <p className="buton">/</p>
+                                <button onClick={ () => this.goToRegister() }>التسجيل</button>
                             </div>
                             { NavItems }
                         </ul>

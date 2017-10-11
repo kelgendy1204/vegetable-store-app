@@ -9,9 +9,31 @@ class Login extends Component {
 
     render() {
         return (
-          <div className="login-page">
-                login page
-          </div>
+            <div className="login-page">
+                <div className="login-data">
+                    <p> اسم المستخدم </p>
+                    <div className="description-login">
+                        <div className="input user-login">
+                            <input type="text" placeholder="..........." />
+                        </div>
+                    </div>
+                    <p>كلمة المرور</p>
+                    <div className="description-login">
+                        <div className="input password-login">
+                            <input type="text" placeholder="..........." />
+                        </div>
+                    </div>
+                    <p>رقم الموبيل</p>
+                    <div className="description-login">
+                        <div className="input phonnumber-login">
+                            <input type="number" placeholder="..........." />
+                        </div>
+                    </div>
+                </div>
+                <div className="center-align">
+                    <button className="finish">تسجيل الدخول</button>
+                </div>
+            </div>
         );
     }
 }
