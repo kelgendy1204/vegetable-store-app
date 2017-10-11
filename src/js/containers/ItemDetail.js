@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ItemDetail from '../components/ItemDetail';
@@ -10,6 +10,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state, ownProps) {
     return {
+        cartItems: state.cartItems,
         cartItem: state.cartItems.find(function (element) {
             return element.id == ownProps.match.params.id;
         })
