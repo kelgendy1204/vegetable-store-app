@@ -5,6 +5,7 @@ import NavItem from '../containers/NavItem';
 class Navbar extends Component {
     constructor(props){
         super(props);
+        this.search_items = this.search_items.bind(this);
     }
 
     componentDidMount() {
@@ -13,6 +14,10 @@ class Navbar extends Component {
             closeonClick: true,
             edge: 'right',
         });
+    }
+
+    search_items(e) {
+        console.log(e.target.value);
     }
 
     goBack(){
@@ -64,30 +69,40 @@ class Navbar extends Component {
                 <nav>
                     <div className="nav-wrapper">
 
-                        <ul className="left">
+                        <ul className="left upper-left">
+
+                            <li>
+                                <form>
+                                    <div className="input-field">
+                                        <input id="search" type="search" required onChange={ this.search_items } />
+                                        <label className="label-icon" for="search">
+                                            <i className="material-icons">search</i>
+                                        </label>
+                                        <i className="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </li>
+
                             <li className="cart">
                                 <span className="badge">{ this.props.cartItems }</span>
                                 <a href="#" className="left" onClick={ () => this.goToShopCart() }>
                                     <img src="./assets/images/1.svg" />
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" className="left">
-                                    <i className="search material-icons">search</i>
-                                </a>
-                            </li>
+
                         </ul>
 
-                        <ul className="right nav-right">
-                            <li className={(currPathName == '/InnerPage/Home' || currPathName == '/InnerPage') ? 'hide' : '' } >
-                                <a href="#" onClick={ () => this.goBack() }>
-                                    <i className="material-icons back">reply</i>
-                                </a>
-                            </li>
+                        <ul className="right nav-right upper-right">
 
                             <li>
                                 <a href="#" data-activates="mobile-demo" className="button-collapse">
                                     <i className="material-icons">menu</i>
+                                </a>
+                            </li>
+
+                            <li className={(currPathName == '/InnerPage/Home' || currPathName == '/InnerPage') ? 'hide' : '' } >
+                                <a href="#" onClick={ () => this.goBack() }>
+                                    <i className="material-icons back">reply</i>
                                 </a>
                             </li>
 
@@ -103,6 +118,7 @@ class Navbar extends Component {
                                 <button onClick={ () => this.goToRegister() }>التسجيل</button>
                             </div>
                             { NavItems }
+                            <div>هنا</div>
                         </ul>
 
                     </div>

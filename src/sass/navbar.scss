@@ -5,9 +5,47 @@ nav{
         display: block !important;
         margin: 0;
     }
+    .nav-wrapper{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     ul{
         height: 100%;
         margin: 0;
+        &.upper-right{
+            display: flex;
+        }
+        &.upper-left{
+            padding: 0;
+            display: flex;
+            .label-icon{
+                transform: translate(0);
+                left: 0;
+            }
+            li{
+                &:first-child{
+                    margin-right: 15px;
+                    padding-left: 10px;
+                }
+                .input-field{
+                    display: flex;
+                    >.material-icons{
+                        right: 0;
+                    }
+                }
+                input#search{
+                    width: 100%;
+                    padding: 0 25px;
+                    display: inline-block;
+                    margin: 0;
+                    &:focus{
+                        border: 0;
+                        outline: 0;
+                        box-shadow: 0 0 0 transparent;
+                    }
+                }
+            }
+        }
         li.cart{
             position: relative;
             height: 100%;
