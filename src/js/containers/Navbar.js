@@ -1,20 +1,22 @@
 // import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
+import { bindActionCreators } from 'redux';
 import Navbar from '../components/Navbar';
 import { withRouter } from 'react-router';
+import { filterBy } from '../actions/action_filterBy';
 
-// function mapDispatchToProps(dispatch) {
-  // return bindActionCreators({ login } ,dispatch);
-// }
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ filterBy } ,dispatch);
+}
 
 function mapStateToProps(state) {
     return {
         cartItems: state.cartItems.reduce((acc, cur) => {
             return acc + cur.amount;
         }, 0),
-        navItems: state.categories
+        navItems: state.categories,
+        filteredBy: state.filteredBy
     };
 }
 
-export default withRouter(connect(mapStateToProps, null)(Navbar));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Navbar));

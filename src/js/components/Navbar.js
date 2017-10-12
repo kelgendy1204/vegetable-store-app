@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import NavItem from '../containers/NavItem';
+// import { Throttle } from 'react-throttle';
 
 class Navbar extends Component {
     constructor(props){
@@ -17,7 +18,7 @@ class Navbar extends Component {
     }
 
     search_items(e) {
-        console.log(e.target.value);
+        this.props.filterBy(e.target.value);
     }
 
     goBack(){
@@ -75,10 +76,10 @@ class Navbar extends Component {
                                 <form>
                                     <div className="input-field">
                                         <input id="search" type="search" required onChange={ this.search_items } />
-                                        <label className="label-icon" for="search">
+                                        <label className="label-icon" htmlFor="search">
                                             <i className="material-icons">search</i>
                                         </label>
-                                        <i className="material-icons">close</i>
+                                        <i className="material-icons" onClick={() => { this.props.filterBy(null); document.querySelector('#search').value = ''; } }>close</i>
                                     </div>
                                 </form>
                             </li>
@@ -132,6 +133,7 @@ class Navbar extends Component {
 Navbar.propTypes = {
     history: PropTypes.object.isRequired,
     cartItems: PropTypes.number.isRequired,
+    filterBy: PropTypes.func.isRequired,
     navItems: PropTypes.array.isRequired
 };
 

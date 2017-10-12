@@ -3,11 +3,13 @@ import { combineReducers } from 'redux';
 import cartItems from './reducer_cartItems';
 import categories from './reducer_categories';
 import activeCategory from './reducer_activeCategory';
+import filteredBy from './reducer_filterBy';
 
 const rootReducer = combineReducers({
     cartItems,
     categories,
-    activeCategory
+    activeCategory,
+    filteredBy
 });
 
 export default rootReducer;
