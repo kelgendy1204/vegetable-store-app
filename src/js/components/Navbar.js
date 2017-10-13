@@ -119,7 +119,30 @@ class Navbar extends Component {
                                 <button onClick={ () => this.goToRegister() }>التسجيل</button>
                             </div>
                             { NavItems }
-                            <div>هنا</div>
+                            <li className="items contact-us">
+                                <p> اتصل بنا  </p>
+                                <img src="./assets/images/2.svg"/>
+                            </li>
+                            <li className="items help">
+                                <p> المساعدة </p>
+                                <img src="./assets/images/2.svg"/>
+                            </li>
+                            <li className="items favorite">
+                                <p> المفضل لك  </p>
+                                <img src="./assets/images/2.svg"/>
+                            </li>
+                            <li className="items profile">
+                                <p> حسابي  </p>
+                                <img src="./assets/images/2.svg"/>
+                            </li>
+                            <li className="items news">
+                                <p> اخر العروض </p>
+                                <img src="./assets/images/2.svg"/>
+                            </li>
+                            <li className="items news">
+                                <p> تتبع الطلبات  </p>
+                                <img src="./assets/images/2.svg"/>
+                            </li>
                         </ul>
 
                     </div>

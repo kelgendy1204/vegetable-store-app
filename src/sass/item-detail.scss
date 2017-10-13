@@ -25,14 +25,14 @@ div.item-detail {
                 line-height: 40px;
                 margin-top: 10px;
                 p{
-                    font-size: 45px;
+                    font-size: 2.5em;
                     margin: 0;
                     font-weight: bold;
                     color: $color1;
                     padding-right: 10px;
                     font-family: bader;
                     &.sc{
-                        font-size: 35px;
+                        font-size: 2em;
                         font-weight: normal;
                         color: #646464;
                     }
@@ -115,7 +115,7 @@ div.item-detail {
                 .one{
                     width: 80%;
                     p{
-                        font-size: 35px;
+                        font-size: 2.5em;
                         margin: 0;
                         font-weight: bold;
                         padding-right: 35px;
