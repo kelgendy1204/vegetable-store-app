@@ -1,0 +1,23 @@
+.contact-page{
+    padding-top: 15px;
+    .input-field {
+        .btn{
+            margin-left: 0px;
+            margin-right: 3rem;
+        }
+        label{
+            left: -0.75rem;
+            font-family: bader;
+        }
+        .prefix{
+            & ~ input, & ~ textarea{
+                margin-left: 0px;
+                margin-right: 3rem;
+            }
+            & ~ label{
+                margin-left: 0px;
+                margin-right: 3rem;
+            }
+        }
+    }
+}

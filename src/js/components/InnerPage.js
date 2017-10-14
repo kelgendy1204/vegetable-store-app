@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Login from './Login';
 import Register from './Register';
+import Contact from './Contact';
+import Help from './Help';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
 import Home from '../containers/Home';
@@ -39,6 +41,8 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/ShopCart" component={ ShopCart }/>
                                 <Route path="/InnerPage/Login" component={ Login }/>
                                 <Route path="/InnerPage/Register" component={ Register }/>
+                                <Route path="/InnerPage/Contact" component={ Contact }/>
+                                <Route path="/InnerPage/Help" component={ Help }/>
                                 <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
                             </Switch>
                         </div>

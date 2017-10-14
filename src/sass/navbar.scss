@@ -14,6 +14,7 @@ nav{
         margin: 0;
         &.upper-right{
             display: flex;
+            flex-grow: 1;
         }
         &.upper-left{
             padding: 0;

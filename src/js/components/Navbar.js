@@ -7,6 +7,8 @@ class Navbar extends Component {
     constructor(props){
         super(props);
         this.search_items = this.search_items.bind(this);
+        this.goToContact = this.goToContact.bind(this);
+        this.goToHelp = this.goToHelp.bind(this);
     }
 
     componentDidMount() {
@@ -48,6 +50,22 @@ class Navbar extends Component {
         $('.button-collapse').sideNav('hide');
         if( currPathName != '/InnerPage/Register' ){
             this.props.history.push('/InnerPage/Register');
+        }
+    }
+
+    goToContact(){
+        let currPathName = this.props.history.location.pathname;
+        $('.button-collapse').sideNav('hide');
+        if( currPathName != '/InnerPage/Contact' ){
+            this.props.history.push('/InnerPage/Contact');
+        }
+    }
+
+    goToHelp(){
+        let currPathName = this.props.history.location.pathname;
+        $('.button-collapse').sideNav('hide');
+        if( currPathName != '/InnerPage/Help' ){
+            this.props.history.push('/InnerPage/Help');
         }
     }
 
@@ -119,26 +137,32 @@ class Navbar extends Component {
                                 <button onClick={ () => this.goToRegister() }>التسجيل</button>
                             </div>
                             { NavItems }
-                            <li className="items contact-us">
+
+                            <li className="items contact-us" onClick={this.goToContact}>
                                 <p> اتصل بنا  </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>
-                            <li className="items help">
+
+                            <li className="items help" onClick={this.goToHelp}>
                                 <p> المساعدة </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>
+
                             <li className="items favorite">
                                 <p> المفضل لك  </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>
+
                             <li className="items profile">
                                 <p> حسابي  </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>
+
                             <li className="items news">
                                 <p> اخر العروض </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>
+
                             <li className="items news">
                                 <p> تتبع الطلبات  </p>
                                 <img src="./assets/images/2.svg"/>
