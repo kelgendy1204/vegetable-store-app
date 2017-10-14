@@ -1,3 +1,8 @@
 .help-page{
-
+    ul.collapsible{
+        padding: 0;
+        .collapsible-body{
+            background-color: #fff;
+        }
+    }
 }
