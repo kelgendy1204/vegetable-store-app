@@ -9,6 +9,7 @@ class Navbar extends Component {
         this.search_items = this.search_items.bind(this);
         this.goToContact = this.goToContact.bind(this);
         this.goToHelp = this.goToHelp.bind(this);
+        this.goToProfile = this.goToProfile.bind(this);
     }
 
     componentDidMount() {
@@ -30,43 +31,36 @@ class Navbar extends Component {
         }
     }
 
-    goToShopCart(){
+    goToPage(page) {
         let currPathName = this.props.history.location.pathname;
-        if( currPathName != '/InnerPage/ShopCart' ){
-            this.props.history.push('/InnerPage/ShopCart');
+        $('.button-collapse').sideNav('hide');
+        if( currPathName != `/InnerPage/${page}` ){
+            this.props.history.push(`/InnerPage/${page}`);
         }
+    }
+
+    goToShopCart(){
+        this.goToPage('ShopCart');
     }
 
     goToLogin(){
-        let currPathName = this.props.history.location.pathname;
-        $('.button-collapse').sideNav('hide');
-        if( currPathName != '/InnerPage/Login' ){
-            this.props.history.push('/InnerPage/Login');
-        }
+        this.goToPage('Login');
     }
 
     goToRegister(){
-        let currPathName = this.props.history.location.pathname;
-        $('.button-collapse').sideNav('hide');
-        if( currPathName != '/InnerPage/Register' ){
-            this.props.history.push('/InnerPage/Register');
-        }
+        this.goToPage('Register');
     }
 
     goToContact(){
-        let currPathName = this.props.history.location.pathname;
-        $('.button-collapse').sideNav('hide');
-        if( currPathName != '/InnerPage/Contact' ){
-            this.props.history.push('/InnerPage/Contact');
-        }
+        this.goToPage('Contact');
     }
 
     goToHelp(){
-        let currPathName = this.props.history.location.pathname;
-        $('.button-collapse').sideNav('hide');
-        if( currPathName != '/InnerPage/Help' ){
-            this.props.history.push('/InnerPage/Help');
-        }
+        this.goToPage('Help');
+    }
+
+    goToProfile(){
+        this.goToPage('Profile');
     }
 
     render() {
@@ -148,13 +142,13 @@ class Navbar extends Component {
                                 <img src="./assets/images/2.svg"/>
                             </li>
 
-                            <li className="items favorite">
-                                <p> المفضل لك  </p>
+                            <li className="items profile" onClick={this.goToProfile}>
+                                <p> حسابي  </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>
 
-                            <li className="items profile">
-                                <p> حسابي  </p>
+                            <li className="items favorite">
+                                <p> المفضل لك  </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>
 
