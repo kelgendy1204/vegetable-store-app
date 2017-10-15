@@ -10,6 +10,7 @@ let defaultCarts = [
         category_id: 1,
         price: 7,
         inShop: false,
+        favorite: false,
         amount: 0,
         discount: 10
     },
@@ -22,6 +23,7 @@ let defaultCarts = [
         category_id: 2,
         price: 12,
         inShop: false,
+        favorite: false,
         amount: 0,
         discount: 0
     },
@@ -34,6 +36,7 @@ let defaultCarts = [
         category_id: 3,
         price: 14,
         inShop: false,
+        favorite: false,
         amount: 0,
         discount: 15
     },
@@ -46,6 +49,7 @@ let defaultCarts = [
         category_id: 3,
         price: 16,
         inShop: false,
+        favorite: false,
         amount: 0,
         discount: 5
     },
@@ -80,6 +84,13 @@ export default function (state = defaultCarts, action) {
             return [
                 ...state.filter(elem => elem.id != action.payload.id),
                 elementRemovedFromShop
+            ];
+        case action_types.TOGGLE_FAVORITE:
+            let favoratedElement = state.find( elem => elem.id == action.payload.id);
+            favoratedElement.favorite = !favoratedElement.favorite;
+            return [
+                ...state.filter(elem => elem.id != action.payload.id),
+                favoratedElement
             ];
     }
     return state;
