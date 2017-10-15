@@ -40,7 +40,7 @@ class Contact extends Component {
                         <div className="input-field col s12">
                             <i className="material-icons prefix">mode_edit</i>
                             <textarea id="message" className="materialize-textarea validate" required></textarea>
-                            <label htmlFor="message">Textarea</label>
+                            <label htmlFor="message">رسالتك </label>
                         </div>
                     </div>
 

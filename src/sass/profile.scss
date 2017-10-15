@@ -1,3 +1,46 @@
 .profile-page{
-
+    padding-top: 15px;
+    .input-field {
+        p{
+            margin-bottom: 10px;
+            text-align: right;
+            margin-right: 65px;
+            font-size: 1.5rem;
+            color: #366634;
+        }
+        &.marg{
+            margin-left: 0px;
+            margin-right: 3rem;
+            width: calc(100% - 3rem);
+            span.caret{
+                right: -20px;
+            }
+        }
+        &.but-rig{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .waves-effect {
+                margin: 0;
+            }
+        }
+        .btn{
+            margin-left: 0px;
+            margin-right: 3rem;
+        }
+        label{
+            left: -0.75rem;
+            font-family: bader;
+        }
+        .prefix{
+            & ~ input, & ~ textarea{
+                margin-left: 0px;
+                margin-right: 3rem;
+            }
+            & ~ label{
+                margin-left: 0px;
+                margin-right: 3rem;
+            }
+        }
+    }
 }
