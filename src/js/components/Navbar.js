@@ -130,6 +130,7 @@ class Navbar extends Component {
                                 <p className="buton">/</p>
                                 <button onClick={ () => this.goToRegister() }>التسجيل</button>
                             </div>
+
                             { NavItems }
 
                             <li className="items contact-us" onClick={this.goToContact}>

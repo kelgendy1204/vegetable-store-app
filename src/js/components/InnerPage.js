@@ -3,6 +3,7 @@ import Login from './Login';
 import Register from './Register';
 import Contact from './Contact';
 import Profile from './Profile';
+import SubCategory from './SubCategory';
 import Help from './Help';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
@@ -42,6 +43,7 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/Login" component={ Login }/>
                                 <Route path="/InnerPage/Register" component={ Register }/>
                                 <Route path="/InnerPage/Contact" component={ Contact }/>
+                                <Route path="/InnerPage/SubCategory" component={ SubCategory }/>
                                 <Route path="/InnerPage/Help" component={ Help }/>
                                 <Route path="/InnerPage/Profile" component={ Profile }/>
                                 <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
