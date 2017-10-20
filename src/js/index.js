@@ -32,3 +32,17 @@ ReactDOM.render(
     <Root store={store} />,
     document.getElementById('root')
 );
+
+window.onload = function (){
+    document.addEventListener('deviceready', () => {
+        StatusBar.hide();
+        if (typeof AndroidFullScreen !== 'undefined') {   // Fullscreen plugin exists ?
+            // console.log(AndroidFullScreen);
+            AndroidFullScreen.isSupported(() => {
+                AndroidFullScreen.immersiveMode(null, null);
+            }, () => {
+                console.error(error);
+            });
+        }
+    }, false);
+};

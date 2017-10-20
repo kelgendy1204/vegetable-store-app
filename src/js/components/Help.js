@@ -39,8 +39,7 @@ class Help extends Component {
                                     ما هو لهلوبة ؟
                                 </div>
                                 <div className="collapsible-body">
-                                    <iframe width="100%" src="https://www.youtube.com/embed/QW-XHbEVmbk" frameborder="0" allowfullscreen></iframe>
-                                
+                                    <iframe width="100%" src="https://www.youtube.com/embed/nYFuxTXDj90" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </li>
                         </ul>
