@@ -19,7 +19,6 @@ class Profile extends Component {
 
 
             <div className="profile-page container">
-                <div className="row">
 
                     <div className="row">
                         <div className="input-field col s12">
@@ -81,7 +80,6 @@ class Profile extends Component {
                         </div>
                     </div>
 
-                </div>
 
             </div>
         );

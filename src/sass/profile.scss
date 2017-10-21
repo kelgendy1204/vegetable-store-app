@@ -5,7 +5,8 @@
     margin: 0 auto;
     position: absolute;
     height: 100%;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     .input-field {
         p{
             margin-top: 0;
@@ -14,6 +15,7 @@
             margin-right: 65px;
             font-size: 1.5rem;
             color: $color2;
+            word-break: break-word;
         }
         &.marg{
             margin-left: 0px;
