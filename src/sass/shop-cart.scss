@@ -94,7 +94,7 @@
                             height: 30px;
                             min-width: 30px;
                             min-height: 30px;
-                            background-color: #dedad7;
+                            background-color: $color2;
                             border-radius: 5px;
                             display: flex;
                             justify-content: center;
@@ -106,9 +106,8 @@
                                 border: 0;
                                 background-color: transparent;
                                 font-size: 1.9em;
-                                color: #db5927;
-                                font-family: cursive;
-                                margin: 0;
+                                color: white;
+                                 margin: 0;
                                 padding: 0;
                             }
                         }
@@ -126,8 +125,7 @@
                             p {
                                 font-size: 1.2em;
                                 color: #db5927;
-                                font-family: cursive;
-                                margin: 0;
+                                 margin: 0;
                                 padding: 0;
                             }
                         }
@@ -165,7 +163,7 @@
                         align-items: flex-start;
                         direction: rtl;
                         img {
-                            width: 27%;
+                            width: 22%;
                         }
                     }
                 }

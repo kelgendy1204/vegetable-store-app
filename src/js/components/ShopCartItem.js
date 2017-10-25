@@ -37,7 +37,7 @@ class ShopCartItem extends Component {
                 <div className="left-data-cart">
                     <div className="content-data-left" onClick={ () => this.props.removeFromShop({ id: this.props.data.id }) } >
                         <div className="content">
-                            <img src="./assets/images/1.svg" />
+                            <img src="./assets/images/Drys3icon8.svg" />
                         </div>
                     </div>
                     <p>اجمالي الصنف</p>

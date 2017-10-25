@@ -225,7 +225,7 @@ div.home {
                             .border1 {
                                 overflow: hidden;
                                 width: 30px;
-                                background-color: #dedad7;
+                                background-color: $color2;
                                 height: 30px;
                                 border-radius: 5px;
                                 display: flex;
@@ -236,10 +236,10 @@ div.home {
                                     height: 100%;
                                     border: 0;
                                     font-size: 1.9em;
-                                    color: #db5927;
-                                    font-family: cursive;
+                                    color: white;
                                     margin: 0;
                                     padding: 0;
+                                    background-color: transparent;
                                     &:focus {
                                         outline: none;
                                         background-color: transparent;
@@ -255,9 +255,8 @@ div.home {
                                 justify-content: center;
                                 align-items: center;
                                 p {
-                                    font-size: 1.2em;
+                                    font-size: 1.4em;
                                     color: #db5927;
-                                    font-family: cursive;
                                     margin: 0;
                                     padding: 0;
                                 }
@@ -265,7 +264,7 @@ div.home {
                             .border3 {
                                 overflow: hidden;
                                 width: 30px;
-                                background-color: #dedad7;
+                                background-color: $color2;
                                 height: 30px;
                                 border-radius: 5px;
                                 display: flex;
@@ -276,10 +275,10 @@ div.home {
                                     height: 100%;
                                     border: 0;
                                     font-size: 1.9em;
-                                    color: #db5927;
-                                    font-family: cursive;
+                                    color: white;
                                     margin: 0;
                                     padding: 0;
+                                    background-color: transparent;
                                     &:focus {
                                         outline: none;
                                         background-color: transparent;
