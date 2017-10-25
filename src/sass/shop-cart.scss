@@ -10,8 +10,7 @@
         align-items: center;
         flex-wrap: wrap;
         .item-cart {
-            min-width: 310px;
-            max-width: 350px;
+            width: 99%;
             height: 135px;
             margin: 10px 5px 0;
             background-color: white;
@@ -107,7 +106,7 @@
                                 background-color: transparent;
                                 font-size: 1.9em;
                                 color: white;
-                                 margin: 0;
+                                margin: 0;
                                 padding: 0;
                             }
                         }
@@ -125,7 +124,7 @@
                             p {
                                 font-size: 1.2em;
                                 color: #db5927;
-                                 margin: 0;
+                                margin: 0;
                                 padding: 0;
                             }
                         }
