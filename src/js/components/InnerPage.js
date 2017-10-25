@@ -5,6 +5,8 @@ import Contact from './Contact';
 import Profile from './Profile';
 import DryClean from './DryClean';
 import DryCleanSubject from './DryCleanSubject';
+import Fruits from './Fruits';
+import FruitSubject from './FruitSubject';
 import Help from './Help';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
@@ -49,6 +51,8 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/ItemDetail/:id" component={ ItemDetail }/>
                                 <Route path="/InnerPage/DryClean" component={ DryClean }/>
                                 <Route path="/InnerPage/DryCleanSubject" component={ DryCleanSubject }/>
+                                <Route path="/InnerPage/Fruits" component={ Fruits }/>
+                                <Route path="/InnerPage/FruitSubject" component={ FruitSubject }/>
                             </Switch>
                         </div>
                     </CSSTransition>

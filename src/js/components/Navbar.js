@@ -12,6 +12,7 @@ class Navbar extends Component {
         this.goToHelp = this.goToHelp.bind(this);
         this.goToProfile = this.goToProfile.bind(this);
         this.goToDryClean = this.goToDryClean.bind(this);
+        this.goToFruits = this.goToFruits.bind(this);
     }
 
     componentDidMount() {
@@ -69,6 +70,10 @@ class Navbar extends Component {
         this.goToPage('DryClean');
     }
 
+    goToFruits(){
+        this.goToPage('Fruits');
+    }
+
 
     render() {
         let currPathName = this.props.history.location.pathname;
@@ -118,6 +123,7 @@ class Navbar extends Component {
                         </ul>
 
                         <ul className="side-nav" id="mobile-demo">
+                            
                             <div className="header-data">
                                 <div className="circl">
                                     <img src="./assets/images/menu1.svg" />
@@ -136,7 +142,7 @@ class Navbar extends Component {
                                 <img src='assets/images/menu1.svg' />
                             </div>
 
-                            <div className="menu-data" onClick={ () => {} } >
+                            <div className="menu-data" onClick={ this.goToFruits } >
                                 <p>
                                     خضروات مجهزة
                                 </p>
