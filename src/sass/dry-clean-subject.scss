@@ -5,61 +5,49 @@
         background-color: #7a9574;
         margin-top: 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: stretch;
         align-items: center;
-        .click-data{
-            background-color: #356732;
-            height: 55px;
-            margin-bottom: 8px;
-            border-top-left-radius: 10px;
-            p{
-                font-size: 24px !important;
-            }
-            img{
-                margin-left: 8px;
-            }
-        }
-        .right-data{
+        align-items: flex-end;
+
+        .data-item{
+            background-color: #7a9574;
+            transition: 0.3s;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 33%;
-            margin-left: 8px;
+            flex: 1;
+            height: 100%;
             p{
+                margin: 0;
                 color: white;
                 font-size: 20px;
             }
             img{
                 width: 25%;
             }
-        }
-        .center-data{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 33%;
-            margin-left: 8px;
-            p{
-                color: white;
-                font-size: 20px;
+
+            &.opened{
+                padding: 0 10px;
+                height: calc(100% + 10px);
+                background-color: #356732;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                &:first-child{
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 0;
+                }
+                &:last-child{
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 0;
+                }
+                p{
+                    font-size: 24px;
+                }
+                img{
+                    margin-left: 8px;
+                }
             }
-            img{
-                width: 25%;
-            }
-        }
-        .left-data{
-            display: flex;
-            justify-content: space-around;
-            align-items: center; 
-            width: 33%;
-            margin-left: 8px;
-            p{
-                color: white;
-                font-size: 20px;
-            }
-            img{
-                width: 25%;
-            }
+
         }
     }
 

@@ -4,7 +4,9 @@ class DryCleanSubject extends Component {
 
     constructor(props){
         super(props);
+        this.openCategory = this.openCategory.bind(this);
     }
+
     componentDidMount(){
         $('select').material_select();
     }
@@ -12,24 +14,34 @@ class DryCleanSubject extends Component {
     componentWillUnmount(){
         $('select').material_select('destroy');
     }
+
+    openCategory(event){
+        $('.data-item.opened').removeClass('opened');
+        event.currentTarget.classList.add('opened');
+    }
+
     render() {
 
         return (
             <div className='dry-clean-subject'>
 
                 <div className="header-dryclean">
-                    <div className="right-data click-data">
-                        <img  src="assets/images/Drys3icon1.svg"/>
+
+                    <div className="data-item opened" onClick={this.openCategory}>
+                        <img src="assets/images/Drys3icon1.svg"/>
                         <p>ملابس</p>
                     </div>
-                    <div className="center-data">
-                        <img  src="assets/images/Drys3icon2.svg"/>
+
+                    <div className="data-item" onClick={this.openCategory}>
+                        <img src="assets/images/Drys3icon2.svg"/>
                         <p>مفروشات</p>
                     </div>
-                    <div className="left-data">
-                        <img  src="assets/images/Drys3icon3.svg"/>
+
+                    <div className="data-item" onClick={this.openCategory}>
+                        <img src="assets/images/Drys3icon3.svg"/>
                         <p>اكسسوارات</p>
                     </div>
+
                 </div>
 
                 <div className="all-subject">
@@ -87,7 +99,7 @@ class DryCleanSubject extends Component {
                                 <p className="one">213</p>
                              </div>
                         </div>
-                        
+
                         <div className="item-Dry">
                             <div className="right-data-Dry">
                                 <div className="img" ></div>
