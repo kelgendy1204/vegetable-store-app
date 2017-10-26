@@ -7,6 +7,8 @@ import DryClean from './DryClean';
 import DryCleanSubject from './DryCleanSubject';
 import Fruits from './Fruits';
 import FruitSubject from './FruitSubject';
+import SuperMarkting from './SuperMarkting';
+import SuperMarktingSubject from './SuperMarktingSubject';
 import Help from './Help';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
@@ -53,6 +55,8 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/DryCleanSubject" component={ DryCleanSubject }/>
                                 <Route path="/InnerPage/Fruits" component={ Fruits }/>
                                 <Route path="/InnerPage/FruitSubject" component={ FruitSubject }/>
+                                <Route path="/InnerPage/SuperMarkting" component={ SuperMarkting }/>
+                                <Route path="/InnerPage/SuperMarktingSubject" component={ SuperMarktingSubject }/>
                             </Switch>
                         </div>
                     </CSSTransition>

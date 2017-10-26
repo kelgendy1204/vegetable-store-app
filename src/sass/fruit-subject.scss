@@ -46,7 +46,7 @@
                     }
                 }
                 .down-data {
-                    background-image: url(../images/tmatm.jpg);
+                    background-image: url(../images/dr6.png);
                     width: 100%;
                     height: 100%;
                     background-size: contain;
@@ -72,11 +72,10 @@
                         display: flex;
                         justify-content: flex-start;
                         p{
-                            font-size: 1.4em;
+                            font-size: 18px;
                             color: $color2;
                             font-weight: bold;
                             width: 100%;
-                            font-family: bader;
                         }
                     }
                     .centertwo-data{
@@ -89,12 +88,11 @@
                             display: flex;
                             flex-direction: column;
                             >p {
-                                font-size: 1.4em;
-                                line-height: 1.4em;
+                                font-size: 17px;
+                                line-height: 17px;
                                 margin: 0;
                                 width: 100%;
                                 font-weight: bold;
-                                font-family: bader;
                             }
                             .two {
                                 color: $color2;
@@ -187,7 +185,7 @@
                                 justify-content: center;
                                 align-items: center;
                                 p {
-                                    font-size: 20px;
+                                    font-size: 17px;
                                     color: white;
                                     margin: 0;
                                 }
@@ -211,11 +209,13 @@
                                     width: 100%;
                                     height: 100%;
                                     border: 0;
-                                    font-size: 1.9em;
+                                    font-size: 1.8em;
                                     color: white;
                                     margin: 0;
                                     padding: 0;
                                     background-color: transparent;
+                                    font-family: DroidKufi;
+                                    font-weight: bold;
                                     &:focus {
                                         outline: none;
                                         background-color: transparent;
@@ -232,6 +232,8 @@
                                 align-items: center;
                                 p {
                                     font-size: 1.4em;
+                                    font-family: DroidKufi;
+                                    font-weight: bold;
                                     color: #db5927;
                                     margin: 0;
                                     padding: 0;
@@ -250,7 +252,9 @@
                                     width: 100%;
                                     height: 100%;
                                     border: 0;
-                                    font-size: 1.9em;
+                                    font-size: 1.7em;
+                                    font-family: DroidKufi;
+                                    font-weight: bold;
                                     color: white;
                                     margin: 0;
                                     padding: 0;
