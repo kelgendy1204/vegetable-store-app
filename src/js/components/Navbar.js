@@ -13,6 +13,7 @@ class Navbar extends Component {
         this.goToProfile = this.goToProfile.bind(this);
         this.goToDryClean = this.goToDryClean.bind(this);
         this.goToFruits = this.goToFruits.bind(this);
+        this.goToSuperMarkting = this.goToSuperMarkting.bind(this);
     }
 
     componentDidMount() {
@@ -65,7 +66,7 @@ class Navbar extends Component {
     goToProfile(){
         this.goToPage('Profile');
     }
-    
+
     goToDryClean(){
         this.goToPage('DryClean');
     }
@@ -74,6 +75,9 @@ class Navbar extends Component {
         this.goToPage('Fruits');
     }
 
+    goToSuperMarkting(){
+        this.goToPage('SuperMarkting');
+    }
 
     render() {
         let currPathName = this.props.history.location.pathname;
@@ -123,7 +127,7 @@ class Navbar extends Component {
                         </ul>
 
                         <ul className="side-nav" id="mobile-demo">
-                            
+
                             <div className="header-data">
                                 <div className="circl">
                                     <img src="./assets/images/menu1.svg" />
@@ -137,23 +141,23 @@ class Navbar extends Component {
 
                             <div className="menu-data" onClick={ this.goToDryClean } >
                                 <p>
-                                    تخفيضات لهلوبة
+                                    تنظيف الملابس
                                 </p>
-                                <img src='assets/images/menu1.svg' />
+                                <img src='assets/images/Uu1.svg' />
                             </div>
 
                             <div className="menu-data" onClick={ this.goToFruits } >
                                 <p>
-                                    خضروات مجهزة
+                                   خضروات وفاكهة
                                 </p>
-                                <img src='assets/images/menu2.svg' />
+                                <img src='assets/images/Uu2.png' />
                             </div>
 
-                            <div className="menu-data" onClick={ () => {} } >
+                            <div className="menu-data" onClick={ this.goToSuperMarkting} >
                                 <p>
-                                    خضروات لهلوبة
+                                    سوبر ماركت
                                 </p>
-                                <img src='assets/images/menu3.svg' />
+                                <img src='assets/images/Uu3.svg' />
                             </div>
 
                             <div className="menu-data" onClick={ () => {} } >

@@ -1,28 +1,4 @@
-div.home {
-    // font-family: DANUB;
-    width: 100vw;
-    margin: 0 auto;
-    position: absolute;
-    height: 100%;
-    overflow: auto;
-
-    .tools {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0.8em 0px;
-        a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 10px;
-            i {
-                font-size: 2em;
-                color: $color1;
-            }
-        }
-    }
-
+.supermarkting-subject{
     .items {
         display: flex;
         justify-content: center;
@@ -70,7 +46,7 @@ div.home {
                     }
                 }
                 .down-data {
-                    background-image: url(../images/tmatm.jpg);
+                    background-image: url(../images/Sub1.jpg);
                     width: 100%;
                     height: 100%;
                     background-size: contain;

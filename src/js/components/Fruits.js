@@ -29,12 +29,12 @@ class Fruits extends Component {
 
                     <div className="item-fruit" onClick={() => { this.goToPage('FruitSubject'); } }>
                         <div className="top-img"><img src="assets/images/fru2.png" /></div>
-                        <div className="bottom-fruit"><p>العروض</p></div>
+                        <div className="bottom-fruit"><p>فاكهة </p></div>
                     </div>
 
                     <div className="item-fruit" onClick={() => { this.goToPage('FruitSubject'); } }>
                         <div className="top-img"><img src="assets/images/fru3.png" /></div>
-                        <div className="bottom-fruit"><p>العروض</p></div>
+                        <div className="bottom-fruit"><p>خضروات طازجة</p></div>
                     </div>
 
                 </div>

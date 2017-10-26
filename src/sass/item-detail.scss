@@ -25,14 +25,14 @@ div.item-detail {
                 line-height: 40px;
                 margin-top: 10px;
                 p{
-                    font-size: 2.5em;
+                    font-size: 23px;
                     margin: 0;
                     font-weight: bold;
                     color: $color1;
                     padding-right: 10px;
-                    font-family: bader;
+                    font-family: DroidKufi;
                     &.sc{
-                        font-size: 2em;
+                        font-size: 20px;
                         font-weight: normal;
                         color: #646464;
                     }
@@ -114,7 +114,7 @@ div.item-detail {
                 .one{
                     width: 80%;
                     p{
-                        font-size: 2.5em;
+                        font-size: 25px;
                         margin: 0;
                         font-weight: bold;
                         padding-right: 35px;
@@ -122,7 +122,7 @@ div.item-detail {
                             color: $color3;
                         }
                         &.sc{
-                            font-size: 35px;
+                            font-size: 25px;
                             font-weight: normal;
                             color: $color1;
                             text-decoration: line-through;
@@ -154,14 +154,14 @@ div.item-detail {
                 padding-right: 10px;
                 padding-left: 10px;
                 p{
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }
     }
     .button{
         width: 100%;
-        height: 55px;
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -246,7 +246,7 @@ div.item-detail {
                         justify-content: center;
                         align-items: center;
                         p {
-                            font-size: 20px;
+                            font-size: 21px;
                             color: white;
                             margin: 0;
                         }
@@ -259,11 +259,10 @@ div.item-detail {
                     background-color: #dedad7;
                     justify-content: space-around;
                     .border1 {
-                        border: 2px solid $color1;
                         overflow: hidden;
-                        width: 30px;
-                        background-color: #dedad7;
-                        height: 30px;
+                        width: 50px;
+                        background-color: $color2;
+                        height: 50px;
                         border-radius: 5px;
                         display: flex;
                         justify-content: center;
@@ -272,41 +271,43 @@ div.item-detail {
                             width: 100%;
                             height: 100%;
                             border: 0;
-                            font-size: 1.9em;
+                            font-size: 25px;
+                            font-weight: bold;
                             line-height: 1em;
-                            color: $color1;
-                            font-family: cursive;
+                            color: white;
+                            font-family: DroidKufi;
                             margin: 0;
                             padding: 0;
-                            background-color: #f4f4f4;
+                            background-color: transparent;
                             &:focus {
                                 outline: none;
-                                background-color: #f4f4f4;
+                                background-color: transparent;
                             }
                         }
                     }
                     .border2 {
                         border: 2px solid $color1;
                         padding: 0 10px;
-                        height: 30px;
+                        height: 50px;
+                        min-width: 50px;
                         border-radius: 5px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         p {
-                            font-size: 1.2em;
+                            font-size: 25px;
+                            font-weight: bold;
                             color: $color1;
-                            font-family: cursive;
+                            font-family: DroidKufi;
                             margin: 0;
                             padding: 0;
                         }
                     }
                     .border3 {
-                        border: 2px solid $color1;
                         overflow: hidden;
-                        width: 30px;
-                        background-color: #dedad7;
-                        height: 30px;
+                        width: 50px;
+                        background-color: $color2;
+                        height: 50px;
                         border-radius: 5px;
                         display: flex;
                         justify-content: center;
@@ -320,21 +321,21 @@ div.item-detail {
                             border: 0;
                             font-size: 1.9em;
                             line-height: 1em;
-                            color: $color1;
+                            color: white;
                             font-family: cursive;
                             margin: 0;
                             padding: 0;
-                            background-color: #f4f4f4;
+                            background-color: transparent;
                             &:focus {
                                 outline: none;
-                                background-color: #f4f4f4;
+                                background-color: transparent;
                             }
                         }
                     }
                     .border4 {
-                        width: 30px;
+                        width: 50px;
                         border: 2px solid #fe0000;
-                        height: 30px;
+                        height: 50px;
                         border-radius: 5px;
                         display: flex;
                         justify-content: center;
@@ -370,7 +371,7 @@ div.item-detail {
             justify-content: center;
             align-items: center;
             img{
-                width: 40%;
+                width: 60%;
                 height: 100%;
             }
         }
