@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import NavItem from '../containers/NavItem';
+//import NavItem from '../containers/NavItem';
+//import DryClean from './DryClean';
 // import { Throttle } from 'react-throttle';
 
 class Navbar extends Component {
@@ -10,6 +11,8 @@ class Navbar extends Component {
         this.goToContact = this.goToContact.bind(this);
         this.goToHelp = this.goToHelp.bind(this);
         this.goToProfile = this.goToProfile.bind(this);
+        this.goToDryClean = this.goToDryClean.bind(this);
+        this.goToFruits = this.goToFruits.bind(this);
     }
 
     componentDidMount() {
@@ -62,20 +65,18 @@ class Navbar extends Component {
     goToProfile(){
         this.goToPage('Profile');
     }
+    
+    goToDryClean(){
+        this.goToPage('DryClean');
+    }
+
+    goToFruits(){
+        this.goToPage('Fruits');
+    }
+
 
     render() {
         let currPathName = this.props.history.location.pathname;
-
-        let discountItemData = {
-            id: 0,
-            position: 0,
-            name: 'تخفيضات لهلوبة',
-            image: 'assets/images/menu1.svg'
-        };
-
-        let NavItems = [ ( <NavItem data={discountItemData} key={-1} history={ this.props.history } /> ) , ...this.props.navItems.map((elem, index) => {
-            return <NavItem data={elem} key={index} history={ this.props.history } />;
-        }) ];
 
         return (
             <div className="navbar-fixed">
@@ -122,6 +123,7 @@ class Navbar extends Component {
                         </ul>
 
                         <ul className="side-nav" id="mobile-demo">
+                            
                             <div className="header-data">
                                 <div className="circl">
                                     <img src="./assets/images/menu1.svg" />
@@ -131,7 +133,37 @@ class Navbar extends Component {
                                 <button onClick={ () => this.goToRegister() }>التسجيل</button>
                             </div>
 
-                            { NavItems }
+
+
+                            <div className="menu-data" onClick={ this.goToDryClean } >
+                                <p>
+                                    تخفيضات لهلوبة
+                                </p>
+                                <img src='assets/images/menu1.svg' />
+                            </div>
+
+                            <div className="menu-data" onClick={ this.goToFruits } >
+                                <p>
+                                    خضروات مجهزة
+                                </p>
+                                <img src='assets/images/menu2.svg' />
+                            </div>
+
+                            <div className="menu-data" onClick={ () => {} } >
+                                <p>
+                                    خضروات لهلوبة
+                                </p>
+                                <img src='assets/images/menu3.svg' />
+                            </div>
+
+                            <div className="menu-data" onClick={ () => {} } >
+                                <p>
+                                    فواكة لهلوبة
+                                </p>
+                                <img src='assets/images/menu4.svg' />
+                            </div>
+
+
 
                             <li className="items contact-us" onClick={this.goToContact}>
                                 <p> اتصل بنا  </p>

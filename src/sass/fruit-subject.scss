@@ -1,28 +1,4 @@
-div.home {
-    // font-family: DANUB;
-    width: 100vw;
-    margin: 0 auto;
-    position: absolute;
-    height: 100%;
-    overflow: auto;
-
-    .tools {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0.8em 0px;
-        a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 10px;
-            i {
-                font-size: 2em;
-                color: $color1;
-            }
-        }
-    }
-
+.fruit-subject{
     .items {
         display: flex;
         justify-content: center;
