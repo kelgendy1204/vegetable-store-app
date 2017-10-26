@@ -9,6 +9,8 @@ import Fruits from './Fruits';
 import FruitSubject from './FruitSubject';
 import SuperMarkting from './SuperMarkting';
 import SuperMarktingSubject from './SuperMarktingSubject';
+import Rust from './Rust';
+import RustSubject from './RustSubject';
 import Help from './Help';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
@@ -57,6 +59,8 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/FruitSubject" component={ FruitSubject }/>
                                 <Route path="/InnerPage/SuperMarkting" component={ SuperMarkting }/>
                                 <Route path="/InnerPage/SuperMarktingSubject" component={ SuperMarktingSubject }/>
+                                <Route path="/InnerPage/Rust" component={ Rust }/>
+                                <Route path="/InnerPage/RustSubject" component={ RustSubject }/>
                             </Switch>
                         </div>
                     </CSSTransition>

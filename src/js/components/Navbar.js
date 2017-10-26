@@ -14,6 +14,8 @@ class Navbar extends Component {
         this.goToDryClean = this.goToDryClean.bind(this);
         this.goToFruits = this.goToFruits.bind(this);
         this.goToSuperMarkting = this.goToSuperMarkting.bind(this);
+        this.goToRust = this.goToRust.bind(this);
+
     }
 
     componentDidMount() {
@@ -79,6 +81,9 @@ class Navbar extends Component {
         this.goToPage('SuperMarkting');
     }
 
+    goToRust(){
+        this.goToPage('Rust');
+    }
     render() {
         let currPathName = this.props.history.location.pathname;
 
@@ -148,7 +153,7 @@ class Navbar extends Component {
 
                             <div className="menu-data" onClick={ this.goToFruits } >
                                 <p>
-                                   خضروات وفاكهة
+                                    خضروات وفاكهة
                                 </p>
                                 <img src='assets/images/Uu2.png' />
                             </div>
@@ -160,9 +165,9 @@ class Navbar extends Component {
                                 <img src='assets/images/Uu3.svg' />
                             </div>
 
-                            <div className="menu-data" onClick={ () => {} } >
+                            <div className="menu-data" onClick={ this.goToRust} >
                                 <p>
-                                    فواكة لهلوبة
+                                   مطاعم لهلوبة
                                 </p>
                                 <img src='assets/images/menu4.svg' />
                             </div>

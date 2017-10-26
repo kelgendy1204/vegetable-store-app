@@ -1,0 +1,124 @@
+.rust{
+    .itemsrust {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .itemrust {
+            min-width: 300px;
+            max-width: 350px;
+            width: 95%;
+            height: 155px;
+            margin: 5px;
+            background-color: white;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .3);
+            .right-data {
+                height: 100%;
+                width: 40%;
+                position: relative;
+                .down-data {
+                    background-image: url(../images/rus6.png);
+                    width: 100%;
+                    height: 100%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+
+            .left-data {
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                line-height: 20px;
+
+                .center-data{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    align-items: center;
+                    line-height: 30px;
+                    padding-right: 5px;
+                    p{
+                        font-size: 18px;
+                        color: $color2;
+                        font-weight: bold;
+                        width: 100%;
+                        margin: 0;
+                    }
+                    .one{
+                        margin-top: 10px;
+                    }
+                    .two {
+                        font-size: 10px;
+                        color: $color2;
+                    }
+                    .three {
+                        text-decoration: line-through;
+                        color: $color1;
+                    }
+
+                    .Evaluation{
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        height: 25px;
+                        img{
+                            height: 100%;
+                            width: 70%;
+                        }
+                    }
+                    .time-data{
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        height: 35px;
+                        margin-top: 10px;
+                        .timer-data{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            width: 50%;
+                            height: 100%;
+                            img{
+                                width: 35%;
+                                height: 100%
+                            }
+                            p{
+                                color: &color2;
+                                font-size: 12px;
+                                margin-right: 2px;
+                                font-weight: bold;
+                            }
+                        }
+                        .delivery-service{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            width: 50%;
+                            height: 100%;
+                            img{
+                                width: 35%;
+                                height: 100%
+                            }
+                            p{
+                                color: &color2;
+                                font-size: 12px;
+                                margin-right: 7px;
+                                font-weight: bold;
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}

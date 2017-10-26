@@ -105,14 +105,14 @@ nav{
             }
             p{
                 margin: 0;
-                font-size: 1em;
-                font-family: bader;
+                font-size: 12px;
+                font-family: DroidKufi;
             }
             button{
                 background-color: rgba(0, 0, 0, 0);
                 padding: 5px;
                 border: 0;
-                font-family: bader;
+                font-family: DroidKufi;
             }
         }
         .menu-data{
@@ -130,7 +130,7 @@ nav{
                 min-height: 100px;
             }
             p{
-                line-height: 1em;
+                line-height: 1.2em;
                 flex-grow: 1;
                 font-size: 27px;
                 margin: 0;

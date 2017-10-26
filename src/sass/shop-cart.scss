@@ -50,14 +50,14 @@
                         line-height: 40px;
 
                         p {
-                            font-size: 1.6em;
+                            font-size: 19px;
                             color: $color2;
                             margin: 0;
                             margin-top: 10px;
                             font-weight: bold;
                             line-height: 1.3em;
                             width: 100%;
-                            font-family: bader;
+
                         }
 
                         .two {
@@ -104,7 +104,7 @@
                                 height: 100%;
                                 border: 0;
                                 background-color: transparent;
-                                font-size: 1.9em;
+                                font-size: 20px;
                                 color: white;
                                 margin: 0;
                                 padding: 0;
@@ -122,7 +122,7 @@
                             margin-right: 3px;
                             margin-left: 3px;
                             p {
-                                font-size: 1.2em;
+                                font-size: 18px;
                                 color: #db5927;
                                 margin: 0;
                                 padding: 0;
@@ -167,19 +167,19 @@
                     }
                 }
                 p {
-                    font-size: 1em;
+                    font-size:  12px;
                     color: $color1;
                     font-weight: bold;
                     width: 100%;
-                    font-family: bader;
+
                     margin: 0;
                 }
                 .one {
-                    font-size: 2.8em;
+                    font-size: 22px;
                     color: $color2;
                 }
                 .two {
-                    font-size: 2em;
+                    font-size: 18px;
                 }
             }
         }
@@ -196,8 +196,6 @@
         background-color: $color2;
         color: white;
         border: 0;
-        font-size: 2.2em;
-        font-family: bader;
-        // border-radius: 5px;
+        font-size: 25px;
     }
 }
