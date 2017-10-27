@@ -20,3 +20,10 @@ export function removeFromShop(cartItem) {
         payload: cartItem
     };
 }
+
+export function toggleFavorite(cartItem) {
+    return {
+        type: action_types.TOGGLE_FAVORITE,
+        payload: cartItem
+    };
+}

@@ -15,6 +15,7 @@ class Navbar extends Component {
         this.goToFruits = this.goToFruits.bind(this);
         this.goToSuperMarkting = this.goToSuperMarkting.bind(this);
         this.goToRust = this.goToRust.bind(this);
+        this.showFavorites = this.showFavorites.bind(this);
 
     }
 
@@ -28,6 +29,15 @@ class Navbar extends Component {
 
     search_items(e) {
         this.props.filterBy(e.target.value);
+    }
+
+    showFavorites() {
+        let currPathName = this.props.history.location.pathname;
+        $('.button-collapse').sideNav('hide');
+        if( currPathName != '/InnerPage/Home' ){
+            this.props.history.push(`/InnerPage/Home`);
+        }
+        this.props.filterByFavorites();
     }
 
     goBack(){
@@ -84,6 +94,7 @@ class Navbar extends Component {
     goToRust(){
         this.goToPage('Rust');
     }
+
     render() {
         let currPathName = this.props.history.location.pathname;
 
@@ -189,7 +200,7 @@ class Navbar extends Component {
                                 <img src="./assets/images/2.svg"/>
                             </li>
 
-                            <li className="items favorite">
+                            <li className="items favorite" onClick={this.showFavorites}>
                                 <p> المفضل لك  </p>
                                 <img src="./assets/images/2.svg"/>
                             </li>

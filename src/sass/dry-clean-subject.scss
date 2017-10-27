@@ -17,6 +17,7 @@
             align-items: center;
             flex: 1;
             height: 100%;
+            padding: 0 10px;
             p{
                 margin: 0;
                 color: white;
@@ -27,7 +28,7 @@
             }
 
             &.opened{
-                padding: 0 10px;
+                padding: 0 5px;
                 height: calc(100% + 10px);
                 background-color: #356732;
                 border-top-right-radius: 10px;
@@ -39,12 +40,6 @@
                 &:last-child{
                     border-top-right-radius: 10px;
                     border-top-left-radius: 0;
-                }
-                p{
-                    font-size: 20px;
-                }
-                img{
-                    margin-left: 8px;
                 }
             }
 
@@ -64,14 +59,11 @@
             align-items: center;
         }
         .row{
-            border: 2px solid green;
-            border-radius: 15px;
             width: 90%;
             height: 45px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: white;
             &.add-last{
                 width: 45%;
                 margin: 0;
@@ -88,11 +80,19 @@
         }
         .input-field {
             margin: 0;
-//            .font-dry{
-//                font-size: 1.8em;
-//                color: #356732;
-//                text-align: center;
-//            }
+            height: 100%;
+            >select{
+                background-color: white;
+                border: 2px solid green;
+                border-radius: 15px;
+                width: 100%;
+                pointer-events: auto;
+                height: 100%;
+                opacity: 1;
+                &:focus{
+                    outline: 0;
+                }
+            }
             .waves-effect{
                 margin: 0;
                 background-color: #356732;
@@ -104,7 +104,7 @@
             }
             &.marg{
                 margin-left: 0px;
-                margin-right: 1rem;
+                // margin-right: 1rem;
                 span.caret{
                     right: 260px;
                     font-size: 20px;
@@ -124,7 +124,7 @@
             }
             label{
                 left: -0.75rem;
-                 
+
             }
             .prefix{
                 & ~ input, & ~ textarea{
@@ -138,6 +138,7 @@
             }
         }
     }
+
     .Dry-items{
         position: absolute;
         width: 100%;
@@ -150,10 +151,26 @@
             align-items: center;
             flex-wrap: wrap;
             margin-bottom: 60px;
+            min-height: 100%;
+            position: relative;
+            &::after {
+                background-image: url(../images/DryS3icon6.svg);
+                background-size: 80% auto;
+                background-repeat: no-repeat;
+                background-position: center center;
+                content: '';
+                opacity: 0.1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
+            }
             .item-Dry {
                 width: 99%;
                 height: 135px;
-                margin: 10px 5px 0;
+                margin: 10px 15px;
                 background-color: white;
                 display: flex;
                 align-items: stretch;
@@ -198,7 +215,7 @@
                                 font-weight: bold;
                                 line-height: 1.3em;
                                 width: 100%;
-                                 
+
                             }
 
                             .two {
@@ -250,7 +267,7 @@
                         color: $color1;
                         font-weight: bold;
                         width: 100%;
-                         
+
                         margin: 0;
                     }
                     .one {
@@ -277,7 +294,7 @@
         color: white;
         border: 0;
         font-size: 25px;
-         
+
         // border-radius: 5px;
     }
 }

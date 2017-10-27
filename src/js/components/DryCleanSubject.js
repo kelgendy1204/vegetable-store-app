@@ -7,14 +7,6 @@ class DryCleanSubject extends Component {
         this.openCategory = this.openCategory.bind(this);
     }
 
-    componentDidMount(){
-        $('select').material_select();
-    }
-
-    componentWillUnmount(){
-        $('select').material_select('destroy');
-    }
-
     openCategory(event){
         $('.data-item.opened').removeClass('opened');
         event.currentTarget.classList.add('opened');

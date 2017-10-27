@@ -9,6 +9,24 @@ class CartItem extends Component {
         this.openCart = this.openCart.bind(this);
     }
 
+    share(){
+        if(window.plugins){
+
+            var options = {
+                message: null, // not supported on some apps (Facebook, Instagram)
+                subject: null, // fi. for email
+                files: null, // an array of filenames either locally or remotely
+                url: 'http://lahloba.net',
+                chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
+            };
+
+            // window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
+
+            window.plugins.socialsharing.shareWithOptions(options, null, null);
+        }
+
+    }
+
     gotToDetails(){
         this.props.history.push(`/InnerPage/ItemDetail/${this.props.data.id}`);
     }
@@ -46,8 +64,8 @@ class CartItem extends Component {
                                 <p className={'three ' + (this.props.data.discount > 0 ? '' : 'hide')}> <span> { this.props.data.price } </span> جنيه</p>
                             </div>
                             <div className='lef-data'>
-                                <a className='hart'></a>
-                                <a className='share'></a>
+                                <button className={'hart ' + (this.props.data.favorite ? 'fav' : '')} onClick={ () => { this.props.toggleFavorite(this.props.data); }}></button>
+                                <button className='share' onClick={ () => { this.share(); } }></button>
                             </div>
                         </div>
                     </div>
@@ -79,6 +97,7 @@ CartItem.propTypes = {
     data: PropTypes.object.isRequired,
     removeCartItem: PropTypes.func.isRequired,
     addCartItem: PropTypes.func.isRequired,
+    toggleFavorite: PropTypes.func.isRequired,
     removeFromShop: PropTypes.func.isRequired
 };
 

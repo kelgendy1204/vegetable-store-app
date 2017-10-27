@@ -20,7 +20,7 @@ let defaultCarts = [
         name: 'تفاح امريكي',
         image: 'assets/images/tmatm.jpg',
         description: 'مستورد وذو جودة عالية',
-        category_id: 2,
+        category_id: 1,
         price: 12,
         inShop: false,
         favorite: false,
@@ -33,7 +33,7 @@ let defaultCarts = [
         name: 'منجو اسماعيلي',
         image: 'assets/images/tmatm.jpg',
         description: 'مستورد وذو جودة عالية',
-        category_id: 3,
+        category_id: 1,
         price: 14,
         inShop: false,
         favorite: false,
@@ -91,6 +91,10 @@ export default function (state = defaultCarts, action) {
             return [
                 ...state.filter(elem => elem.id != action.payload.id),
                 favoratedElement
+            ];
+        case action_types.SHOW_FAVORITES:
+            return [
+                ...state.filter(elem => elem.favorite),
             ];
     }
     return state;

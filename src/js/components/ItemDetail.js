@@ -20,11 +20,11 @@ class ItemDetail extends Component {
         if(window.plugins){
 
             var options = {
-              message: null, // not supported on some apps (Facebook, Instagram)
-              subject: null, // fi. for email
-              files: null, // an array of filenames either locally or remotely
-              url: 'http://lahloba.net',
-              chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
+                message: null, // not supported on some apps (Facebook, Instagram)
+                subject: null, // fi. for email
+                files: null, // an array of filenames either locally or remotely
+                url: 'http://lahloba.net',
+                chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title
             };
 
             // window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);

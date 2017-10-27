@@ -6,3 +6,9 @@ export function filterBy(search) {
         payload: search
     };
 }
+
+export function filterByFavorites() {
+    return {
+        type: action_types.SHOW_FAVORITES
+    };
+}

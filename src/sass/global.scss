@@ -5,9 +5,10 @@ $color3 : #356732;
 body{
     direction: rtl;
     background-color: #dedad7;
-    p{
+    p, button, a, select{
         font-family: DroidKufi;
     }
+
 }
 
 .innerpage{
