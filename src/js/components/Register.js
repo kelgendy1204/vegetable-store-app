@@ -38,6 +38,15 @@ class Login extends Component {
                             </div>
                         </div>
 
+
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <i className="material-icons prefix">lock</i>
+                                <input id="password" type="password" className="validate" required />
+                                <label htmlFor="password">password</label>
+                            </div>
+                        </div>
+
                         <div className="row">
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">email</i>
@@ -87,7 +96,7 @@ class Login extends Component {
                                 <label htmlFor="telephone">عمارة رقم </label>
                             </div>
                         </div>
-                        
+
                         <div className="row">
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">mode_edit</i>
@@ -104,67 +113,6 @@ class Login extends Component {
                     </form>
                 </div>
             </div>
-
-            //            <div className="register-page">
-            //                <div className="header-Regestration">
-            //                    <div className="right-head"><p>بيانات الحساب</p></div>
-            //                    <div className="left-head"><p>بيانات اضافية</p></div>
-            //                </div>
-            //                <section className="Regestration">
-            //                    <div className="description">
-            //                        <p>الاسم بالكامل</p>
-            //                        <div className="center-input name">
-            //                            <div className="input">
-            //                                <input type="text" placeholder="..........." />
-            //                            </div>
-            //                        </div>
-            //                    </div>
-            //                    <div className="description">
-            //                        <p>رقم المنزل </p>
-            //                        <div className="center-input number-home">
-            //                            <div className="input">
-            //                                <input type="number" placeholder="..........." />
-            //                            </div>
-            //                        </div>
-            //                    </div>
-            //                    <div className="description">
-            //                        <p>رقم الموبيل</p>
-            //                        <div className="center-input number-mobile">
-            //                            <div className="input">
-            //                                <input type="number" placeholder="..........." />
-            //                            </div>
-            //                        </div>
-            //                    </div>
-            //                    <div className="description">
-            //                        <p>المحافظة</p>
-            //                        <div className="center-input Governorate">
-            //                            <select>
-            //                                <option value="القاهرة"> القاهرة </option>
-            //                            </select>
-            //                        </div>
-            //                    </div>
-            //                    <div className="description">
-            //                        <p>المدينة</p>
-            //                        <div className="center-input city">
-            //                            <select>
-            //                                <option value="15 مايو"> 15 مايو </option>
-            //                            </select>
-            //                        </div>
-            //                    </div>
-            //                    <div className="description">
-            //                        <p>العنوان بالتفصيل</p>
-            //                        <div className="center-input full-data">
-            //                            <div className="input">
-            //                                <input type="text" placeholder="..........." />
-            //                            </div>
-            //                        </div>
-            //                    </div>
-            //                </section>
-            //                <div className="center-align">
-            //                    <button className="finish">تسجيل</button>
-            //                </div>
-            //
-            //            </div>
         );
     }
 }

@@ -11,6 +11,7 @@ import SuperMarkting from './SuperMarkting';
 import SuperMarktingSubject from './SuperMarktingSubject';
 import Rust from './Rust';
 import RustSubject from './RustSubject';
+import LoginRigister from './LoginRigister';
 import Help from './Help';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
@@ -61,6 +62,7 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/SuperMarktingSubject" component={ SuperMarktingSubject }/>
                                 <Route path="/InnerPage/Rust" component={ Rust }/>
                                 <Route path="/InnerPage/RustSubject" component={ RustSubject }/>
+                                <Route path="/InnerPage/LoginRigister" component={ LoginRigister }/>
                             </Switch>
                         </div>
                     </CSSTransition>

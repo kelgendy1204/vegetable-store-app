@@ -31,12 +31,12 @@ class Login extends Component {
 
                         <div className="row">
                             <div className="input-field col s12">
-                                <i className="material-icons prefix">email</i>
-                                <input id="email" type="email" className="validate" required />
-                                <label htmlFor="email">الايميل</label>
+                                <i className="material-icons prefix">lock</i>
+                                <input id="password" type="password" className="validate" required />
+                                <label htmlFor="password">password</label>
                             </div>
                         </div>
-
+ 
                         <div className="row">
                             <div className="input-field but-rig col s12">
                                 <a className="waves-effect waves-light btn" type="submit" id="submit"><i className="material-icons left">send</i> تسجيل الدخول </a>
@@ -45,32 +45,6 @@ class Login extends Component {
                     </form>
                 </div>
             </div>
-            
-            //            <div className="login-page">
-            //                <div className="login-data">
-            //                    <p> اسم المستخدم </p>
-            //                    <div className="description-login">
-            //                        <div className="input user-login">
-            //                            <input type="text" placeholder="..........." />
-            //                        </div>
-            //                    </div>
-            //                    <p>كلمة المرور</p>
-            //                    <div className="description-login">
-            //                        <div className="input password-login">
-            //                            <input type="text" placeholder="..........." />
-            //                        </div>
-            //                    </div>
-            //                    <p>رقم الموبيل</p>
-            //                    <div className="description-login">
-            //                        <div className="input phonnumber-login">
-            //                            <input type="number" placeholder="..........." />
-            //                        </div>
-            //                    </div>
-            //                </div>
-            //                <div className="center-align">
-            //                    <button className="finish">تسجيل الدخول</button>
-            //                </div>
-            //            </div>
         );
     }
 }

@@ -6,7 +6,16 @@ class ShopCart extends Component {
 
     constructor(props){
         super(props);
+        this.goToPage = this.goToPage.bind(this);
     }
+
+    goToPage(page) {
+        let currPathName = this.props.history.location.pathname;
+        if( currPathName != `/InnerPage/${page}` ){
+            this.props.history.push(`/InnerPage/${page}`);
+        }
+    }
+
 
     render() {
 
@@ -19,7 +28,7 @@ class ShopCart extends Component {
                 <div className="items-cart">
                     { shopCartItems }
                 </div>
-                <div className="center-align">
+                <div className="center-align" onClick={() => {this.goToPage('LoginRigister');}}>
                     <button className="finish">انهاء الطلب</button>
                 </div>
             </div>

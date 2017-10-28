@@ -146,7 +146,7 @@ class Navbar extends Component {
 
                             <div className="header-data">
                                 <div className="circl">
-                                    <img src="./assets/images/menu1.svg" />
+                                    <img src="./assets/images/boy.svg" />
                                 </div>
                                 <button onClick={ () => this.goToLogin() }>تسجيل الدخول</button>
                                 <p className="buton">/</p>
