@@ -126,6 +126,7 @@ class Navbar extends Component {
 
                         </ul>
 
+
                         <ul className="right nav-right upper-right">
 
                             <li>
@@ -133,7 +134,6 @@ class Navbar extends Component {
                                     <i className="material-icons">menu</i>
                                 </a>
                             </li>
-
                             <li className={(currPathName == '/InnerPage/Home' || currPathName == '/InnerPage') ? 'hide' : '' } >
                                 <a href="#" onClick={ () => this.goBack() }>
                                     <i className="material-icons back">reply</i>
@@ -149,72 +149,77 @@ class Navbar extends Component {
                                     <img src="./assets/images/boy.svg" />
                                 </div>
                                 <button onClick={ () => this.goToLogin() }>تسجيل الدخول</button>
-                                <p className="buton">/</p>
-                                <button onClick={ () => this.goToRegister() }>التسجيل</button>
                             </div>
 
 
-
-                            <div className="menu-data" onClick={ this.goToDryClean } >
-                                <p>
-                                    تنظيف الملابس
-                                </p>
-                                <img src='assets/images/Uu1.svg' />
-                            </div>
 
                             <div className="menu-data" onClick={ this.goToFruits } >
                                 <p>
-                                    خضروات وفاكهة
+                                    فــــــواكــــة وخضــروات
                                 </p>
-                                <img src='assets/images/Uu2.png' />
+                                <img src='assets/images/iconfinal1.svg' />
                             </div>
 
                             <div className="menu-data" onClick={ this.goToSuperMarkting} >
                                 <p>
-                                    سوبر ماركت
+                                    ســـوبـــر مــــاركـــت
                                 </p>
-                                <img src='assets/images/Uu3.svg' />
+                                <img src='assets/images/iconfinal2.svg' />
                             </div>
 
                             <div className="menu-data" onClick={ this.goToRust} >
                                 <p>
-                                   مطاعم لهلوبة
+                                    مـــطـــاعـــم لــهلوبــة
                                 </p>
-                                <img src='assets/images/menu4.svg' />
+                                <img src='assets/images/iconfinal3.svg' />
                             </div>
 
+                            <div className="menu-data" onClick={ this.goToDryClean } >
+                                <p>
+                                    خــــدمـــات تــنظــيـف
+                                </p>
+                                <img src='assets/images/iconfinal4.svg' />
+                            </div>
+                            <div className="items ">
+
+                                 <li className="item tlbati" onClick={this.goToContact}>
+                                    <img src="./assets/images/iconfinal5.svg"/>
+                                    <p> طلباتي </p>
+                                </li>
+
+                                <li className="item left-child help" onClick={this.goToHelp}>
+                                    <img src="./assets/images/iconfinal6.svg"/>
+                                    <p> تتبع الطلبات </p>
+                                </li>
+
+                                <li className="item favorite" onClick={this.showFavorites}>
+                                    <img src="./assets/images/iconfinal7.svg"/>
+                                    <p> مفضلي  </p>
+                                </li>
+
+                                <li className="item left-child favorite" onClick={this.showFavorites}>
+                                    <img src="./assets/images/iconfinal8.svg"/>
+                                    <p> ركن لهلوبة </p>
+                                </li>
+
+                                <li className="item contact-us" onClick={this.goToContact}>
+                                    <img src="./assets/images/iconfinal9.svg"/>
+                                    <p> اتصل بنا  </p>
+                                </li>
+
+                                <li className="item left-child help" onClick={this.goToHelp}>
+                                    <img src="./assets/images/iconfinal10.svg"/>
+                                    <p> المساعدة  </p>
+                                </li>
+
+                                <li className="item profile" onClick={this.goToProfile}>
+                                    <img src="./assets/images/iconfinal11.svg"/>
+                                    <p> حسابي  </p>
+                                </li>
 
 
-                            <li className="items contact-us" onClick={this.goToContact}>
-                                <p> اتصل بنا  </p>
-                                <img src="./assets/images/2.svg"/>
-                            </li>
 
-                            <li className="items help" onClick={this.goToHelp}>
-                                <p> المساعدة </p>
-                                <img src="./assets/images/2.svg"/>
-                            </li>
-
-                            <li className="items profile" onClick={this.goToProfile}>
-                                <p> حسابي  </p>
-                                <img src="./assets/images/2.svg"/>
-                            </li>
-
-                            <li className="items favorite" onClick={this.showFavorites}>
-                                <p> المفضل لك  </p>
-                                <img src="./assets/images/2.svg"/>
-                            </li>
-
-                            <li className="items news">
-                                <p> اخر العروض </p>
-                                <img src="./assets/images/2.svg"/>
-                            </li>
-
-                            <li className="items news">
-                                <p> تتبع الطلبات  </p>
-                                <img src="./assets/images/2.svg"/>
-                            </li>
-
+                            </div>
                         </ul>
 
                     </div>
