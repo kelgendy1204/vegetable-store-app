@@ -1,0 +1,75 @@
+.tlpati-page{
+    width: 95%;
+    ul.collapsible{
+        padding: 0;
+        margin: 10px 0 ;
+        border: 0;
+        li{
+            margin-bottom: 4px;
+            .collapsible-header{
+                padding: 0;
+                display: flex;
+                align-items: center;
+                height: 40px;
+                justify-content: space-between;
+                border: 0;
+                font-weight: bold;
+                border-radius: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+                .fir-data{
+                    width: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    img{
+                        width: 25px;
+                        margin-left: 5px;
+                    }
+                    p{
+                        margin: 0;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: $color1;
+
+                    }
+                }
+                .sc-data{
+                    width: 20%;
+                    p{
+                        margin: 0;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #666666;
+
+                    }
+                    .sma{
+                        font-size: 10px;
+                    }
+
+                }
+                .last-data{
+                    width: 40%;
+                    img{
+                        width: 25px;
+                        margin-left: 5px;
+                    }
+                    p{
+                        margin: 0;
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: #666666;
+
+                    }
+                    .sma{
+                        font-size: 10px;
+                    }
+
+                }
+            }
+            .collapsible-body{
+                background-color: #fff;
+            }
+        }
+    }
+}

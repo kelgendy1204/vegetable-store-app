@@ -3,6 +3,7 @@ import Login from './Login';
 import Register from './Register';
 import Contact from './Contact';
 import Profile from './Profile';
+import Tlpati from './Tlpati';
 import DryClean from './DryClean';
 import DryCleanSubject from './DryCleanSubject';
 import Fruits from './Fruits';
@@ -63,6 +64,7 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/Rust" component={ Rust }/>
                                 <Route path="/InnerPage/RustSubject" component={ RustSubject }/>
                                 <Route path="/InnerPage/LoginRigister" component={ LoginRigister }/>
+                                <Route path="/InnerPage/Tlpati" component={ Tlpati }/>
                             </Switch>
                         </div>
                     </CSSTransition>

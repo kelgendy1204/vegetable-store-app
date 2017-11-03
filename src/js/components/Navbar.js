@@ -15,6 +15,7 @@ class Navbar extends Component {
         this.goToFruits = this.goToFruits.bind(this);
         this.goToSuperMarkting = this.goToSuperMarkting.bind(this);
         this.goToRust = this.goToRust.bind(this);
+        this.goToTlpati = this.goToTlpati.bind(this);
         this.showFavorites = this.showFavorites.bind(this);
 
     }
@@ -73,6 +74,9 @@ class Navbar extends Component {
 
     goToHelp(){
         this.goToPage('Help');
+    }
+    goToTlpati(){
+        this.goToPage('Tlpati');
     }
 
     goToProfile(){
@@ -182,12 +186,12 @@ class Navbar extends Component {
                             </div>
                             <div className="items ">
 
-                                 <li className="item tlbati" onClick={this.goToContact}>
+                                <li className="item tlpati" onClick={this.goToTlpati}>
                                     <img src="./assets/images/iconfinal5.svg"/>
                                     <p> طلباتي </p>
                                 </li>
 
-                                <li className="item left-child help" onClick={this.goToHelp}>
+                                <li className="item left-child tlpati" onClick={this.goToTlpati}>
                                     <img src="./assets/images/iconfinal6.svg"/>
                                     <p> تتبع الطلبات </p>
                                 </li>
