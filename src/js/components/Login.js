@@ -36,7 +36,7 @@ class Login extends Component {
                                 <label htmlFor="password">password</label>
                             </div>
                         </div>
- 
+
                         <div className="row">
                             <div className="input-field but-rig col s12">
                                 <a className="waves-effect waves-light btn" type="submit" id="submit"><i className="material-icons left">send</i> تسجيل الدخول </a>

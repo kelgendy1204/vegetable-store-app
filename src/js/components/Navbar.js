@@ -61,7 +61,7 @@ class Navbar extends Component {
     }
 
     goToLogin(){
-        this.goToPage('Login');
+        this.goToPage('LoginRigister');
     }
 
     goToRegister(){

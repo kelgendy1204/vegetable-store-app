@@ -1,0 +1,45 @@
+form{
+	display: block;
+	width: 100%;
+}
+
+.my-input-field{
+	position: relative;
+	margin: 1.5em 0 1em 0;
+	width: 100%;
+	overflow: hidden;
+
+	a.btn{
+		background-color: $color1;
+		border-radius: 15px;
+	}
+
+	label{
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 1;
+		font-family: DroidKufi;
+		font-size: 1em;
+		color: $color1 !important;
+		transform: none !important;
+		font-weight: bold !important;
+		padding: 0 1em !important;
+	}
+
+	input, textarea{
+		padding: 0 0.5em !important;
+		font-size: 1.3em !important;
+		font-family: DroidKufi;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		border-bottom: 1px solid $color1 !important;
+		box-shadow: 0 0 0 0 $color1 !important;
+		margin: 1em 0 !important;
+	}
+
+}

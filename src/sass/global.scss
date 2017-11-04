@@ -8,7 +8,10 @@ body{
     p, button, a, select{
         font-family: DroidKufi;
     }
+}
 
+*{
+    box-sizing: border-box;
 }
 
 .innerpage{
