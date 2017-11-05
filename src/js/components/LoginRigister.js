@@ -28,22 +28,29 @@ class Login extends Component {
         return (
 
             <div className="login-rigister">
-                <div className="row">
-                    <form className="col s12">
+                <div className="bg-image"></div>
+                <div className="bg-overlay"></div>
 
-                        <div className="row">
-                            <div className="input-field but-rig col s12"  onClick={() => {this.goToPage('Login');}} >
-                                <a className="waves-effect waves-light btn" type="submit" id="submit"><i className="material-icons left">send</i> تسجيل الدخول  </a>
-                            </div>
-                        </div>
+                <div className="content">
+                    <div className="logo">
+                        <img src="assets/images/logo2.svg" />
+                    </div>
 
-                        <div className="row">
-                            <div className="input-field but-rig col s12"  onClick={() => {this.goToPage('Register');}} >
-                                <a className="waves-effect waves-light btn" type="submit" id="submit"><i className="material-icons left">send</i> تسجيل اشتراك جديد </a>
-                            </div>
+                    <form>
+                        <div className="my-input-field">
+                            <label>رقم الموبايل</label>
+                            <input type="tel" />
                         </div>
+                        <div className="my-input-field">
+                            <label>كلمة السر</label>
+                            <input type="password" />
+                        </div>
+                        <button>دخول</button>
                     </form>
+
                 </div>
+
+
             </div>
         );
     }
