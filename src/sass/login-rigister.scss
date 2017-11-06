@@ -5,61 +5,78 @@
     position: absolute;
     overflow: auto;
     min-height: 100%;
-    .bg-image, .bg-overlay{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-
-    .bg-image{
-        background-image: url(../images/bg.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-    }
-
-    .bg-overlay{
-        background-color: rgba($color1, 0.9);
-    }
 
     .content{
         padding-top: 15px;
         position: relative;
+        text-align: center;
+        min-height: 100vh;
+        padding-bottom: 60px;
+
         .logo{
             text-align: center;
             img{
-                width: 80%;
+                width: 50%;
                 max-width: 360px;
             }
         }
-        form{
+
+        button{
+            max-width: 360px;
+            background-color: #FFF;
+            border: 0;
+            padding: 10px 0;
+            font-size: 1.4em;
+            color: $color1;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .loginform{
             text-align: center;
             color: white;
             width: 80%;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             .my-input-field{
                 text-align: right;
             }
+
             label, input{
                 color: white !important;
             }
+
             input{
                 border-bottom: 1px solid rgba(255,255,255, 0.4) !important;
             }
 
-            button{
-                width: 80%;
-                max-width: 360px;
-                background-color: #FFF;
-                border: 0;
-                padding: 10px 0;
+            .forgetpassword{
+                margin: 30px 0;
+                display: inline-block;
+                color: white;
                 font-size: 1.4em;
-                color: $color1;
-                border-radius: 10px;
-                font-weight: bold;
             }
+
         }
+
+        .loginbtn{
+            width: 80%;
+        }
+
+        .registerbtn{
+            border-radius: 25px;
+            width: 100%;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
     }
 }

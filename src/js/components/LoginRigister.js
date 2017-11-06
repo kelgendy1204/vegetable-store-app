@@ -28,27 +28,37 @@ class Login extends Component {
         return (
 
             <div className="login-rigister">
-                <div className="bg-image"></div>
-                <div className="bg-overlay"></div>
+                <div className="bg-image">
+                    <div className="bg-overlay">
 
-                <div className="content">
-                    <div className="logo">
-                        <img src="assets/images/logo2.svg" />
+                        <div className="content">
+                            <div className="logo">
+                                <img src="assets/images/logo2.svg" />
+                            </div>
+
+                            <div className="loginform">
+                                <div className="my-input-field">
+                                    <label>رقم الموبايل</label>
+                                    <input type="tel" />
+                                </div>
+                                <div className="my-input-field">
+                                    <label>كلمة السر</label>
+                                    <input type="password" />
+                                </div>
+                                <button className="loginbtn">دخول</button>
+
+                                <a href='#' className="forgetpassword">نسيت كلمة السر ؟</a>
+
+                            </div>
+
+                            <button className="registerbtn">مستخدم جديد</button>
+
+                        </div>
+
                     </div>
 
-                    <form>
-                        <div className="my-input-field">
-                            <label>رقم الموبايل</label>
-                            <input type="tel" />
-                        </div>
-                        <div className="my-input-field">
-                            <label>كلمة السر</label>
-                            <input type="password" />
-                        </div>
-                        <button>دخول</button>
-                    </form>
-
                 </div>
+
 
 
             </div>
