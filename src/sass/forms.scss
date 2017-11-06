@@ -5,8 +5,8 @@ form{
 
 .my-input-field{
 	position: relative;
-	margin: 1.5em 0 1em 0;
-	width: 100%;
+	margin: 1.5em 5px 0 5px;
+	// width: 100%;
 	overflow: hidden;
 
 	a.btn{
@@ -14,7 +14,7 @@ form{
 		border-radius: 15px;
 	}
 
-	label{
+	label:not(.radio){
 		top: 0;
 		right: 0;
 		width: 100%;
@@ -29,7 +29,7 @@ form{
 		padding: 0 1em !important;
 	}
 
-	input, textarea{
+	input:not([type='radio']), textarea{
 		padding: 0 0.5em !important;
 		font-size: 1.3em !important;
 		font-family: DroidKufi;
@@ -39,7 +39,7 @@ form{
 		z-index: 2;
 		border-bottom: 1px solid $color1 !important;
 		box-shadow: 0 0 0 0 $color1 !important;
-		margin: 1em 0 !important;
+		margin: 1em 0 0 0 !important;
 	}
 
 }

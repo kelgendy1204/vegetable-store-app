@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Login from './Login';
-import Register from './Register';
+import Register1 from './Register1';
+import Register2 from './Register2';
 import Contact from './Contact';
 import Profile from './Profile';
 import Tlpati from './Tlpati';
@@ -50,7 +51,8 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/Home" component={ Home }/>
                                 <Route path="/InnerPage/ShopCart" component={ ShopCart }/>
                                 <Route path="/InnerPage/Login" component={ Login }/>
-                                <Route path="/InnerPage/Register" component={ Register }/>
+                                <Route path="/InnerPage/Register1" component={ Register1 }/>
+                                <Route path="/InnerPage/Register2" component={ Register2 }/>
                                 <Route path="/InnerPage/Contact" component={ Contact }/>
                                 <Route path="/InnerPage/Help" component={ Help }/>
                                 <Route path="/InnerPage/Profile" component={ Profile }/>

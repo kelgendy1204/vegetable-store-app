@@ -15,7 +15,6 @@ class Login extends Component {
         }
     }
 
-
     componentDidMount(){
         $('select').material_select();
     }
@@ -45,21 +44,23 @@ class Login extends Component {
                                     <label>كلمة السر</label>
                                     <input type="password" />
                                 </div>
-                                <button className="loginbtn">دخول</button>
+
+                                <div className="my-input-field center-align w-100">
+                                    <button className="loginbtn">دخول</button>
+                                </div>
+
 
                                 <a href='#' className="forgetpassword">نسيت كلمة السر ؟</a>
 
                             </div>
 
-                            <button className="registerbtn">مستخدم جديد</button>
+                            <button onClick={() => {this.goToPage('Register1')}} className="registerbtn">مستخدم جديد</button>
 
                         </div>
 
                     </div>
 
                 </div>
-
-
 
             </div>
         );
