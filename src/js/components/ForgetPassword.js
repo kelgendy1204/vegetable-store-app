@@ -15,7 +15,6 @@ class ForgetPassword extends Component {
 
     activeAspect(aspectName){
         $('.active').removeClass('active');
-        console.log($(`.${aspectName}`));
         $(`.${aspectName}`).addClass('active');
     }
 
