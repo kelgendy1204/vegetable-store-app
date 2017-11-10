@@ -5,6 +5,7 @@ class Register1 extends Component {
 
     constructor(props) {
         super(props);
+        this.submitFirstPage = this.submitFirstPage.bind(this);
     }
 
     componentDidMount(){
@@ -23,6 +24,11 @@ class Register1 extends Component {
         }
     }
 
+    submitFirstPage(event){
+        event.preventDefault();
+        this.goToPage('Register2');
+    }
+
     render() {
         return (
 
@@ -38,7 +44,7 @@ class Register1 extends Component {
                 </div>
 
 
-                <form>
+                <form onSubmit={ this.submitFirstPage }>
 
                     <div className="d-flex">
                         <div className="my-input-field w-50">
@@ -60,18 +66,18 @@ class Register1 extends Component {
                     </div>
 
                     <div className="my-input-field">
-                        <input id="password" type="text" className="validate" required />
-                        <label htmlFor="password"><i className="fa fa-mobile fa-big" aria-hidden="true"></i> المنطقة</label>
+                        <input id="telephone" type="tel" className="validate" required />
+                        <label htmlFor="telephone"><i className="fa fa-mobile fa-big" aria-hidden="true"></i> رقم الموبايل</label>
                     </div>
 
                     <div className="my-input-field">
                         <input id="email" type="email" className="validate" required />
-                        <label htmlFor="email"><i className="fa fa-envelope" aria-hidden="true"></i> الشارع</label>
+                        <label htmlFor="email"><i className="fa fa-envelope" aria-hidden="true"></i> الايميل</label>
                     </div>
 
                     <div className="my-input-field">
-                        <input id="street" type="text" className="validate" required/>
-                        <label htmlFor="street"><i className="fa fa-lock fa-big" aria-hidden="true"></i> نوع العنوان</label>
+                        <input id="password" type="password" className="validate" required/>
+                        <label htmlFor="password"><i className="fa fa-lock fa-big" aria-hidden="true"></i> كلمة السر</label>
                     </div>
 
                     <div className="my-input-field">
@@ -84,11 +90,11 @@ class Register1 extends Component {
                         <div className="dot"></div>
                     </div>
 
-                </form>
+                    <div className="my-input-field center-align">
+                        <button className="waves-effect waves-light btn one" type="submit" id="submit">التالي</button>
+                    </div>
 
-                <div className="my-input-field center-align">
-                    <a onClick={() => {this.goToPage('Register2')}} className="waves-effect waves-light btn one" type="submit" id="submit">التالي</a>
-                </div>
+                </form>
 
             </div>
         );

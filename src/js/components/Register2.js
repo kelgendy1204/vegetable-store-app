@@ -5,6 +5,7 @@ class Register2 extends Component {
 
     constructor(props) {
         super(props);
+        this.submitSecondPage = this.submitSecondPage.bind(this);
     }
 
     componentDidMount(){
@@ -16,10 +17,32 @@ class Register2 extends Component {
         // $('iframe').attr('display', 'none');
     }
 
+    goToPage(page) {
+        let currPathName = this.props.history.location.pathname;
+        if( currPathName != `/InnerPage/${page}` ){
+            this.props.history.push(`/InnerPage/${page}`);
+        }
+    }
+
+    submitSecondPage(event){
+        event.preventDefault();
+        $('.register-page').addClass('finish');
+        setTimeout(() => {
+            this.goToPage('Home');
+        }, 3000);
+    }
+
     render() {
         return (
 
             <div className="register-page container">
+
+                <div className="finish-page">
+                    <img src="assets/images/smile.svg" />
+                    <h1>تهانينا</h1>
+                    <h3>أحمد خالد</h3>
+                    <h2>تم أنشاء حسابك بنجاح</h2>
+                </div>
 
                 <div className="location-map">
                     <div className="map">
@@ -32,8 +55,7 @@ class Register2 extends Component {
                 </div>
 
 
-                <form>
-
+                <form onSubmit={ this.submitSecondPage }>
 
                     <div className="d-flex">
                         <div className="my-input-field w-50">
@@ -42,14 +64,14 @@ class Register2 extends Component {
                         </div>
 
                         <div className="my-input-field w-50">
-                            <input id="city" type="text" className="validate" required pattern="[0-9]+"/>
+                            <input id="city" type="text" className="validate" required />
                             <label htmlFor="city">المدينة</label>
                         </div>
                     </div>
 
                     <div className="my-input-field">
-                        <input id="street" type="text" className="validate" required />
-                        <label htmlFor="street">المنطقة</label>
+                        <input id="area" type="text" className="validate" required />
+                        <label htmlFor="area">المنطقة</label>
                     </div>
 
                     <div className="my-input-field">
@@ -80,7 +102,7 @@ class Register2 extends Component {
                     </div>
 
                     <div className="my-input-field center-align">
-                        <a className="waves-effect waves-light btn" type="submit" id="submit">تسجيل</a>
+                        <button className="waves-effect waves-light btn button" type="submit" id="submit">تسجيل</button>
                     </div>
 
                 </form>
