@@ -28,14 +28,13 @@ class Register1 extends Component {
 
             <div className="register-page container">
 
-                <div className="location-map">
-                    <div className="map">
-                        <iframe width="100%" height="100%" frameBorder="0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDQlK-FE56_UiPJgi5jL7UPL1B1elDRBi4&center=-33.8569,151.2152&zoom=18" allowFullScreen>
-                        </iframe>
+                <div className="user-pic">
+                    <div className="user">
+                        <img src="assets/images/userpic.svg" />
                     </div>
-                    <button>
-                        تحديد موقعك علي الخريطة
-                    </button>
+                    <div className="button">
+                        تسجيل مستخدم جديد
+                    </div>
                 </div>
 
 
@@ -61,7 +60,7 @@ class Register1 extends Component {
                     </div>
 
                     <div className="my-input-field">
-                        <input id="password" type="password" className="validate" required />
+                        <input id="password" type="text" className="validate" required />
                         <label htmlFor="password"><i className="fa fa-mobile fa-big" aria-hidden="true"></i> المنطقة</label>
                     </div>
 
@@ -71,13 +70,13 @@ class Register1 extends Component {
                     </div>
 
                     <div className="my-input-field">
-                        <input id="mgawra" type="number" className="validate" required min="1" max="36"/>
-                        <label htmlFor="mgawra"><i className="fa fa-lock fa-big" aria-hidden="true"></i> نوع العنوان</label>
+                        <input id="street" type="text" className="validate" required/>
+                        <label htmlFor="street"><i className="fa fa-lock fa-big" aria-hidden="true"></i> نوع العنوان</label>
                     </div>
 
                     <div className="my-input-field">
                         <input type="checkbox" className="filled-in" id="filled-in-box" />
-                        <label htmlFor="filled-in-box">Filled in</label>
+                        <label htmlFor="filled-in-box">موافق علي شروك التسجيل و سياسة تطبيق لهلوبة</label>
                     </div>
 
                     <div className="my-input-field dots">
@@ -88,7 +87,7 @@ class Register1 extends Component {
                 </form>
 
                 <div className="my-input-field center-align">
-                    <a onClick={() => {this.goToPage('Register2')}}  className="waves-effect waves-light btn" type="submit" id="submit">تسجيل</a>
+                    <a onClick={() => {this.goToPage('Register2')}} className="waves-effect waves-light btn one" type="submit" id="submit">التالي</a>
                 </div>
 
             </div>

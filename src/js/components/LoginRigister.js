@@ -36,10 +36,12 @@ class Login extends Component {
                             </div>
 
                             <div className="loginform">
+
                                 <div className="my-input-field">
                                     <label>رقم الموبايل</label>
                                     <input type="tel" />
                                 </div>
+
                                 <div className="my-input-field">
                                     <label>كلمة السر</label>
                                     <input type="password" />
