@@ -16,6 +16,8 @@ class Navbar extends Component {
         this.goToSuperMarkting = this.goToSuperMarkting.bind(this);
         this.goToRust = this.goToRust.bind(this);
         this.goToTlpati = this.goToTlpati.bind(this);
+        this.goToEltlpat = this.goToEltlpat.bind(this);
+        this.goToLahlopaCorner = this.goToLahlopaCorner.bind(this);
         this.showFavorites = this.showFavorites.bind(this);
 
     }
@@ -97,6 +99,14 @@ class Navbar extends Component {
 
     goToRust(){
         this.goToPage('Rust');
+    }
+    
+    goToEltlpat(){
+        this.goToPage('Eltlpat');
+    } 
+    
+    goToLahlopaCorner(){
+        this.goToPage('LahlopaCorner');
     }
 
     render() {
@@ -191,7 +201,7 @@ class Navbar extends Component {
                                     <p> طلباتي </p>
                                 </li>
 
-                                <li className="item left-child tlpati" onClick={this.goToTlpati}>
+                                <li className="item left-child Eltlpat" onClick={this.goToEltlpat}>
                                     <img src="./assets/images/iconfinal6.svg"/>
                                     <p> تتبع الطلبات </p>
                                 </li>
@@ -201,7 +211,7 @@ class Navbar extends Component {
                                     <p> مفضلي  </p>
                                 </li>
 
-                                <li className="item left-child favorite" onClick={this.showFavorites}>
+                                <li className="item left-child LahlopaCorner" onClick={this.goToLahlopaCorner}>
                                     <img src="./assets/images/iconfinal8.svg"/>
                                     <p> ركن لهلوبة </p>
                                 </li>

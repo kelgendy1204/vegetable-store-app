@@ -15,6 +15,8 @@ import Rust from './Rust';
 import RustSubject from './RustSubject';
 import LoginRigister from './LoginRigister';
 import Help from './Help';
+import Eltlpat from './Eltlpat';
+import LahlopaCorner from './LahlopaCorner';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
 import Home from '../containers/Home';
@@ -67,6 +69,8 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/RustSubject" component={ RustSubject }/>
                                 <Route path="/InnerPage/LoginRigister" component={ LoginRigister }/>
                                 <Route path="/InnerPage/Tlpati" component={ Tlpati }/>
+                                <Route path="/InnerPage/Eltlpat" component={ Eltlpat }/>
+                                <Route path="/InnerPage/LahlopaCorner" component={ LahlopaCorner }/>
                             </Switch>
                         </div>
                     </CSSTransition>

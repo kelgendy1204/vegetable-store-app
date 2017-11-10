@@ -1,0 +1,113 @@
+.lahlopacorner{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .header-corner{
+        width: 90%;
+        height: 40px;
+        background-color: #dedad7;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        align-items: flex-end;
+
+        .data-item{
+            background-color: #484645;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            height: 100%;
+            padding: 0 10px;
+            &:first-child{
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                margin-left: 1px;
+            }
+            &:last-child{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                margin-right: 1px;
+            }
+            p{
+                margin: 0;
+                color: white;
+                font-size: 15px;
+            }
+            img{
+                width: 25%;
+            }
+
+            &.opened{
+                background-color: #db5927;
+            }
+
+        }
+    }
+
+    .write-data{
+        width: 90%;
+        height: 210px;
+        background-color: white;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .write{
+            width: 100%;
+            height: 160px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            p{
+                font-size: 1.4em;
+                color: #366634;
+            }
+        }
+    }
+    .youtube-data{
+        width: 90%;
+        height: 275px;
+        background-color: white;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .youtube{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            p{
+                font-size: 1.4em;
+                color: #366634;
+            }
+        }
+
+    }
+
+}
