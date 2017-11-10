@@ -26,7 +26,7 @@ class Register2 extends Component {
                         <iframe width="100%" height="100%" frameBorder="0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDQlK-FE56_UiPJgi5jL7UPL1B1elDRBi4&center=-33.8569,151.2152&zoom=18" allowFullScreen>
                         </iframe>
                     </div>
-                    <button>
+                    <button className="button">
                         تحديد موقعك علي الخريطة
                     </button>
                 </div>
@@ -37,41 +37,41 @@ class Register2 extends Component {
 
                     <div className="d-flex">
                         <div className="my-input-field w-50">
-                            <input id="name" type="text" className="validate" required />
-                            <label htmlFor="name">المحافظة</label>
+                            <input id="state" type="text" className="validate" required />
+                            <label htmlFor="state">المحافظة</label>
                         </div>
 
                         <div className="my-input-field w-50">
-                            <input id="telephone" type="tel" className="validate" required pattern="[0-9]+"/>
-                            <label htmlFor="telephone">المدينة</label>
+                            <input id="city" type="text" className="validate" required pattern="[0-9]+"/>
+                            <label htmlFor="city">المدينة</label>
                         </div>
                     </div>
 
                     <div className="my-input-field">
-                        <input id="password" type="password" className="validate" required />
-                        <label htmlFor="password">المنطقة</label>
+                        <input id="street" type="text" className="validate" required />
+                        <label htmlFor="street">المنطقة</label>
                     </div>
 
                     <div className="my-input-field">
-                        <input id="email" type="email" className="validate" required />
-                        <label htmlFor="email">الشارع</label>
+                        <input id="street" type="text" className="validate" required />
+                        <label htmlFor="street">الشارع</label>
                     </div>
 
                     <div className="d-flex">
                         <div className="my-input-field w-50">
-                            <input id="name" type="text" className="validate" required />
-                            <label htmlFor="name">رقم المبني</label>
+                            <input id="buildingno" type="number" title="رقم المبني" className="validate" required pattern="[0-9]+"/>
+                            <label htmlFor="buildingno">رقم المبني</label>
                         </div>
 
                         <div className="my-input-field w-50">
-                            <input id="telephone" type="tel" className="validate" required pattern="[0-9]+"/>
-                            <label htmlFor="telephone">رقم الشقة</label>
+                            <input id="apartmentno" type="number" title="رقم الشقة" className="validate" required pattern="[0-9]+"/>
+                            <label htmlFor="apartmentno">رقم الشقة</label>
                         </div>
                     </div>
 
                     <div className="my-input-field">
-                        <input id="mgawra" type="number" className="validate" required min="1" max="36"/>
-                        <label htmlFor="mgawra">نوع العنوان</label>
+                        <input id="addtype" type="text" className="validate" required />
+                        <label htmlFor="addtype">نوع العنوان</label>
                     </div>
 
                     <div className="my-input-field dots two">
