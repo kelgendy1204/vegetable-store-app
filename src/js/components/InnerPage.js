@@ -17,6 +17,7 @@ import LoginRigister from './LoginRigister';
 import Help from './Help';
 import Eltlpat from './Eltlpat';
 import LahlopaCorner from './LahlopaCorner';
+import ForgetPassword from './ForgetPassword';
 import Navbar from '../containers/Navbar';
 import ItemDetail from '../containers/ItemDetail';
 import Home from '../containers/Home';
@@ -71,6 +72,7 @@ class InnerPage extends Component {
                                 <Route path="/InnerPage/Tlpati" component={ Tlpati }/>
                                 <Route path="/InnerPage/Eltlpat" component={ Eltlpat }/>
                                 <Route path="/InnerPage/LahlopaCorner" component={ LahlopaCorner }/>
+                                <Route path="/InnerPage/ForgetPassword" component={ ForgetPassword }/>
                             </Switch>
                         </div>
                     </CSSTransition>

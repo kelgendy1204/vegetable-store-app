@@ -52,7 +52,7 @@ class Login extends Component {
                                 </div>
 
 
-                                <a href='#' className="forgetpassword">نسيت كلمة السر ؟</a>
+                                <a href='#' onClick={() => {this.goToPage('ForgetPassword')}} className="forgetpassword">نسيت كلمة السر ؟</a>
 
                             </div>
 
