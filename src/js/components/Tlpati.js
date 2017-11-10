@@ -33,24 +33,179 @@ class tlpati extends Component {
                                     </div>
                                     <div className="last-data">
                                         <p>الاثنين 15/10</p>
-                                     </div>
-                                </div>
-                                <div className="collapsible-body"><span>هو تطبيق يعمل علي تطوير خدمة التوصيل الي المنازل بشكل اسرع ومريح ويعمل علي التطور في عالم التوصيل والخدمة المتميزه وخضار مميز وغيره وغيره وغيره وحاجات تانيه كتير </span></div>
-                            </li>
-                            <li>
-                                <div className="collapsible-header">
-                                    ما هو لهلوبة ؟
-                                </div>
-                                <div className="collapsible-body"><span>هو تطبيق يعمل علي تطوير خدمة التوصيل الي المنازل بشكل اسرع ومريح ويعمل علي التطور في عالم التوصيل والخدمة المتميزه وخضار مميز وغيره وغيره وغيره وحاجات تانيه كتير </span></div>
-                            </li>
-                            <li>
-                                <div className="collapsible-header">
-                                    ما هو لهلوبة ؟
+                                        <p className="mark"></p>
+                                    </div>
                                 </div>
                                 <div className="collapsible-body">
-                                    <iframe width="100%" src="https://www.youtube.com/embed/nYFuxTXDj90" frameborder="0" allowfullscreen></iframe>
+                                    <div className="rightdata">
+                                        <div className="content-data">
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                        </div>
+                                        <div className="cost-data">
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                        </div>
+                                    </div>
+                                    <div className="leftdata">
+                                        <img src='assets/images/icondlev1.svg' />
+                                    </div>
                                 </div>
                             </li>
+
+
+                            
+                            <li className="item">
+                                <div className="collapsible-header">
+                                    <div className="fir-data">
+                                        <img src='assets/images/iconfinal2.svg' />
+                                        <p>0002</p>
+                                    </div>
+                                    <div className="sc-data">
+                                        <p>100 <span className="sma">جنية</span></p>
+                                    </div>
+                                    <div className="last-data">
+                                        <p>الاثنين 15/10</p>
+                                        <p className="mark">&#x2713;</p>
+                                    </div>
+                                </div>
+                                <div className="collapsible-body">
+                                    <div className="rightdata">
+                                        <div className="content-data">
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                        </div>
+                                        <div className="cost-data">
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                        </div>
+                                    </div>
+                                    <div className="leftdata">
+                                        <img src='assets/images/icondlev2.svg' />
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            
+                            <li className="item">
+                                <div className="collapsible-header">
+                                    <div className="fir-data">
+                                        <img src='assets/images/iconfinal1.svg' />
+                                        <p>0003</p>
+                                    </div>
+                                    <div className="sc-data">
+                                        <p>100 <span className="sma">جنية</span></p>
+                                    </div>
+                                    <div className="last-data">
+                                        <p>الاثنين 15/10</p>
+                                        <p className="mark">&#x2713;</p>
+                                    </div>
+                                </div>
+                                <div className="collapsible-body">
+                                    <div className="rightdata">
+                                        <div className="content-data">
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                        </div>
+                                        <div className="cost-data">
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                        </div>
+                                    </div>
+                                    <div className="leftdata">
+                                        <img src='assets/images/icondlev2.svg' />
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            
+                            
+                            <li className="item">
+                                <div className="collapsible-header">
+                                    <div className="fir-data">
+                                        <img src='assets/images/iconfinal3.svg' />
+                                        <p>0004</p>
+                                    </div>
+                                    <div className="sc-data">
+                                        <p>100 <span className="sma">جنية</span></p>
+                                    </div>
+                                    <div className="last-data">
+                                        <p>الاثنين 15/10</p>
+                                        <p className="mark">&#x2713;</p>
+                                    </div>
+                                </div>
+                                <div className="collapsible-body">
+                                    <div className="rightdata">
+                                        <div className="content-data">
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                        </div>
+                                        <div className="cost-data">
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                        </div>
+                                    </div>
+                                    <div className="leftdata">
+                                        <img src='assets/images/icondlev2.svg' />
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+                            
+                            <li className="item">
+                                <div className="collapsible-header">
+                                    <div className="fir-data">
+                                        <img src='assets/images/iconfinal4.svg' />
+                                        <p>0005</p>
+                                    </div>
+                                    <div className="sc-data">
+                                        <p>100 <span className="sma">جنية</span></p>
+                                    </div>
+                                    <div className="last-data">
+                                        <p>الاثنين 15/10</p>
+                                        <p className="mark">&#x2713;</p>
+                                    </div>
+                                </div>
+                                <div className="collapsible-body">
+                                    <div className="rightdata">
+                                        <div className="content-data">
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                            <p>- 2 كيلو تفاح اخضر</p>
+                                        </div>
+                                        <div className="cost-data">
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                            <p>20 جنية</p>
+                                        </div>
+                                    </div>
+                                    <div className="leftdata">
+                                        <img src='assets/images/icondlev2.svg' />
+                                    </div>
+                                </div>
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>

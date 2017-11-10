@@ -8,48 +8,39 @@ class Contact extends Component {
 
     render() {
         return (
-            <div className="contact-page container">
-              <form className="col s12">
+            <div className="contact-page">
 
-                <div className="row">
-                    <div className="input-field col s12">
-                      <i className="material-icons prefix">account_circle</i>
-                      <input id="name" type="text" className="validate" required />
-                      <label htmlFor="name">الاسم</label>
+                <div className="contact-header">
+                    <div className="img-left"> <img src='assets/images/iconcall1.svg' /> </div>
+                    <div className="data-right">
+                        <div className="top-data">
+                            <p> 0120356598 </p>
+                            <img src='assets/images/iconcall2.svg' />
+                        </div>
+                        <div className="bottom-data">
+                            <p> cs@lahlopa.net </p>
+                            <img src='assets/images/iconcall3.svg' />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className="title"><p>نحن سعداء لتلقي استفسارتكم واقتراحتكم </p></div>
+
+
+                <div className="text-data">
+                    <div className="title-test">
+                        <p>  اترك رسالتك </p>
+                    </div>
+                    <div className="text">
+
                     </div>
                 </div>
 
-                <div className="row">
-                  <div className="input-field col s12">
-                    <i className="material-icons prefix">phone</i>
-                    <input id="telephone" type="tel" className="validate" required pattern="[0-9]+"/>
-                    <label htmlFor="telephone">رقم الهاتف</label>
-                  </div>
+                <div className="center-align" onClick={() => {this.goToPage('LoginRigister');}}>
+                    <button className="finish"> ارســــــــال  </button>
                 </div>
 
-                <div className="row">
-                  <div className="input-field col s12">
-                    <i className="material-icons prefix">email</i>
-                    <input id="email" type="email" className="validate" required />
-                    <label htmlFor="email">الايميل</label>
-                  </div>
-                </div>
-
-                <div className="row">
-                    <div className="input-field col s12">
-                        <i className="material-icons prefix">mode_edit</i>
-                        <textarea id="message" className="materialize-textarea validate" required></textarea>
-                        <label htmlFor="message">رسالتك </label>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="input-field col s12 submit-btn">
-                        <a className="waves-effect waves-light btn" type="submit" id="submit"><i className="material-icons left">send</i>ارسال</a>
-                    </div>
-                </div>
-
-              </form>
             </div>
         );
     }

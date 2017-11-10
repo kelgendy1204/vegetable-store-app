@@ -1,8 +1,22 @@
 .help-page{
     ul.collapsible{
         padding: 0;
+        box-shadow: none;
+        width: 100%;
+        .collapsible-header{
+            border-radius: 10px;
+            margin-bottom: 3px;
+            &.active{
+                border-bottom-left-radius: 0 ;
+                border-bottom-right-radius: 0;
+                margin-bottom: 0;
+            }
+        }
         .collapsible-body{
             background-color: #fff;
+            margin-bottom: 3px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
     }
 }

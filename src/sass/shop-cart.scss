@@ -4,6 +4,9 @@
     margin: 0 auto;
     height: 100%;
     overflow: auto;
+    background-image: url(../images/logocart.svg);
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
     .items-cart {
         display: flex;
         justify-content: center;
