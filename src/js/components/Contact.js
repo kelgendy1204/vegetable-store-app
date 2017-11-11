@@ -32,9 +32,9 @@ class Contact extends Component {
                     <div className="title-test">
                         <p>  اترك رسالتك </p>
                     </div>
-                    <div className="text">
+                    <textarea className="text">
 
-                    </div>
+                    </textarea>
                 </div>
 
                 <div className="center-align" onClick={() => {this.goToPage('LoginRigister');}}>

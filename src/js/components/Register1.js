@@ -8,15 +8,6 @@ class Register1 extends Component {
         this.submitFirstPage = this.submitFirstPage.bind(this);
     }
 
-    componentDidMount(){
-        $('select').material_select();
-    }
-
-    componentWillUnmount(){
-        $('select').material_select('destroy');
-        // $('iframe').attr('display', 'none');
-    }
-
     goToPage(page) {
         let currPathName = this.props.history.location.pathname;
         if( currPathName != `/InnerPage/${page}` ){

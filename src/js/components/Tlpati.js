@@ -21,6 +21,7 @@ class tlpati extends Component {
             <div className="tlpati-page container">
                 <div className="row">
                     <div className="col s12">
+
                         <ul className="collapsible" data-collapsible="accordion">
                             <li className="item">
                                 <div className="collapsible-header">
@@ -58,7 +59,7 @@ class tlpati extends Component {
                             </li>
 
 
-                            
+
                             <li className="item">
                                 <div className="collapsible-header">
                                     <div className="fir-data">
@@ -93,9 +94,9 @@ class tlpati extends Component {
                                     </div>
                                 </div>
                             </li>
-                            
-                            
-                            
+
+
+
                             <li className="item">
                                 <div className="collapsible-header">
                                     <div className="fir-data">
@@ -130,10 +131,10 @@ class tlpati extends Component {
                                     </div>
                                 </div>
                             </li>
-                            
-                            
-                            
-                            
+
+
+
+
                             <li className="item">
                                 <div className="collapsible-header">
                                     <div className="fir-data">
@@ -168,9 +169,9 @@ class tlpati extends Component {
                                     </div>
                                 </div>
                             </li>
-                            
-                            
-                            
+
+
+
                             <li className="item">
                                 <div className="collapsible-header">
                                     <div className="fir-data">
@@ -205,7 +206,7 @@ class tlpati extends Component {
                                     </div>
                                 </div>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </div>

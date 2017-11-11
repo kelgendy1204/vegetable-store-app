@@ -1,22 +1,26 @@
 .help-page{
-    ul.collapsible{
+    ul.collapsible, .rc-collapse{
+        margin: 10px 0;
         padding: 0;
         box-shadow: none;
         width: 100%;
-        .collapsible-header{
-            border-radius: 10px;
-            margin-bottom: 3px;
-            &.active{
-                border-bottom-left-radius: 0 ;
-                border-bottom-right-radius: 0;
-                margin-bottom: 0;
-            }
+    }
+    .rc-collapse>.rc-collapse-item>.rc-collapse-header .arrow{
+        margin: 0 6px;
+    }
+    .collapsible-header{
+        border-radius: 10px;
+        margin-bottom: 3px;
+        &.active{
+            border-bottom-left-radius: 0 ;
+            border-bottom-right-radius: 0;
+            margin-bottom: 0;
         }
-        .collapsible-body{
-            background-color: #fff;
-            margin-bottom: 3px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
+    }
+    .collapsible-body{
+        background-color: #fff;
+        margin-bottom: 3px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 }

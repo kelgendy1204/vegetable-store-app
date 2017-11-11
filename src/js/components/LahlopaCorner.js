@@ -7,29 +7,29 @@ class LahlopaCorner extends Component {
         this.openCategory = this.openCategory.bind(this);
     }
 
-    componentDidMount(){
-        $('.collapsible').collapsible();
-    }
-
-    componentWillUnmount(){
-        $('.collapsible').collapsible('destroy');
-    }
-
     openCategory(event){
         $('.data-item.opened').removeClass('opened');
         event.currentTarget.classList.add('opened');
+        if(event.currentTarget.classList.contains('youtube')) {
+            $('.youtube-data').removeClass('hide');
+            $('.write-data').addClass('hide');
+        } else {
+            $('.youtube-data').addClass('hide');
+            $('.write-data').removeClass('hide');
+        }
     }
 
     openCart(e) {
         let cartItem = e.currentTarget;
         cartItem.classList.add('open');
     }
+
     render() {
         return (
             <div className="lahlopacorner">
 
                 <div className="header-corner">
-                    <div className="data-item opened" onClick={this.openCategory}>
+                    <div className="data-item opened youtube" onClick={this.openCategory}>
                         <p> فيديوهات </p>
                     </div>
                     <div className="data-item" onClick={this.openCategory}>
@@ -45,7 +45,7 @@ class LahlopaCorner extends Component {
                 </div>
 
 
-                <div className="write-data">
+                <div className="write-data hide">
                     <div className="write">
                         <img src="assets/images/fru1.png" />
                     </div>
@@ -53,7 +53,7 @@ class LahlopaCorner extends Component {
                 </div>
 
 
-                <div className="write-data">
+                <div className="write-data hide">
                     <div className="write">
                         <img src="assets/images/fru1.png" />
                     </div>
@@ -61,7 +61,7 @@ class LahlopaCorner extends Component {
                 </div>
 
 
-                <div className="write-data">
+                <div className="write-data hide">
                     <div className="write">
                         <img src="assets/images/fru1.png" />
                     </div>
