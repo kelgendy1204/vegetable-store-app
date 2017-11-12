@@ -8,15 +8,36 @@ nav{
     .nav-wrapper{
         display: flex;
         flex-direction: row-reverse;
+        position: relative;
     }
     ul{
         height: 100%;
         margin: 0;
         &.upper-right{
+            right: 0;
+            position: absolute;
+            z-index: 0;
             display: flex;
             flex-grow: 1;
+            .screen-title{
+                font-weight: bold;
+                font-size: 1.2em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                p{
+                    height: 100%;
+                    margin: 0;
+                }
+            }
+            .menu, .goback{
+                min-width: 54px;
+            }
         }
         &.upper-left{
+            left: 0;
+            z-index: 1;
+            position: absolute;
+            background-color: $color1;
             padding: 0;
             display: flex;
             .label-icon{
@@ -34,16 +55,53 @@ nav{
                         right: 0;
                     }
                 }
-                input#search{
-                    width: 100%;
-                    padding: 0 25px;
-                    display: inline-block;
+
+                .expandable-search{
+                    border-bottom: 0px !important;
+                    box-shadow: 0 0px 0 0 rgba(0,0,0,0) !important;
                     margin: 0;
-                    &:focus{
-                        border: 0;
-                        outline: 0;
-                        box-shadow: 0 0 0 transparent;
+                    outline: none;
+                    -webkit-appearance: textfield;
+                    font-family: DroidKufi;
+                    font-size: 1em;
+                    width: 0px;
+                    height: 40px;
+                    color: transparent;
+                    cursor: pointer;
+                    background: #ffffff url(../images/search-icon.png) no-repeat 9px center;
+                    padding: 0px 10px 0px 30px;
+                    border-radius: 10em;
+                    transition: all .5s;
+
+                    &::-webkit-search-decoration,
+                    &::-webkit-search-cancel-button {
+                        display: none;
                     }
+
+                    &:hover {
+                        background-color: #fff;
+                    }
+
+                    &:focus {
+                        width: 130px;
+                        padding-left: 32px;
+                        color: #000;
+                        background-color: #fff;
+                        cursor: auto;
+                        width: 130px;
+                        background-color: #fff;
+                    }
+
+                    &:-moz-placeholder {
+                        color: transparent;
+                        color: #999;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: transparent;
+                        color: #999;
+                    }
+
                 }
             }
         }

@@ -4,6 +4,23 @@ import PropTypes from 'prop-types';
 //import DryClean from './DryClean';
 // import { Throttle } from 'react-throttle';
 
+let pages = {
+    '/InnerPage/Home' : 'Home',
+    '/InnerPage/ShopCart' : 'ShopCart',
+    '/InnerPage/LoginRigister' : 'LoginRigister',
+    '/InnerPage/Register' : 'Register',
+    '/InnerPage/Contact' : 'Contact',
+    '/InnerPage/Help' : 'Help',
+    '/InnerPage/Tlpati' : 'Tlpati',
+    '/InnerPage/Profile' : 'Profile',
+    '/InnerPage/DryClean' : 'DryClean',
+    '/InnerPage/Fruits' : 'Fruits',
+    '/InnerPage/SuperMarkting' : 'SuperMarkting',
+    '/InnerPage/Rust' : 'Rust',
+    '/InnerPage/Eltlpat' : 'Eltlpat',
+    '/InnerPage/LahlopaCorner' : 'LahlopaCorner',
+};
+
 class Navbar extends Component {
     constructor(props){
         super(props);
@@ -77,6 +94,7 @@ class Navbar extends Component {
     goToHelp(){
         this.goToPage('Help');
     }
+
     goToTlpati(){
         this.goToPage('Tlpati');
     }
@@ -100,11 +118,11 @@ class Navbar extends Component {
     goToRust(){
         this.goToPage('Rust');
     }
-    
+
     goToEltlpat(){
         this.goToPage('Eltlpat');
-    } 
-    
+    }
+
     goToLahlopaCorner(){
         this.goToPage('LahlopaCorner');
     }
@@ -120,15 +138,7 @@ class Navbar extends Component {
                         <ul className="left upper-left">
 
                             <li>
-                                <form>
-                                    <div className="input-field">
-                                        <input id="search" type="search" required onChange={ this.search_items } />
-                                        <label className="label-icon" htmlFor="search">
-                                            <i className="material-icons">search</i>
-                                        </label>
-                                        <i className="material-icons" onClick={() => { this.props.filterBy(null); document.querySelector('#search').value = ''; } }>close</i>
-                                    </div>
-                                </form>
+                                <input id="search" type="search" className="expandable-search" required onChange={ this.search_items } />
                             </li>
 
                             <li className="cart">
@@ -143,15 +153,20 @@ class Navbar extends Component {
 
                         <ul className="right nav-right upper-right">
 
-                            <li>
+                            <li className="menu">
                                 <a href="#" data-activates="mobile-demo" className="button-collapse">
                                     <i className="material-icons">menu</i>
                                 </a>
                             </li>
-                            <li className={(currPathName == '/InnerPage/Home' || currPathName == '/InnerPage') ? 'hide' : '' } >
+                            <li className={(currPathName == '/InnerPage/Home' || currPathName == '/InnerPage') ? 'goback hide' : 'goback' } >
                                 <a href="#" onClick={ () => this.goBack() }>
                                     <i className="material-icons back">reply</i>
                                 </a>
+                            </li>
+                            <li className='screen-title'>
+                                <p>
+                                    {pages[currPathName]}
+                                </p>
                             </li>
 
                         </ul>
@@ -164,8 +179,6 @@ class Navbar extends Component {
                                 </div>
                                 <button onClick={ () => this.goToLogin() }>تسجيل الدخول</button>
                             </div>
-
-
 
                             <div className="menu-data" onClick={ this.goToFruits } >
                                 <p>
