@@ -1,137 +1,142 @@
 .tlpati-page{
     width: 95%;
 
-    ul.collapsible{
+    .collapsible, .rc-collapse{
         padding: 0;
         margin: 10px 0 ;
         border: 0;
         box-shadow: none;
-        li{
-            margin-bottom: 4px;
-            .collapsible-header{
-                padding: 0;
-                display: flex;
-                align-items: center;
-                height: 40px;
-                justify-content: space-between;
-                border: 0;
-                font-weight: bold;
-                border-radius: 10px;
-                padding-left: 5px;
-                padding-right: 5px;
-                &.active{
-                    border-bottom-left-radius: 0 ;
-                    border-bottom-right-radius: 0;
+        .rc-collapse-item{
+            .rc-collapse-header{
+                .arrow{
+                    display: none;
                 }
-                .fir-data{
-                    width: 40%;
+                .collapsible-header{
+                    padding: 0;
                     display: flex;
                     align-items: center;
-                    justify-content: flex-start;
-                    img{
-                        width: 25px;
-                        margin-left: 5px;
-                    }
-                    p{
-                        margin: 0;
-                        font-size: 12px;
-                        font-weight: bold;
-                        color: $color1;
-
-                    }
-                }
-                .sc-data{
-                    width: 20%;
-                    p{
-                        margin: 0;
-                        font-size: 12px;
-                        font-weight: bold;
-                        color: #666666;
-
-                    }
-                    .sma{
-                        font-size: 10px;
-                    }
-
-                }
-                .last-data{
-                    width: 40%;
-                    display: flex;
+                    height: 40px;
                     justify-content: space-between;
-                    align-items: center;
-                    margin-left: 15px;
-                    img{
-                        width: 25px;
-                        margin-left: 5px;
+                    border: 0;
+                    font-weight: bold;
+                    padding-left: 5px;
+                    padding-right: 5px;
+
+                    .fir-data{
+                        width: 40%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        img{
+                            width: 25px;
+                            margin-left: 5px;
+                        }
+                        p{
+                            margin: 0;
+                            font-size: 12px;
+                            font-weight: bold;
+                            color: $color1;
+
+                        }
                     }
-                    p{
-                        margin: 0;
-                        font-size: 12px;
-                        font-weight: bold;
-                        color: #666666;
+                    .sc-data{
+                        width: 20%;
+                        p{
+                            margin: 0;
+                            font-size: 12px;
+                            font-weight: bold;
+                            color: #666666;
+
+                        }
+                        .sma{
+                            font-size: 10px;
+                        }
 
                     }
-                    .mark{
-                        color: $color1;
-                        font-size: 15px;
-                    }
-                    .sma{
-                        font-size: 10px;
-                    }
+                    .last-data{
+                        width: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-left: 15px;
+                        img{
+                            width: 25px;
+                            margin-left: 5px;
+                        }
+                        p{
+                            margin: 0;
+                            font-size: 12px;
+                            font-weight: bold;
+                            color: #666666;
 
+                        }
+                        .mark{
+                            color: $color1;
+                            font-size: 15px;
+                        }
+                        .sma{
+                            font-size: 10px;
+                        }
+
+                    }
                 }
             }
-            .collapsible-body{
-                background-color: #fff;
-                padding: 15px;
-                min-height: 50px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom-left-radius: 10px;
-                border-bottom-right-radius: 10px;
-                .rightdata{
-                    width: 60%;
+
+            .rc-collapse-content{
+                padding: 0;
+                .rc-collapse-content-box{
+                    margin: 0;
+                }
+                .collapsible-body{
+                    background-color: #fff;
+                    padding: 15px;
+                    min-height: 50px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    .content-data{
+                    .rightdata{
+                        width: 60%;
                         display: flex;
-                        justify-content: flex-start;
-                        flex-direction: column;
+                        justify-content: space-between;
                         align-items: center;
-                        width: 70%;
-                        margin-left: 10px;
-                        line-height: 25px;
-                        p{
-                            padding: 0;
-                            margin: 0;
-                            color: #666666;
-                            font-size: 12px;
-                            font-weight: bold;
+                        .content-data{
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 70%;
+                            margin-left: 10px;
+                            line-height: 25px;
+                            p{
+                                padding: 0;
+                                margin: 0;
+                                color: #666666;
+                                font-size: 12px;
+                                font-weight: bold;
+                            }
+                        }
+                        .cost-data{
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 30%;
+                            line-height: 25px;
+                            p{
+                                padding: 0;
+                                margin: 0;
+                                font-size: 12px;
+                                color: #666666;
+                                font-weight: bold;
+                            }
                         }
                     }
-                    .cost-data{
-                        display: flex;
-                        justify-content: flex-start;
-                        flex-direction: column;
-                        align-items: center;
-                        width: 30%;
-                        line-height: 25px;
-                        p{
-                            padding: 0;
-                            margin: 0;
-                            font-size: 12px;
-                            color: #666666;
-                            font-weight: bold;
+                    .leftdata{
+                        width: 40%;
+                        img{
+                            width: 90%;
+                            margin-right: 15px;
                         }
-                    }
-                }
-                .leftdata{
-                    width: 40%;
-                    img{
-                        width: 90%;
-                        margin-right: 15px;
                     }
                 }
             }

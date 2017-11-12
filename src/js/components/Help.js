@@ -8,16 +8,6 @@ class Help extends Component {
         super(props);
     }
 
-    componentDidMount(){
-        $(document).ready(function(){
-            $('.collapsible').collapsible();
-        });
-    }
-
-    componentWillUnmount(){
-        $('.collapsible').collapsible('destroy');
-    }
-
     render() {
         return (
             <div className="help-page container">
